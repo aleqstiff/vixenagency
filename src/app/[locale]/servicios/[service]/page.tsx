@@ -41,7 +41,7 @@ export default async function ServicePage({ params }: { params: Promise<{locale:
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <MegaNav locale={l} recentSlugs={recentSlugs} />
+      <MegaNav locale={l} posts={recentSlugs} />
       <Popup locale={l} href={href} />
 
       {/* HERO */}

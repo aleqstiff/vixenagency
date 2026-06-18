@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  /* Palette */
+  --bg:       #030710;
+  --bg2:      #060d1c;
+  --bg3:      #0a1428;
+  --teal:     #00e5d4;
+  --teal-dim: #00b8aa;
+  --violet:   #8b5cf6;
+  --gold:     #f59e0b;
+  --glass:    rgba(255,255,255,0.03);
+  --glass2:   rgba(255,255,255,0.055);
+  --border:   rgba(0,229,212,0.1);
+  --border2:  rgba(0,229,212,0.22);
+  --text:     #e2eaf8;
+  --muted:    rgba(226,234,248,0.48);
+  --muted2:   rgba(226,234,248,0.22);
+}
+
+*  { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── GRADIENT TEXT ─────────────────────────────────── */
+.grad-teal {
+  background: linear-gradient(135deg, var(--teal) 0%, #38bdf8 50%, var(--violet) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.grad-warm {
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 60%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── CARDS ─────────────────────────────────────────── */
+.card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+.card:hover {
+  border-color: var(--border2);
+  box-shadow: 0 4px 32px rgba(0,229,212,0.07);
+}
+.card-glow {
+  background: var(--glass);
+  border: 1px solid var(--border2);
+  border-radius: 22px;
+  box-shadow: 0 0 60px rgba(0,229,212,0.05), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* ── BUTTONS ───────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  text-decoration: none; border: none; cursor: pointer;
+  font-family: inherit; font-weight: 800; border-radius: 14px;
+  transition: all 0.2s; position: relative; overflow: hidden;
+}
+.btn::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(rgba(255,255,255,0.12), transparent);
+  opacity: 0; transition: opacity 0.2s;
+}
+.btn:hover::after { opacity: 1; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--teal), #0284c7);
+  color: #020b18; padding: 16px 36px; font-size: 15px;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 44px rgba(0,229,212,0.35); }
+
+.btn-ghost {
+  border: 1.5px solid var(--border2); color: var(--teal);
+  background: rgba(0,229,212,0.04); padding: 14px 28px; font-size: 14px;
+}
+.btn-ghost:hover { background: rgba(0,229,212,0.1); border-color: var(--teal); }
+
+.btn-sm { padding: 10px 20px; font-size: 13px; border-radius: 10px; }
+
+/* ── BADGE ─────────────────────────────────────────── */
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 16px; border-radius: 999px;
+  background: rgba(0,229,212,0.07); border: 1px solid rgba(0,229,212,0.22);
+  color: var(--teal); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+/* ── MARQUEE ───────────────────────────────────────── */
+.marquee-track { overflow: hidden; mask-image: linear-gradient(90deg,transparent,black 8%,black 92%,transparent); }
+.marquee-inner { display: flex; gap: 0; animation: marquee 30s linear infinite; width: max-content; }
+.marquee-inner:hover { animation-play-state: paused; }
+
+/* ── SECTION LABEL ─────────────────────────────────── */
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 10px;
+}
+
+/* ── DIVIDER ───────────────────────────────────────── */
+.divider { width: 48px; height: 3px; background: linear-gradient(90deg,var(--teal),transparent); border-radius: 2px; margin: 0 auto 12px; }
+
+/* ── ANIMATIONS ────────────────────────────────────── */
+@keyframes marquee   { to { transform: translateX(-50%); } }
+@keyframes pulseRing { 0%,100%{box-shadow:0 0 0 0 rgba(0,229,212,.5)} 50%{box-shadow:0 0 0 10px rgba(0,229,212,0)} }
+@keyframes float     { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+@keyframes fadeUp    { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes shimmer   { from{background-position:200% center} to{background-position:-200% center} }
+@keyframes breathe   { 0%,100%{opacity:.6} 50%{opacity:1} }
+
+.pulse   { animation: pulseRing 2.2s ease-in-out infinite; }
+.float   { animation: float 5s ease-in-out infinite; }
+.fade-up { animation: fadeUp .6s ease forwards; }
+
+/* ── DETAILS/ACCORDION ─────────────────────────────── */
+details summary { list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+
+/* ── MISC ──────────────────────────────────────────── */
+::selection { background: rgba(0,229,212,0.25); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: rgba(0,229,212,0.3); border-radius: 3px; }

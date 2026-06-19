@@ -223,7 +223,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   {icon}
                 </div>
                 <h3 style={{ fontWeight:800, color:"#fff", fontSize:18, marginBottom:10, letterSpacing:"-0.3px" }}>{title}</h3>
-                <p style={{ color:"var(--muted)", lineHeight:1.68, fontSize:14 }}>{desc}</p>
+                <p style={{ color:"var(--muted)", lineHeight:1.65, fontSize:14,
+                  overflow:"hidden", display:"-webkit-box", WebkitLineClamp:3, WebkitBoxOrient:"vertical" }}>{desc}</p>
               </div>
             ))}
           </div>
@@ -276,7 +277,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:12 }}>
                     <div>
                       <h3 style={{ fontWeight:800, color:"#fff", fontSize:18, marginBottom:8, letterSpacing:"-0.3px" }}>{title}</h3>
-                      <p style={{ color:"var(--muted)", lineHeight:1.68, fontSize:14 }}>{desc}</p>
+                      <p style={{ color:"var(--muted)", lineHeight:1.65, fontSize:14,
+                  overflow:"hidden", display:"-webkit-box", WebkitLineClamp:3, WebkitBoxOrient:"vertical" }}>{desc}</p>
                     </div>
                     <div style={{ width:40, height:40, borderRadius:10, background:"rgba(0,229,204,0.06)",
                       display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
@@ -404,7 +406,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 </div>
                 <div>
                   <p style={{ fontWeight:700, color:"#fff", fontSize:14, marginBottom:2 }}>{title}</p>
-                  <p style={{ color:"var(--muted)", fontSize:12, lineHeight:1.5 }}>{desc.slice(0,60)}…</p>
+                  <p style={{ color:"var(--muted)", fontSize:12, lineHeight:1.5 }}>{desc.split(".")[0]}.</p>
                 </div>
               </div>
             ))}

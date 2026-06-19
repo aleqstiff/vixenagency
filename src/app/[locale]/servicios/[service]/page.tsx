@@ -194,7 +194,7 @@ export default async function ServicePage({
 
       {/* ── Main content ─────────────────────────────────── */}
       <div style={{ padding:"60px 20px 40px" }}>
-        <div style={{ maxWidth:900, margin:"0 auto", display:"grid", gridTemplateColumns:"1fr 320px", gap:48, alignItems:"start" }}>
+        <div style={{ maxWidth:900, margin:"0 auto", display:"grid", gridTemplateColumns:"minmax(0,1fr)", gap:40 }}>
 
           {/* Content */}
           <div>
@@ -235,7 +235,7 @@ export default async function ServicePage({
           </div>
 
           {/* Sidebar CTA */}
-          <div style={{ position:"sticky", top:80 }}>
+          <div style={{ position:"relative" }}>
             <div className="card-glow" style={{ padding:28 }}>
               <div style={{ fontSize:10, fontWeight:700, color:s.color, textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:14 }}>VixenAgency</div>
               <h3 style={{ fontWeight:900, color:"#fff", fontSize:20, marginBottom:10, letterSpacing:"-0.5px", lineHeight:1.2 }}>

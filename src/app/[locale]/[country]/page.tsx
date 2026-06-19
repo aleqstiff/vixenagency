@@ -77,7 +77,7 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
         <div style={{ position:"absolute",inset:0,background:"radial-gradient(ellipse 70% 60% at 50% 0%,rgba(0,229,212,0.1) 0%,transparent 65%)",pointerEvents:"none" }} />
         <div style={{ maxWidth:800,margin:"0 auto",position:"relative" }}>
           <div style={{ fontSize:56,marginBottom:16 }}>{c.flag}</div>
-          <h1 style={{ fontSize:"clamp(2rem,5vw,3.4rem)",fontWeight:900,color:"#fff",lineHeight:1.1,letterSpacing:"-1px",marginBottom:16 }}>
+          <h1 style={{ fontSize:"clamp(2rem,5vw,3.4rem)",fontWeight:900,color:"var(--dark)",lineHeight:1.1,letterSpacing:"-1px",marginBottom:16 }}>
             {meta?.title.split("|")[0].trim() ?? `VixenAgency — ${c.name}`}
           </h1>
           <p style={{ fontSize:16,color:"var(--muted)",lineHeight:1.7,maxWidth:580,margin:"0 auto 40px" }}>{meta?.desc}</p>
@@ -87,13 +87,13 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
         </div>
       </section>
 
-      <section style={{ padding:"60px 20px",background:"var(--bg2)" }}>
+      <section style={{ padding:"60px 20px",background:"var(--cream2)" }}>
         <div style={{ maxWidth:960,margin:"0 auto" }}>
           <div style={{ display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",gap:16 }}>
             {ta2(l,"sv").slice(0,6).map(([icon,title,desc],i) => (
               <div key={i} className="card" style={{ padding:24 }}>
                 <div style={{ fontSize:28,marginBottom:12 }}>{icon}</div>
-                <h3 style={{ fontWeight:700,color:"#fff",fontSize:16,marginBottom:8 }}>{title}</h3>
+                <h3 style={{ fontWeight:700,color:"var(--dark)",fontSize:16,marginBottom:8 }}>{title}</h3>
                 <p style={{ color:"var(--muted)",fontSize:13,lineHeight:1.6 }}>{desc}</p>
               </div>
             ))}
@@ -104,7 +104,7 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
       <section style={{ padding:"60px 20px" }}>
         <div style={{ maxWidth:640,margin:"0 auto",textAlign:"center" }}>
           <div className="card-glow" style={{ padding:40 }}>
-            <h2 style={{ fontWeight:900,color:"#fff",fontSize:22,marginBottom:12 }}>{t(l,"cta_title")}</h2>
+            <h2 style={{ fontWeight:900,color:"var(--dark)",fontSize:22,marginBottom:12 }}>{t(l,"cta_title")}</h2>
             <p style={{ color:"var(--muted)",marginBottom:28 }}>{t(l,"cta_sub")}</p>
             <a href={href} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding:"16px 36px",fontSize:15 }}>
               <span>💬</span> {t(l,"cta_btn")}

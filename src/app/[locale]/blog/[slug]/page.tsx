@@ -198,7 +198,7 @@ export default async function BlogPost({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <MegaNav locale={l} posts={navPosts} />
 {/* ── Article hero ───────────────────────────────── */}
-      <div style={{ background: "var(--bg2)", padding: "52px 20px 40px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+      <div style={{ background: "var(--cream2)", padding: "52px 20px 40px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth: 740, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20, flexWrap: "wrap" }}>
             <Link href={`/${l}/blog/`}
@@ -278,7 +278,7 @@ export default async function BlogPost({
 
       {/* ── Related posts ─────────────────────────────── */}
       {related.length > 0 && (
-        <section style={{ padding: "48px 20px 64px", background: "var(--bg2)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+        <section style={{ padding: "48px 20px 64px", background: "var(--cream2)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
           <div style={{ maxWidth: 740, margin: "0 auto" }}>
             <p style={{ fontSize: 11, fontWeight: 700, color: accentColor, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 20 }}>
               {l === "es" ? "Sigue leyendo" : l === "en" ? "Keep reading" : l === "fr" ? "Continuer à lire" : l === "de" ? "Weiterlesen" : "Continua a leggere"}

@@ -292,6 +292,7 @@ details>div{
   background:radial-gradient(ellipse,rgba(196,105,154,0.12) 0%,transparent 70%);
   animation:float 6s ease-in-out infinite;
   pointer-events:none;
+  z-index:0;
 }
 
 /* Gradient border on form card */
@@ -299,6 +300,7 @@ details>div{
   background:#fff;border-radius:24px;
   box-shadow:0 20px 60px rgba(196,105,154,0.12);
   position:relative;
+  z-index:1;
 }
 .form-card::before{
   content:'';position:absolute;inset:-1px;border-radius:25px;
@@ -306,11 +308,14 @@ details>div{
   -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
   -webkit-mask-composite:xor;mask-composite:exclude;
   padding:1px;
+  pointer-events:none;
+  z-index:0;
 }
 
 /* Hero section subtle animated gradient */
 .hero-bg{
   position:absolute;inset:0;
+  pointer-events:none;
   background:
     radial-gradient(ellipse 60% 50% at 80% 40%, rgba(249,220,234,0.45) 0%, transparent 65%),
     radial-gradient(ellipse 40% 50% at 10% 80%, rgba(249,220,234,0.25) 0%, transparent 60%);

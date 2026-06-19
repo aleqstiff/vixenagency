@@ -1,5 +1,18 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+// ── Scroll reveal hook ──────────────────────────────────────────────────────
+export function useReveal(threshold = 0.12) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [vis, setVis] = useState(false);
+  useEffect(() => {
+    const el = ref.current; if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold });
+    obs.observe(el); return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, vis };
+}
+
+
 
 // ── Unlock animation ────────────────────────────────────────────────────────
 export function UnlockSection({ locale }: { locale: string }) {
@@ -21,7 +34,7 @@ export function UnlockSection({ locale }: { locale: string }) {
       {words.map((word, i) => (
         <div key={i} className="unlock-row" style={{ justifyContent:i%2===0?"flex-start":"flex-end", paddingLeft:i%2===0?"5vw":"0", paddingRight:i%2!==0?"5vw":"0", opacity:vis?1:0, transform:vis?"translateY(0)":"translateY(40px)", transition:`opacity .7s ease ${i*.15}s,transform .7s ease ${i*.15}s` }}>
           {i%2===0 && <img src={imgs[i%imgs.length]} alt="" className="unlock-img" style={{ opacity:vis?1:0, transition:`opacity .5s ease ${i*.2+.3}s` }}/>}
-          <span className="unlock-text g-rose">{word}</span>
+          <span className="unlock-text g-pink">{word}</span>
           {i%2!==0 && <img src={imgs[(i+1)%imgs.length]} alt="" className="unlock-img" style={{ opacity:vis?1:0, transition:`opacity .5s ease ${i*.2+.3}s` }}/>}
         </div>
       ))}
@@ -238,7 +251,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
       </div>
 
       <button type="submit" disabled={status==="sending"}
-        style={{ width:"100%", padding:"17px", borderRadius:14, background:status==="sending"?"rgba(200,112,90,0.5)":"var(--rose)", color:"#fff", fontWeight:800, fontSize:16, cursor:status==="sending"?"wait":"pointer", border:"none", fontFamily:"inherit", transition:"all .2s", letterSpacing:"-.2px", boxShadow:"0 4px 20px rgba(200,112,90,0.3)" }}>
+        style={{ width:"100%", padding:"17px", borderRadius:14, background:status==="sending"?"rgba(196,105,154,0.5)":"var(--pink)", color:"#fff", fontWeight:800, fontSize:16, cursor:status==="sending"?"wait":"pointer", border:"none", fontFamily:"inherit", transition:"all .2s", letterSpacing:"-.2px", boxShadow:"0 4px 20px rgba(196,105,154,0.3)" }}>
         {status==="sending" ? (locale==="es"?"Enviando…":"Sending…") : tx_l.submit}
       </button>
 
@@ -248,16 +261,10 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
   );
 }
 
-export function CounterStat({ value, label, color="var(--rose)" }: { value:string;label:string;color?:string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [vis, setVis] = useState(false);
-  useEffect(() => {
-    const el = ref.current; if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold:.3 });
-    obs.observe(el); return () => obs.disconnect();
-  }, []);
+export function CounterStat({ value, label, color="var(--pink)" }: { value:string;label:string;color?:string }) {
+  const { ref, vis } = useReveal(0.3);
   return (
-    <div ref={ref} style={{ textAlign:"center", opacity:vis?1:0, transform:vis?"translateY(0)":"translateY(20px)", transition:"opacity .6s,transform .6s" }}>
+    <div ref={ref} style={{ textAlign:"center", opacity:vis?1:0, transform:vis?"translateY(0)":"translateY(24px)", transition:"opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)" }}>
       <div style={{ fontSize:"clamp(2.2rem,4.5vw,3.8rem)", fontWeight:900, color, letterSpacing:"-2px", lineHeight:1 }}>{value}</div>
       <div style={{ fontSize:13, color:"var(--muted)", marginTop:8, fontWeight:500 }}>{label}</div>
     </div>

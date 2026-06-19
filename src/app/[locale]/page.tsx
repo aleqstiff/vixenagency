@@ -8,7 +8,7 @@ import { TR, t, ta, ta2 } from "@/lib/translations";
 import { POSTS } from "@/lib/blog";
 import { IMGS } from "@/lib/images";
 import MegaNav from "@/components/MegaNav";
-import { UnlockSection, ApplyForm, CounterStat } from "@/components/HomeClient";
+import { UnlockSection, ApplyForm, CounterStat, useReveal } from "@/components/HomeClient";
 
 export async function generateStaticParams() { return LOCALES.map(l => ({ locale: l })); }
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -40,8 +40,8 @@ const Arr = ({c="currentColor",s=18}:{c?:string;s?:number}) => (
 );
 const Check = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{flexShrink:0,marginTop:1}}>
-    <circle cx="10" cy="10" r="9" fill="rgba(200,112,90,0.1)" stroke="rgba(200,112,90,0.3)"/>
-    <path d="M6 10l3 3 5-6" stroke="var(--rose)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="10" cy="10" r="9" fill="rgba(196,105,154,0.1)" stroke="rgba(196,105,154,0.3)"/>
+    <path d="M6 10l3 3 5-6" stroke="var(--pink)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 const Avatar = ({name,color}:{name:string;color:string}) => {
@@ -96,9 +96,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
       {/* ═══ HERO ══════════════════════════════════════════ */}
       <section style={{position:"relative",minHeight:"90vh",display:"flex",alignItems:"center",overflow:"hidden",background:"var(--bg)"}}>
-        {/* Soft blush blob */}
-        <div style={{position:"absolute",top:"-15%",right:"-8%",width:600,height:600,borderRadius:"50%",background:"rgba(245,213,204,0.4)",filter:"blur(80px)",pointerEvents:"none"}}/>
-        <div style={{position:"absolute",bottom:"-10%",left:"-5%",width:400,height:400,borderRadius:"50%",background:"rgba(245,213,204,0.25)",filter:"blur(60px)",pointerEvents:"none"}}/>
+        <div className="hero-bg"/>
+        <div style={{position:"absolute",inset:0,backgroundImage:"radial-gradient(rgba(196,105,154,0.04) 1px,transparent 1px)",backgroundSize:"36px 36px",pointerEvents:"none"}}/>
 
         <div style={{maxWidth:1280,margin:"0 auto",padding:"100px 24px 60px",width:"100%",display:"grid",gridTemplateColumns:"1fr 1fr",gap:64,alignItems:"center"}} className="hero-grid">
           <div>
@@ -132,7 +131,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             <p style={{fontSize:12,color:"var(--muted2)"}}>{t(l,"hero_trust")}</p>
 
             {/* Social proof card */}
-            <div style={{marginTop:28,padding:"16px 20px",background:"var(--bg2)",borderRadius:16,border:"1px solid var(--border)",display:"flex",alignItems:"center",gap:14,maxWidth:400,boxShadow:"0 2px 12px rgba(200,112,90,0.08)"}}>
+            <div style={{marginTop:28,padding:"16px 20px",background:"var(--bg2)",borderRadius:16,border:"1px solid var(--border)",display:"flex",alignItems:"center",gap:14,maxWidth:400,boxShadow:"0 2px 12px rgba(196,105,154,0.08)"}}>
               <div style={{display:"flex"}}>
                 {["SR","VM","CR","MS"].map((init,i)=>(
                   <div key={i} style={{width:36,height:36,borderRadius:"50%",marginLeft:i>0?-10:0,border:"2px solid var(--bg)",background:["#c8705a","#8b6cb0","#b8925a","#4a9b7a"][i]+"18",display:"flex",alignItems:"center",justifyContent:"center"}}>
@@ -150,7 +149,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           {/* Image */}
           <div className="hero-img" style={{position:"relative"}}>
             <div style={{position:"absolute",width:440,height:440,borderRadius:"50%",background:"rgba(245,213,204,0.5)",filter:"blur(60px)",top:"50%",left:"50%",transform:"translate(-50%,-50%)",pointerEvents:"none"}}/>
-            <div style={{borderRadius:28,overflow:"hidden",boxShadow:"0 32px 80px rgba(200,112,90,0.15)",aspectRatio:"4/5",position:"relative"}}>
+            <div style={{borderRadius:28,overflow:"hidden",boxShadow:"0 32px 80px rgba(196,105,154,0.15)",aspectRatio:"4/5",position:"relative"}}>
               <img src={IMGS.hero} alt="Creator managed by VixenAgency" width={520} height={650}
                 style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,18,16,0.55) 0%,transparent 55%)"}}/>
@@ -158,13 +157,13 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 <p style={{fontSize:10,color:"var(--muted)",marginBottom:6,textTransform:"uppercase",letterSpacing:"0.08em",fontWeight:600}}>Camila R. · Medellín 🇨🇴</p>
                 <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
                   <div style={{textAlign:"center"}}><p style={{fontSize:10,color:"var(--muted2)"}}>antes</p><p style={{fontWeight:800,fontSize:15,color:"rgba(26,18,16,0.25)"}}>680€</p></div>
-                  <div style={{flex:1,margin:"0 10px"}}><div style={{height:3,borderRadius:2,background:"linear-gradient(90deg,var(--rose-lt),var(--rose))"}}/><p style={{fontSize:10,color:"var(--muted2)",textAlign:"center",marginTop:2}}>3 meses</p></div>
-                  <div style={{textAlign:"center"}}><p style={{fontSize:10,color:"var(--muted2)"}}>después</p><p style={{fontWeight:900,fontSize:20,color:"var(--rose)"}}>4.200€</p></div>
+                  <div style={{flex:1,margin:"0 10px"}}><div style={{height:3,borderRadius:2,background:"linear-gradient(90deg,var(--pink-lt),var(--rose))"}}/><p style={{fontSize:10,color:"var(--muted2)",textAlign:"center",marginTop:2}}>3 meses</p></div>
+                  <div style={{textAlign:"center"}}><p style={{fontSize:10,color:"var(--muted2)"}}>después</p><p style={{fontWeight:900,fontSize:20,color:"var(--pink)"}}>4.200€</p></div>
                 </div>
               </div>
             </div>
             <div style={{position:"absolute",top:28,right:-14,background:"var(--dark)",color:"#fff",borderRadius:14,padding:"12px 16px",boxShadow:"0 8px 28px rgba(26,18,16,0.2)",textAlign:"center"}}>
-              <p style={{fontSize:20,fontWeight:900,color:"var(--rose2)",lineHeight:1}}>+340%</p>
+              <p style={{fontSize:20,fontWeight:900,color:"var(--pink2)",lineHeight:1}}>+340%</p>
               <p style={{fontSize:10,color:"rgba(255,255,255,0.45)",marginTop:2}}>media</p>
             </div>
           </div>
@@ -179,7 +178,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <span key={i} style={{display:"inline-flex",alignItems:"center",gap:16,padding:"0 28px",fontSize:12,fontWeight:700,color:"var(--muted)",whiteSpace:"nowrap",textTransform:"uppercase",letterSpacing:"0.08em"}}>
                 <OFLogo size={18}/>
                 {l==="es"?"Gestión profesional":l==="en"?"Professional management":l==="fr"?"Gestion pro":l==="de"?"Professionelles Management":"Gestione pro"}
-                <svg width="5" height="5" viewBox="0 0 5 5" fill="var(--rose-lt)"><circle cx="2.5" cy="2.5" r="2.5"/></svg>
+                <svg width="5" height="5" viewBox="0 0 5 5" fill="var(--pink-lt)"><circle cx="2.5" cy="2.5" r="2.5"/></svg>
               </span>
             ))}
           </div>
@@ -189,9 +188,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       {/* ═══ STATS ════════════════════════════════════════ */}
       <section style={{padding:"64px 24px",background:"#fff"}}>
         <div style={{maxWidth:1000,margin:"0 auto"}}>
-          <div className="stats-4" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",borderRadius:24,overflow:"hidden",border:"1px solid var(--border-d)",boxShadow:"0 4px 24px rgba(200,112,90,0.07)"}}>
+          <div className="stats-4" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",borderRadius:24,overflow:"hidden",border:"1px solid var(--border-d)",boxShadow:"0 4px 24px rgba(196,105,154,0.07)"}}>
             {([
-              ["+340%",l==="es"?"aumento medio de ingresos":l==="en"?"avg income increase":"hausse des revenus","var(--rose)"],
+              ["+340%",l==="es"?"aumento medio de ingresos":l==="en"?"avg income increase":"hausse des revenus","var(--pink)"],
               ["+200",l==="es"?"creadoras gestionadas":l==="en"?"creators managed":"Creator","#8b6cb0"],
               ["30d",l==="es"?"primeros resultados":l==="en"?"first results":"premiers résultats","var(--gold)"],
               ["24/7",l==="es"?"chatters activos":l==="en"?"active chatters":"Chatter activi","#4a9b7a"],
@@ -219,11 +218,11 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <OFLogo size={18}/> <span>{l==="es"?"Gestión especializada en OnlyFans":l==="en"?"Specialized management":"Gestion spécialisée"}</span>
             </div>
           </div>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",gap:16}}>
+          <div className="stagger" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",gap:16}}>
             {ta2(l,"sv").map(([icon,title,desc],i)=>(
               <div key={i} className="card" style={{padding:"28px",position:"relative",overflow:"hidden"}}>
-                <div style={{position:"absolute",top:0,left:0,right:0,height:3,background:["linear-gradient(90deg,var(--rose),var(--rose2))","linear-gradient(90deg,#8b6cb0,#a98fd4)","linear-gradient(90deg,var(--gold),var(--gold2))","linear-gradient(90deg,#4a9b7a,#6dc4a0)","linear-gradient(90deg,var(--rose),var(--gold))","linear-gradient(90deg,#8b6cb0,var(--rose))"][i%6]}}/>
-                <div style={{width:50,height:50,borderRadius:14,background:"var(--rose-bg)",border:"1px solid var(--rose-lt)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,marginBottom:16}}>
+                <div style={{position:"absolute",top:0,left:0,right:0,height:3,background:["linear-gradient(90deg,var(--rose),var(--pink2))","linear-gradient(90deg,#8b6cb0,#a98fd4)","linear-gradient(90deg,var(--gold),var(--gold2))","linear-gradient(90deg,#4a9b7a,#6dc4a0)","linear-gradient(90deg,var(--rose),var(--gold))","linear-gradient(90deg,#8b6cb0,var(--rose))"][i%6]}}/>
+                <div style={{width:50,height:50,borderRadius:14,background:"var(--pink-bg)",border:"1px solid var(--pink-lt)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,marginBottom:16}}>
                   {icon}
                 </div>
                 <h3 style={{fontWeight:700,color:"var(--dark)",fontSize:17,marginBottom:8}}>{title}</h3>
@@ -304,7 +303,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:28}}>
             {ta2(l,"how").map(([n,title,desc],i)=>(
               <div key={i} style={{textAlign:"center"}}>
-                <div style={{width:60,height:60,borderRadius:"50%",background:["var(--rose-bg)","rgba(139,108,176,0.08)","rgba(196,164,90,0.08)","rgba(74,155,122,0.08)"][i],border:`2px solid ${["var(--rose-lt)","rgba(139,108,176,0.3)","rgba(196,164,90,0.3)","rgba(74,155,122,0.3)"][i]}`,display:"flex",alignItems:"center",justifyContent:"center",fontWeight:900,fontSize:22,color:["var(--rose)","#8b6cb0","var(--gold)","#4a9b7a"][i],margin:"0 auto 20px"}}>
+                <div style={{width:60,height:60,borderRadius:"50%",background:["var(--pink-bg)","rgba(139,108,176,0.08)","rgba(196,164,90,0.08)","rgba(74,155,122,0.08)"][i],border:`2px solid ${["var(--pink-lt)","rgba(139,108,176,0.3)","rgba(196,164,90,0.3)","rgba(74,155,122,0.3)"][i]}`,display:"flex",alignItems:"center",justifyContent:"center",fontWeight:900,fontSize:22,color:["var(--pink)","#8b6cb0","var(--gold)","#4a9b7a"][i],margin:"0 auto 20px"}}>
                   {i+1}
                 </div>
                 <h3 style={{fontWeight:700,color:"var(--dark)",fontSize:16,marginBottom:8}}>{title}</h3>
@@ -322,12 +321,12 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
       {/* ═══ FORMULARIO ═══════════════════════════════════ */}
       <section id="form" style={{padding:"88px 24px",background:"var(--bg2)",position:"relative",overflow:"hidden"}}>
-        <div style={{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%,-50%)",width:600,height:500,borderRadius:"50%",background:"rgba(245,213,204,0.3)",filter:"blur(80px)",pointerEvents:"none"}}/>
+        <div className="form-glow"/>
         <div style={{maxWidth:660,margin:"0 auto",position:"relative"}}>
-          <div className="card" style={{padding:"48px 44px",boxShadow:"0 20px 60px rgba(200,112,90,0.1)"}}>
+          <div className="form-card" style={{padding:"48px 44px"}}>
             {/* OF logo en el form */}
             <div style={{display:"flex",justifyContent:"center",marginBottom:20}}>
-              <div style={{display:"flex",alignItems:"center",gap:10,padding:"8px 20px",background:"rgba(0,174,239,0.06)",borderRadius:999,border:"1px solid rgba(0,174,239,0.15)"}}>
+              <div className="float-anim" style={{display:"flex",alignItems:"center",gap:10,padding:"8px 20px",background:"rgba(0,174,239,0.06)",borderRadius:999,border:"1px solid rgba(0,174,239,0.15)"}}>
                 <OFLogo size={22}/>
                 <span style={{fontSize:12,fontWeight:700,color:"#0099cc",letterSpacing:"0.06em",textTransform:"uppercase"}}>Management Application</span>
               </div>
@@ -376,7 +375,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <details key={i} className="card" style={{padding:0}}>
                 <summary style={{padding:"18px 22px",fontWeight:700,color:"var(--dark)",cursor:"pointer",fontSize:15,display:"flex",justifyContent:"space-between",alignItems:"center",userSelect:"none",listStyle:"none"}}>
                   <span style={{flex:1,paddingRight:16}}>{q}</span>
-                  <span className="plus-icon" style={{color:"var(--rose)",fontSize:24,fontWeight:300,lineHeight:1,flexShrink:0}}>+</span>
+                  <span className="plus-icon" style={{color:"var(--pink)",fontSize:24,fontWeight:300,lineHeight:1,flexShrink:0}}>+</span>
                 </summary>
                 <div style={{padding:"0 22px 18px",borderTop:"1px solid var(--border-d)"}}>
                   <p style={{color:"var(--muted)",lineHeight:1.75,fontSize:14,paddingTop:14}}>{a}</p>
@@ -407,13 +406,13 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 <Link key={p.slug} href={`/${l}/blog/${p.slug}/`} style={{textDecoration:"none"}}>
                   <article className="card" style={{padding:24,height:"100%",display:"flex",flexDirection:"column"}}>
                     <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
-                      <span style={{fontSize:10,fontWeight:700,color:"var(--rose)",textTransform:"uppercase",letterSpacing:"0.08em",background:"var(--rose-bg)",border:"1px solid var(--rose-lt)",padding:"2px 8px",borderRadius:999}}>{p.kw[0]}</span>
+                      <span style={{fontSize:10,fontWeight:700,color:"var(--pink)",textTransform:"uppercase",letterSpacing:"0.08em",background:"var(--pink-bg)",border:"1px solid var(--pink-lt)",padding:"2px 8px",borderRadius:999}}>{p.kw[0]}</span>
                       <span style={{fontSize:11,color:"var(--muted2)"}}>{p.date}</span>
                     </div>
                     <h3 style={{fontWeight:700,color:"var(--dark)",fontSize:15,marginBottom:8,lineHeight:1.35,flex:1}}>{p.title}</h3>
                     <p style={{color:"var(--muted)",fontSize:13,lineHeight:1.6,marginBottom:14,overflow:"hidden",display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical"}}>{p.excerpt}</p>
-                    <div style={{display:"flex",alignItems:"center",gap:5,color:"var(--rose)",fontSize:13,fontWeight:700}}>
-                      {l==="es"?"Leer":l==="en"?"Read":"Lire"} <Arr s={14} c="var(--rose)"/>
+                    <div style={{display:"flex",alignItems:"center",gap:5,color:"var(--pink)",fontSize:13,fontWeight:700}}>
+                      {l==="es"?"Leer":l==="en"?"Read":"Lire"} <Arr s={14} c="var(--pink)"/>
                     </div>
                   </article>
                 </Link>
@@ -425,7 +424,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
       {/* ═══ CTA FINAL — dark strip ══════════════════════ */}
       <section style={{padding:"88px 24px",background:"var(--dark)",position:"relative",overflow:"hidden"}}>
-        <div style={{position:"absolute",width:500,height:400,borderRadius:"50%",background:"rgba(200,112,90,0.08)",filter:"blur(90px)",top:"50%",left:"50%",transform:"translate(-50%,-50%)",pointerEvents:"none"}}/>
+        <div style={{position:"absolute",width:500,height:400,borderRadius:"50%",background:"rgba(196,105,154,0.08)",filter:"blur(90px)",top:"50%",left:"50%",transform:"translate(-50%,-50%)",pointerEvents:"none"}}/>
         <div style={{maxWidth:680,margin:"0 auto",textAlign:"center",position:"relative"}}>
           <div style={{display:"flex",justifyContent:"center",marginBottom:20}}>
             <OFLogo size={40}/>
@@ -447,7 +446,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <div className="footer-4" style={{display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:36,marginBottom:44}}>
             <div className="footer-brand">
               <div style={{fontSize:24,fontWeight:900,marginBottom:14,letterSpacing:"-0.5px",display:"flex",alignItems:"center",gap:10}}>
-                <span style={{color:"var(--rose2)"}}>Vixen</span><span style={{color:"#fff"}}>Agency</span>
+                <span style={{color:"var(--pink2)"}}>Vixen</span><span style={{color:"#fff"}}>Agency</span>
                 <OFLogo size={22}/>
               </div>
               <p style={{fontSize:13,color:"rgba(255,255,255,0.35)",lineHeight:1.7,maxWidth:260,marginBottom:20}}>{t(l,"footer_desc")}</p>
@@ -482,9 +481,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 {LOCALES.map(loc=>(
                   <Link key={loc} href={`/${loc}/`}
                     style={{fontSize:10,padding:"3px 7px",borderRadius:5,fontFamily:"monospace",textTransform:"uppercase",fontWeight:800,
-                      color:loc===l?"var(--rose2)":"rgba(255,255,255,0.25)",
-                      background:loc===l?"rgba(200,112,90,0.12)":"rgba(255,255,255,0.04)",
-                      border:`1px solid ${loc===l?"rgba(200,112,90,0.35)":"rgba(255,255,255,0.08)"}`}}>
+                      color:loc===l?"var(--pink2)":"rgba(255,255,255,0.25)",
+                      background:loc===l?"rgba(196,105,154,0.12)":"rgba(255,255,255,0.04)",
+                      border:`1px solid ${loc===l?"rgba(196,105,154,0.35)":"rgba(255,255,255,0.08)"}`}}>
                     {loc}
                   </Link>
                 ))}

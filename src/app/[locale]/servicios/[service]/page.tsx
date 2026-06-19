@@ -163,8 +163,7 @@ export default async function ServicePage({
           </p>
 
           <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
-            <a href={href} target="_blank" rel="noopener noreferrer"
-              className="btn btn-cta" style={{ fontSize:15, padding:"16px 36px" }}>
+            <a href="#form" className="btn btn-cta" style={{ fontSize:15, padding:"16px 36px" }}>
               {l==="es"?"Solicitar consulta gratuita":l==="en"?"Request free consultation":l==="fr"?"Demander une consultation":l==="de"?"Kostenlose Beratung":"Consulenza gratuita"}
             </a>
             <div style={{ display:"flex", alignItems:"center", gap:8, color:"var(--muted2)", fontSize:13 }}>
@@ -244,8 +243,7 @@ export default async function ServicePage({
               <p style={{ color:"var(--muted)", fontSize:13, lineHeight:1.65, marginBottom:22 }}>
                 {s.desc.slice(0, 100)}…
               </p>
-              <a href={href} target="_blank" rel="noopener noreferrer"
-                className="btn btn-cta"
+              <a href="#form" className="btn btn-cta"
                 style={{ display:"flex", justifyContent:"center", width:"100%", padding:"14px", fontSize:14, marginBottom:12 }}>
                 {l==="es"?"Consulta gratuita — WhatsApp":l==="en"?"Free consultation — WhatsApp":l==="fr"?"Consultation gratuite":l==="de"?"Kostenlose Beratung":"Consulenza gratuita"}
               </a>
@@ -293,7 +291,7 @@ export default async function ServicePage({
             {t(l,"cta_title")}
           </h2>
           <p style={{ color:"var(--muted)", fontSize:14, marginBottom:24 }}>{t(l,"cta_sub")}</p>
-          <a href={href} target="_blank" rel="noopener noreferrer" className="btn btn-cta" style={{ fontSize:15, padding:"16px 36px" }}>
+          <a href="#form" className="btn btn-cta" style={{ fontSize:15, padding:"16px 36px" }}>
             {t(l,"cta_btn")}
           </a>
           <p style={{ fontSize:11, color:"var(--muted2)", marginTop:14 }}>{t(l,"cta_note")}</p>

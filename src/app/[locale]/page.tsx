@@ -122,7 +122,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             </p>
 
             <div style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:28}}>
-              <a href={href} target="_blank" rel="noopener noreferrer" className="btn btn-dark">
+              <a href={`/${l}/#form`} className="btn btn-dark">
                 {CTA[l]} <Arr c="#fff"/>
               </a>
               <Link href={`/${l}/#form`} className="btn btn-outline-rose">
@@ -313,7 +313,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             ))}
           </div>
           <div style={{textAlign:"center",marginTop:44}}>
-            <a href={href} target="_blank" rel="noopener noreferrer" className="btn btn-rose">
+            <a href={`/${l}/#form`} className="btn btn-rose">
               {CTA[l]} <Arr c="#fff"/>
             </a>
           </div>
@@ -434,7 +434,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             {t(l,"cta_title")}
           </h2>
           <p style={{color:"rgba(255,255,255,0.5)",lineHeight:1.75,marginBottom:44,fontSize:15}}>{t(l,"cta_sub")}</p>
-          <a href={href} target="_blank" rel="noopener noreferrer" className="btn btn-rose" style={{fontSize:16,padding:"18px 48px"}}>
+          <a href={`/${l}/#form`} className="btn btn-rose" style={{fontSize:16,padding:"18px 48px"}}>
             {t(l,"cta_btn")} <Arr c="#fff" s={20}/>
           </a>
           <p style={{fontSize:12,color:"rgba(255,255,255,0.2)",marginTop:18}}>{t(l,"cta_note")}</p>

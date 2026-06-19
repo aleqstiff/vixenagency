@@ -268,8 +268,7 @@ export default async function BlogPost({
                l === "it" ? "VixenAgency gestisce tutto per te. Consulenza gratuita, senza impegno." :
                "VixenAgency cuida de tudo por você. Consulta gratuita, sem compromisso."}
             </p>
-            <a href={href} target="_blank" rel="noopener noreferrer"
-              className="btn btn-cta" style={{ fontSize: 15, padding: "14px 32px" }}>
+            <a href="#form" className="btn btn-cta" style={{ fontSize: 15, padding: "14px 32px" }}>
               {t(l, "cta_btn")}
             </a>
           </div>

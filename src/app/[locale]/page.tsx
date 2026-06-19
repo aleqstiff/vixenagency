@@ -82,9 +82,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
       {/* Netlify form detection (hidden — DO NOT REMOVE) */}
       <form name="aplicar" data-netlify="true" hidden>
-        <input name="bot-field"/>
         <input name="name"/>
         <input name="instagram"/>
+        <input name="social2"/>
+        <input name="social3"/>
         <input name="prefix"/>
         <input name="phone"/>
         <input name="email"/>

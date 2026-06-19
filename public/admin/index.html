@@ -111,7 +111,7 @@ tr.data-row:hover td{background:var(--pink-bg)}
 </head>
 <body><div id="app"></div>
 <script>
-const TOKEN="nfp_R3ukrVHYSdFrE3bWj9PTkwe9LT9Qr46j1b65",SITE="539966e5-25ee-4960-9e46-755cfc049bbc",PWD_HASH="c713619446642452fee8f5c6e48c2f98a2d8f4511946a70c8baecf66b10d6fa9",VALID_USER="stifflings";
+const PWD_HASH="c713619446642452fee8f5c6e48c2f98a2d8f4511946a70c8baecf66b10d6fa9",VALID_USER="stifflings";
 const THIRTY_DAYS=30*24*60*60*1000;
 const STATUSES=[
   {val:"nuevo",label:"🔴 Nuevo",cls:"tag-pink"},
@@ -186,17 +186,9 @@ function showErr(m){const e=document.getElementById("li-err");if(e){e.textConten
 async function fetchSubs(){
   S.loading=true;render();
   try{
-    const fr=await fetch(`https://api.netlify.com/api/v1/sites/${SITE}/forms`,{headers:{Authorization:`Bearer ${TOKEN}`}});
-    if(!fr.ok)throw new Error(`HTTP ${fr.status} — comprueba el token`);
-    const forms=await fr.json();
-    const form=forms.find(f=>f.name==="aplicar");
-    if(!form){
-      const names=forms.map(f=>f.name).join(", ")||"ninguno";
-      throw new Error(`Formulario "aplicar" no encontrado. Formularios en el site: ${names}`);
-    }
-    const sr=await fetch(`https://api.netlify.com/api/v1/forms/${form.id}/submissions?per_page=100`,{headers:{Authorization:`Bearer ${TOKEN}`}});
-    if(!sr.ok)throw new Error(`HTTP ${sr.status} al cargar submissions`);
-    S.subs=await sr.json();
+    const r=await fetch("/api/submissions",{headers:{"x-admin-token":"va_admin_stiff200"}});
+    if(!r.ok)throw new Error(`HTTP ${r.status}`);
+    S.subs=await r.json();
     S.loading=false;applyF();
   }catch(e){S.loading=false;S.error=e.message;render()}
 }
@@ -321,7 +313,7 @@ function saveNote(id,v){S.notes[id]=v;saveExtra()}
 function logout(){clearAuth();S.authed=false;S.subs=[];S.filtered=[];S.expanded=null;render()}
 async function delSub(id){
   try{
-    await fetch(`https://api.netlify.com/api/v1/submissions/${id}`,{method:"DELETE",headers:{Authorization:`Bearer ${TOKEN}`}});
+    await fetch(`/api/delete-submission?id=${id}`,{method:"DELETE",headers:{"x-admin-token":"va_admin_stiff200"}});
     S.subs=S.subs.filter(s=>s.id!==id);S.expanded=null;applyF();
   }catch(e){alert("Error: "+e.message)}
 }

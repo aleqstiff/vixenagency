@@ -72,28 +72,69 @@ function validateEmail(email: string): boolean {
 // ── Apply Form ──────────────────────────────────────────────────────────────
 export function ApplyForm({ locale, href }: { locale: string; href: string }) {
   const [status, setStatus] = useState<"idle"|"sending"|"ok"|"err">("idle");
-  const [d, setD] = useState({ name:"", instagram:"", phone:"", email:"", monthly:"", goal:"", country:"", notes:"" });
+  const [d, setD] = useState({
+    name:"", instagram:"", prefix:"+34", phone:"",
+    email:"", monthly:"", goal:"", country:"", availability:"", notes:""
+  });
   const [errors, setErrors] = useState<Record<string,string>>({});
 
+  // Country list for prefix + country selector
+  const PREFIXES = [
+    {code:"+34",flag:"🇪🇸",name:"España"},
+    {code:"+52",flag:"🇲🇽",name:"México"},
+    {code:"+54",flag:"🇦🇷",name:"Argentina"},
+    {code:"+57",flag:"🇨🇴",name:"Colombia"},
+    {code:"+56",flag:"🇨🇱",name:"Chile"},
+    {code:"+51",flag:"🇵🇪",name:"Perú"},
+    {code:"+58",flag:"🇻🇪",name:"Venezuela"},
+    {code:"+1",flag:"🇺🇸",name:"USA / Canadá"},
+    {code:"+55",flag:"🇧🇷",name:"Brasil"},
+    {code:"+33",flag:"🇫🇷",name:"France"},
+    {code:"+49",flag:"🇩🇪",name:"Deutschland"},
+    {code:"+39",flag:"🇮🇹",name:"Italia"},
+    {code:"+44",flag:"🇬🇧",name:"UK"},
+    {code:"+31",flag:"🇳🇱",name:"Nederland"},
+    {code:"+32",flag:"🇧🇪",name:"Belgique"},
+    {code:"+41",flag:"🇨🇭",name:"Suiza"},
+    {code:"+351",flag:"🇵🇹",name:"Portugal"},
+    {code:"+598",flag:"🇺🇾",name:"Uruguay"},
+    {code:"+593",flag:"🇪🇨",name:"Ecuador"},
+    {code:"+502",flag:"🇬🇹",name:"Guatemala"},
+    {code:"+507",flag:"🇵🇦",name:"Panamá"},
+  ] as const;
+
+  const COUNTRIES_ES = ["España","México","Argentina","Colombia","Chile","Perú","Venezuela","Estados Unidos","Canadá","Brasil","Francia","Alemania","Italia","Reino Unido","Portugal","Uruguay","Ecuador","Guatemala","Panamá","Bolivia","Paraguay","Costa Rica","Honduras","El Salvador","Nicaragua","Cuba","República Dominicana","Puerto Rico","Otro"];
+  const COUNTRIES_EN = ["Spain","Mexico","Argentina","Colombia","Chile","Peru","Venezuela","United States","Canada","Brazil","France","Germany","Italy","United Kingdom","Portugal","Uruguay","Ecuador","Other"];
+  const COUNTRIES_FR = ["France","Belgique","Suisse","Espagne","Mexique","Argentine","Colombie","États-Unis","Canada","Brésil","Italie","Allemagne","Portugal","Autre"];
+  const COUNTRIES_DE = ["Deutschland","Österreich","Schweiz","Spanien","Mexiko","Argentinien","Kolumbien","USA","Kanada","Brasilien","Frankreich","Italien","Vereinigtes Königreich","Andere"];
+  const COUNTRIES_IT = ["Italia","Spagna","Messico","Argentina","Colombia","Stati Uniti","Canadá","Brasile","Francia","Germania","Svizzera","Altro"];
+  const COUNTRIES_PT = ["Brasil","Portugal","Espanha","México","Argentina","Colômbia","Chile","Peru","Venezuela","Estados Unidos","Canadá","França","Alemanha","Itália","Outro"];
+
+  const COUNTRY_LIST: Record<string,string[]> = {es:COUNTRIES_ES,en:COUNTRIES_EN,fr:COUNTRIES_FR,de:COUNTRIES_DE,it:COUNTRIES_IT,pt:COUNTRIES_PT};
+
   const tx = ({
-    es: { title:"¿Lista para multiplicar tus ingresos?", sub:"Cuéntanos sobre tu cuenta. Análisis gratuito en menos de 24h.", name:"Tu nombre completo", ig:"Instagram / TikTok (usuario)", phone:"Teléfono (WhatsApp)", email:"Email", monthly:"Ingresos actuales en OnlyFans", goal:"¿Cuál es tu objetivo?", country:"País", notes:"Cuéntanos más sobre tu caso (opcional)", notesPlaceholder:"Ej: Llevo 3 meses en OnlyFans, gano 400€/mes, quiero llegar a 2.000€. Mi contenido es fitness sin mostrar cara...", submit:"Solicitar análisis gratuito →", ok:"¡Perfecto! 🎉 Te contactamos en menos de 24 horas por WhatsApp o email.", err:"Error al enviar. Escríbenos directamente por WhatsApp.", goals:["Empezar desde cero","Aumentar lo que ya gano","Llegar a +5.000€/mes","Otro objetivo"], note:"Sin compromiso · Sin cuota inicial · 100% confidencial", errPhone:"Introduce un teléfono válido (mín. 8 dígitos)", errEmail:"Introduce un email válido", errRequired:"Campo obligatorio" },
-    en: { title:"Ready to multiply your income?", sub:"Tell us about your account. Free analysis within 24 hours.", name:"Your full name", ig:"Instagram / TikTok (username)", phone:"Phone (WhatsApp)", email:"Email", monthly:"Current OnlyFans income", goal:"What's your goal?", country:"Country", notes:"Tell us more about your case (optional)", notesPlaceholder:"E.g: I've been on OnlyFans for 3 months, earning $400/mo, want to reach $2,000. My content is fitness without showing face...", submit:"Request free analysis →", ok:"Perfect! 🎉 We'll contact you within 24 hours via WhatsApp or email.", err:"Error. Message us on WhatsApp.", goals:["Start from scratch","Increase my current income","Reach $5,000+/month","Other goal"], note:"No commitment · No upfront fee · 100% confidential", errPhone:"Enter a valid phone number (min. 8 digits)", errEmail:"Enter a valid email", errRequired:"Required field" },
-    fr: { title:"Prête à multiplier tes revenus ?", sub:"Parle-nous de ton compte. Analyse gratuite en moins de 24h.", name:"Ton prénom et nom", ig:"Instagram / TikTok (nom d'utilisateur)", phone:"Téléphone (WhatsApp)", email:"Email", monthly:"Revenus actuels sur OnlyFans", goal:"Quel est ton objectif ?", country:"Pays", notes:"Dis-nous en plus sur ton cas (optionnel)", notesPlaceholder:"Ex: Je suis sur OnlyFans depuis 3 mois, je gagne 400€/mois, je veux atteindre 2.000€...", submit:"Demander une analyse gratuite →", ok:"Parfait ! 🎉 On te contacte dans moins de 24h par WhatsApp ou email.", err:"Erreur. Écris-nous sur WhatsApp.", goals:["Commencer de zéro","Augmenter mes revenus","Atteindre 5.000€+/mois","Autre"], note:"Sans engagement · Sans frais · 100% confidentiel", errPhone:"Entre un numéro valide (min. 8 chiffres)", errEmail:"Entre un email valide", errRequired:"Champ obligatoire" },
-    de: { title:"Bereit dein Einkommen zu multiplizieren?", sub:"Erzähl uns von deinem Account. Kostenlose Analyse in 24h.", name:"Dein vollständiger Name", ig:"Instagram / TikTok (Nutzername)", phone:"Telefon (WhatsApp)", email:"E-Mail", monthly:"Aktuelle OnlyFans-Einnahmen", goal:"Was ist dein Ziel?", country:"Land", notes:"Erzähl uns mehr über deinen Fall (optional)", notesPlaceholder:"z.B: Ich bin seit 3 Monaten auf OnlyFans, verdiene 400€/Monat, möchte 2.000€ erreichen...", submit:"Kostenlose Analyse anfordern →", ok:"Super! 🎉 Wir melden uns innerhalb von 24h per WhatsApp oder E-Mail.", err:"Fehler. Schreib uns auf WhatsApp.", goals:["Von Null starten","Einnahmen steigern","5.000€+/Monat erreichen","Anonymität","Anderes"], note:"Unverbindlich · Keine Vorauszahlung · 100% vertraulich", errPhone:"Gültige Telefonnummer eingeben (min. 8 Ziffern)", errEmail:"Gültige E-Mail eingeben", errRequired:"Pflichtfeld" },
-    it: { title:"Pronta a moltiplicare i tuoi guadagni?", sub:"Raccontaci del tuo account. Analisi gratuita entro 24 ore.", name:"Il tuo nome completo", ig:"Instagram / TikTok (nome utente)", phone:"Telefono (WhatsApp)", email:"Email", monthly:"Guadagni attuali su OnlyFans", goal:"Qual è il tuo obiettivo?", country:"Paese", notes:"Raccontaci di più del tuo caso (opzionale)", notesPlaceholder:"Es: Sono su OnlyFans da 3 mesi, guadagno 400€/mese, voglio arrivare a 2.000€...", submit:"Richiedi analisi gratuita →", ok:"Perfetto! 🎉 Ti contatteremo entro 24 ore via WhatsApp o email.", err:"Errore. Scrivici su WhatsApp.", goals:["Iniziare da zero","Aumentare i guadagni","Raggiungere 5.000€+/mese","Altro"], note:"Senza impegno · Senza costi · 100% riservato", errPhone:"Inserisci un numero valido (min. 8 cifre)", errEmail:"Inserisci un'email valida", errRequired:"Campo obbligatorio" },
-    pt: { title:"Pronta para multiplicar seus ganhos?", sub:"Fale-nos sobre sua conta. Análise gratuita em menos de 24h.", name:"Seu nome completo", ig:"Instagram / TikTok (usuário)", phone:"Telefone (WhatsApp)", email:"Email", monthly:"Ganhos atuais no OnlyFans", goal:"Qual é o seu objetivo?", country:"País", notes:"Conte-nos mais sobre o seu caso (opcional)", notesPlaceholder:"Ex: Estou no OnlyFans há 3 meses, ganho R$2.000/mês, quero chegar a R$10.000...", submit:"Solicitar análise gratuita →", ok:"Perfeito! 🎉 Entraremos em contato em menos de 24h por WhatsApp ou email.", err:"Erro. Escreva-nos pelo WhatsApp.", goals:["Começar do zero","Aumentar meus ganhos","Chegar a 5.000€+/mês","Outro objetivo"], note:"Sem compromisso · Sem taxa · 100% confidencial", errPhone:"Digite um número válido (mín. 8 dígitos)", errEmail:"Digite um email válido", errRequired:"Campo obrigatório" },
-  } as Record<string, { title:string;sub:string;name:string;ig:string;phone:string;email:string;monthly:string;goal:string;country:string;notes:string;notesPlaceholder:string;submit:string;ok:string;err:string;goals:string[];note:string;errPhone:string;errEmail:string;errRequired:string }>);
-  const tx_l = tx[locale] ?? tx.es;
+    es:{title:"¿Lista para empezar?",sub:"Cuéntanos sobre tu cuenta. Análisis gratuito en menos de 24h.",name:"Tu nombre completo",ig:"Instagram o TikTok",prefix:"Prefijo",phone:"Número de teléfono (WhatsApp)",email:"Email",monthly:"Ingresos actuales (ej: 500€/mes)",goal:"¿Cuál es tu objetivo?",country:"País",availability:"Disponibilidad diaria",notes:"Cuéntanos tu caso (opcional)",notesPlaceholder:"Ej: Llevo 3 meses, gano 400€/mes, quiero llegar a 2.000€...",submit:"Solicitar análisis gratuito →",ok:"¡Recibido! 🎉 Te contactamos en menos de 24h.",err:"Error al enviar. Escríbenos por WhatsApp.",goals:["Empezar desde cero","Aumentar lo que ya gano","Llegar a +5.000€/mes","Otro objetivo"],availOptions:["1 hora al día","Hasta 5 horas al día","Hasta 8 horas al día","Todo el día disponible"],note:"Sin compromiso · Sin cuota inicial · 100% confidencial",errPhone:"Introduce un número válido",errEmail:"Introduce un email válido",errRequired:"Campo obligatorio"},
+    en:{title:"Ready to start?",sub:"Tell us about your account. Free analysis within 24 hours.",name:"Your full name",ig:"Instagram or TikTok",prefix:"Prefix",phone:"Phone number (WhatsApp)",email:"Email",monthly:"Current income (e.g. $500/mo)",goal:"What's your goal?",country:"Country",availability:"Daily availability",notes:"Tell us your case (optional)",notesPlaceholder:"E.g: I've been 3 months, earning $400/mo, want to reach $2,000...",submit:"Request free analysis →",ok:"Received! 🎉 We'll contact you within 24h.",err:"Error. Message us on WhatsApp.",goals:["Start from scratch","Increase my current income","Reach $5,000+/month","Other goal"],availOptions:["1 hour a day","Up to 5 hours a day","Up to 8 hours a day","All day available"],note:"No commitment · No upfront fee · 100% confidential",errPhone:"Enter a valid number",errEmail:"Enter a valid email",errRequired:"Required"},
+    fr:{title:"Prête à commencer ?",sub:"Parle-nous de ton compte. Analyse gratuite en moins de 24h.",name:"Ton prénom et nom",ig:"Instagram ou TikTok",prefix:"Préfixe",phone:"Numéro de téléphone (WhatsApp)",email:"Email",monthly:"Revenus actuels (ex: 500€/mois)",goal:"Quel est ton objectif ?",country:"Pays",availability:"Disponibilité quotidienne",notes:"Parle-nous de ton cas (optionnel)",notesPlaceholder:"Ex: Je suis sur la plateforme depuis 3 mois, je gagne 400€/mois...",submit:"Demander une analyse gratuite →",ok:"Reçu ! 🎉 On te contacte dans moins de 24h.",err:"Erreur. Écris-nous sur WhatsApp.",goals:["Commencer de zéro","Augmenter mes revenus","Atteindre 5.000€+/mois","Autre"],availOptions:["1 heure par jour","Jusqu'à 5 heures par jour","Jusqu'à 8 heures par jour","Toute la journée"],note:"Sans engagement · Sans frais · 100% confidentiel",errPhone:"Numéro invalide",errEmail:"Email invalide",errRequired:"Champ obligatoire"},
+    de:{title:"Bereit loszulegen?",sub:"Erzähl uns von deinem Account. Kostenlose Analyse in 24h.",name:"Dein vollständiger Name",ig:"Instagram oder TikTok",prefix:"Vorwahl",phone:"Telefonnummer (WhatsApp)",email:"E-Mail",monthly:"Aktuelle Einnahmen (z.B. 500€/Monat)",goal:"Was ist dein Ziel?",country:"Land",availability:"Tägliche Verfügbarkeit",notes:"Erzähl uns deinen Fall (optional)",notesPlaceholder:"z.B: Ich bin seit 3 Monaten aktiv, verdiene 400€/Monat...",submit:"Kostenlose Analyse anfordern →",ok:"Erhalten! 🎉 Wir melden uns innerhalb von 24h.",err:"Fehler. Schreib uns auf WhatsApp.",goals:["Von Null starten","Einnahmen steigern","5.000€+/Monat erreichen","Anderes Ziel"],availOptions:["1 Stunde täglich","Bis zu 5 Stunden täglich","Bis zu 8 Stunden täglich","Den ganzen Tag"],note:"Unverbindlich · Keine Vorauszahlung · 100% vertraulich",errPhone:"Ungültige Nummer",errEmail:"Ungültige E-Mail",errRequired:"Pflichtfeld"},
+    it:{title:"Pronta a iniziare?",sub:"Raccontaci del tuo account. Analisi gratuita entro 24 ore.",name:"Il tuo nome completo",ig:"Instagram o TikTok",prefix:"Prefisso",phone:"Numero di telefono (WhatsApp)",email:"Email",monthly:"Guadagni attuali (es. 500€/mese)",goal:"Qual è il tuo obiettivo?",country:"Paese",availability:"Disponibilità giornaliera",notes:"Raccontaci il tuo caso (opzionale)",notesPlaceholder:"Es: Sono attiva da 3 mesi, guadagno 400€/mese...",submit:"Richiedi analisi gratuita →",ok:"Ricevuto! 🎉 Ti contatteremo entro 24 ore.",err:"Errore. Scrivici su WhatsApp.",goals:["Iniziare da zero","Aumentare i guadagni","Raggiungere 5.000€+/mese","Altro"],availOptions:["1 ora al giorno","Fino a 5 ore al giorno","Fino a 8 ore al giorno","Tutto il giorno"],note:"Senza impegno · Senza costi · 100% riservato",errPhone:"Numero non valido",errEmail:"Email non valida",errRequired:"Campo obbligatorio"},
+    pt:{title:"Pronta para começar?",sub:"Fale-nos sobre sua conta. Análise gratuita em menos de 24h.",name:"Seu nome completo",ig:"Instagram ou TikTok",prefix:"Prefixo",phone:"Número de telefone (WhatsApp)",email:"Email",monthly:"Ganhos atuais (ex: R$500/mês)",goal:"Qual é o seu objetivo?",country:"País",availability:"Disponibilidade diária",notes:"Conte-nos seu caso (opcional)",notesPlaceholder:"Ex: Estou ativa há 3 meses, ganho R$2.000/mês...",submit:"Solicitar análise gratuita →",ok:"Recebido! 🎉 Entraremos em contato em menos de 24h.",err:"Erro. Escreva-nos pelo WhatsApp.",goals:["Começar do zero","Aumentar meus ganhos","Chegar a 5.000€+/mês","Outro objetivo"],availOptions:["1 hora por dia","Até 5 horas por dia","Até 8 horas por dia","Dia todo disponível"],note:"Sem compromisso · Sem taxa · 100% confidencial",errPhone:"Número inválido",errEmail:"Email inválido",errRequired:"Campo obrigatório"},
+  } as Record<string,{title:string;sub:string;name:string;ig:string;prefix:string;phone:string;email:string;monthly:string;goal:string;country:string;availability:string;notes:string;notesPlaceholder:string;submit:string;ok:string;err:string;goals:string[];availOptions:string[];note:string;errPhone:string;errEmail:string;errRequired:string}>);
+  const T = tx[locale] ?? tx.es;
+  const countryList = COUNTRY_LIST[locale] ?? COUNTRIES_ES;
+
+  function validatePhone(p: string) { return p.replace(/\D/g,"").length >= 6; }
+  function validateEmail(e: string) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e); }
 
   function validate() {
     const e: Record<string,string> = {};
-    if (!d.name.trim()) e.name = tx_l.errRequired;
-    if (!d.instagram.trim()) e.instagram = tx_l.errRequired;
-    if (!d.phone.trim()) e.phone = tx_l.errRequired;
-    else if (!validatePhone(d.phone)) e.phone = tx_l.errPhone;
-    if (!d.email.trim()) e.email = tx_l.errRequired;
-    else if (!validateEmail(d.email)) e.email = tx_l.errEmail;
-    if (!d.goal) e.goal = tx_l.errRequired;
+    if (!d.name.trim()) e.name = T.errRequired;
+    if (!d.instagram.trim()) e.instagram = T.errRequired;
+    if (!d.phone.trim()) e.phone = T.errRequired;
+    else if (!validatePhone(d.phone)) e.phone = T.errPhone;
+    if (!d.email.trim()) e.email = T.errRequired;
+    else if (!validateEmail(d.email)) e.email = T.errEmail;
+    if (!d.goal) e.goal = T.errRequired;
     return e;
   }
 
@@ -101,10 +142,16 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
-    setErrors({});
-    setStatus("sending");
+    setErrors({}); setStatus("sending");
     try {
-      const body = new URLSearchParams({ "form-name":"aplicar", ...d });
+      const fullPhone = d.prefix + " " + d.phone;
+      const body = new URLSearchParams({
+        "form-name":"aplicar",
+        name:d.name, instagram:d.instagram,
+        phone:fullPhone, email:d.email,
+        monthly:d.monthly, goal:d.goal,
+        country:d.country, availability:d.availability, notes:d.notes
+      });
       const r = await fetch("/", { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:body.toString() });
       setStatus(r.ok ? "ok" : "err");
     } catch { setStatus("err"); }
@@ -112,152 +159,159 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
 
   const inp = (hasError: boolean): React.CSSProperties => ({
     width:"100%", padding:"14px 18px", borderRadius:12,
-    background:"#fff", border:`1.5px solid ${hasError?"#e05252":"rgba(26,18,16,0.1)"}`,
-    color:"var(--dark)", fontFamily:"inherit", fontSize:14,
-    outline:"none", transition:"border-color .2s",
-    boxShadow: hasError ? "0 0 0 3px rgba(224,82,82,0.1)" : "0 1px 4px rgba(26,18,16,0.04)",
+    background:"#fff", border:`1.5px solid ${hasError?"#e05252":"rgba(26,16,24,0.1)"}`,
+    color:"var(--dark)", fontFamily:"inherit", fontSize:16, outline:"none",
+    transition:"border-color .2s,box-shadow .2s",
+    boxShadow:hasError?"0 0 0 3px rgba(224,82,82,0.1)":"0 1px 4px rgba(26,16,24,0.04)",
+    appearance:"none" as const,
   });
 
-  const Err = ({ k }: { k: string }) => errors[k] ? (
-    <p style={{ color:"#e05252", fontSize:11, marginTop:4, fontWeight:600 }}>{errors[k]}</p>
-  ) : null;
+  const Err = ({k}:{k:string}) => errors[k]
+    ? <p style={{color:"#e05252",fontSize:11,marginTop:4,fontWeight:600}}>{errors[k]}</p>
+    : null;
+
+  const selArrow = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c4699a' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`;
 
   if (status === "ok") return (
-    <div style={{ textAlign:"center", padding:"48px 16px" }}>
-      <div style={{ fontSize:56, marginBottom:20 }}>🎉</div>
-      <h3 style={{ fontSize:22, fontWeight:800, color:"var(--dark)", marginBottom:10 }}>{tx_l.ok}</h3>
+    <div style={{textAlign:"center",padding:"48px 16px"}}>
+      <div style={{fontSize:52,marginBottom:16}}>🎉</div>
+      <h3 style={{fontSize:22,fontWeight:800,color:"var(--dark)",marginBottom:10}}>{T.ok}</h3>
       <a href={href} target="_blank" rel="noopener noreferrer"
-        style={{ display:"inline-flex", alignItems:"center", gap:8, marginTop:20, padding:"14px 28px", borderRadius:14, background:"#25D366", color:"#fff", fontWeight:700, fontSize:15 }}>
+        style={{display:"inline-flex",alignItems:"center",gap:8,marginTop:16,padding:"14px 28px",borderRadius:14,background:"#25D366",color:"#fff",fontWeight:700,fontSize:15}}>
         💬 WhatsApp
       </a>
     </div>
   );
 
   return (
-    <form name="aplicar" onSubmit={send} data-netlify="true" netlify-honeypot="bot-field" autoComplete="on" style={{position:"relative",zIndex:1}}>
+    <form name="aplicar" onSubmit={send} data-netlify="true" netlify-honeypot="bot-field"
+      autoComplete="on" style={{position:"relative",zIndex:1}}>
       <input type="hidden" name="form-name" value="aplicar"/>
-      <input type="hidden" name="bot-field" style={{ display:"none" }}/>
+      <input type="hidden" name="bot-field" style={{display:"none"}}/>
 
-      <h2 style={{ fontSize:"clamp(1.5rem,3vw,2.2rem)", fontWeight:900, color:"var(--dark)", textAlign:"center", marginBottom:8, letterSpacing:"-.5px" }}>{tx_l.title}</h2>
-      <p style={{ color:"var(--muted)", textAlign:"center", marginBottom:32, fontSize:15 }}>{tx_l.sub}</p>
+      <h2 style={{fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:900,color:"var(--dark)",textAlign:"center",marginBottom:8,letterSpacing:"-.5px"}}>{T.title}</h2>
+      <p style={{color:"var(--muted)",textAlign:"center",marginBottom:32,fontSize:15}}>{T.sub}</p>
 
-      {/* Row 1: Nombre + Instagram */}
-      <div className="form-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:12 }}>
+      {/* Nombre + Instagram */}
+      <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:12}}>
         <div>
-          <input
-            required name="name" autoComplete="name"
-            style={inp(!!errors.name)} placeholder={tx_l.name}
-            value={d.name} onChange={e => setD({...d, name:e.target.value})}
-            onBlur={() => { if (!d.name.trim()) setErrors(p => ({...p, name:tx_l.errRequired})); else setErrors(p => ({...p, name:""})); }}
-          />
+          <input required name="name" autoComplete="name" placeholder={T.name} style={inp(!!errors.name)}
+            value={d.name} onChange={e=>setD({...d,name:e.target.value})}
+            onBlur={()=>{if(!d.name.trim())setErrors(p=>({...p,name:T.errRequired}));else setErrors(p=>({...p,name:""}))}}/>
           <Err k="name"/>
         </div>
         <div>
-          <input
-            required name="instagram" autoComplete="username"
-            style={inp(!!errors.instagram)} placeholder={tx_l.ig}
-            value={d.instagram} onChange={e => setD({...d, instagram:e.target.value})}
-            onBlur={() => { if (!d.instagram.trim()) setErrors(p => ({...p, instagram:tx_l.errRequired})); else setErrors(p => ({...p, instagram:""})); }}
-          />
+          <input required name="instagram" autoComplete="username" placeholder={T.ig} style={inp(!!errors.instagram)}
+            value={d.instagram} onChange={e=>setD({...d,instagram:e.target.value})}
+            onBlur={()=>{if(!d.instagram.trim())setErrors(p=>({...p,instagram:T.errRequired}));else setErrors(p=>({...p,instagram:""}))}}/>
           <Err k="instagram"/>
         </div>
       </div>
 
-      {/* Row 2: Teléfono + Email */}
-      <div className="form-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:12 }}>
+      {/* Teléfono — prefijo + número */}
+      <div style={{marginBottom:12}}>
+        <div style={{display:"flex",gap:8,alignItems:"flex-start"}}>
+          {/* Prefix selector */}
+          <div style={{flexShrink:0,width:140}}>
+            <select name="prefix" autoComplete="tel-country-code"
+              style={{...inp(false),paddingRight:32,backgroundImage:selArrow,backgroundRepeat:"no-repeat",backgroundPosition:"right 10px center",cursor:"pointer",width:140}}
+              value={d.prefix} onChange={e=>setD({...d,prefix:e.target.value})}>
+              {PREFIXES.map(p=>(
+                <option key={p.code} value={p.code}>{p.flag} {p.code}</option>
+              ))}
+            </select>
+          </div>
+          {/* Number */}
+          <div style={{flex:1}}>
+            <input required name="phone" type="tel" autoComplete="tel-national"
+              placeholder={T.phone} style={inp(!!errors.phone)}
+              value={d.phone}
+              onChange={e=>{
+                const v=e.target.value.replace(/[^\d\s\-]/g,"");
+                setD({...d,phone:v});
+                if(errors.phone&&validatePhone(v))setErrors(p=>({...p,phone:""}));
+              }}
+              onBlur={()=>{
+                if(!d.phone.trim())setErrors(p=>({...p,phone:T.errRequired}));
+                else if(!validatePhone(d.phone))setErrors(p=>({...p,phone:T.errPhone}));
+                else setErrors(p=>({...p,phone:""}));
+              }}/>
+          </div>
+        </div>
+        <Err k="phone"/>
+      </div>
+
+      {/* Email */}
+      <div style={{marginBottom:12}}>
+        <input required name="email" type="email" autoComplete="email"
+          placeholder={T.email} style={inp(!!errors.email)}
+          value={d.email}
+          onChange={e=>{setD({...d,email:e.target.value});if(errors.email&&validateEmail(e.target.value))setErrors(p=>({...p,email:""}))}}
+          onBlur={()=>{if(!d.email.trim())setErrors(p=>({...p,email:T.errRequired}));else if(!validateEmail(d.email))setErrors(p=>({...p,email:T.errEmail}));else setErrors(p=>({...p,email:""}))}}/>
+        <Err k="email"/>
+      </div>
+
+      {/* Ingresos + País (dropdown) */}
+      <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:12}}>
         <div>
-          <input
-            required name="phone" type="tel" autoComplete="tel"
-            style={inp(!!errors.phone)} placeholder={tx_l.phone + " (+34 600 000 000)"}
-            value={d.phone}
-            onChange={e => {
-              const formatted = formatPhone(e.target.value);
-              setD({...d, phone:formatted});
-              if (errors.phone && validatePhone(formatted)) setErrors(p => ({...p, phone:""}));
-            }}
-            onBlur={() => {
-              if (!d.phone.trim()) setErrors(p => ({...p, phone:tx_l.errRequired}));
-              else if (!validatePhone(d.phone)) setErrors(p => ({...p, phone:tx_l.errPhone}));
-              else setErrors(p => ({...p, phone:""}));
-            }}
-          />
-          <Err k="phone"/>
+          <input name="monthly" autoComplete="off" placeholder={T.monthly}
+            style={inp(false)} value={d.monthly} onChange={e=>setD({...d,monthly:e.target.value})}/>
         </div>
         <div>
-          <input
-            required name="email" type="email" autoComplete="email"
-            style={inp(!!errors.email)} placeholder={tx_l.email}
-            value={d.email}
-            onChange={e => {
-              setD({...d, email:e.target.value});
-              if (errors.email && validateEmail(e.target.value)) setErrors(p => ({...p, email:""}));
-            }}
-            onBlur={() => {
-              if (!d.email.trim()) setErrors(p => ({...p, email:tx_l.errRequired}));
-              else if (!validateEmail(d.email)) setErrors(p => ({...p, email:tx_l.errEmail}));
-              else setErrors(p => ({...p, email:""}));
-            }}
-          />
-          <Err k="email"/>
+          <select name="country" autoComplete="country-name"
+            style={{...inp(false),backgroundImage:selArrow,backgroundRepeat:"no-repeat",backgroundPosition:"right 14px center",cursor:"pointer",paddingRight:40}}
+            value={d.country} onChange={e=>setD({...d,country:e.target.value})}>
+            <option value="">{T.country}</option>
+            {countryList.map(c=><option key={c} value={c}>{c}</option>)}
+          </select>
         </div>
       </div>
 
-      {/* Row 3: Ingresos + País */}
-      <div className="form-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:12 }}>
+      {/* Objetivo + Disponibilidad */}
+      <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:12}}>
         <div>
-          <input
-            name="monthly" autoComplete="off"
-            style={inp(false)} placeholder={tx_l.monthly + " (ej: 500€/mes)"}
-            value={d.monthly} onChange={e => setD({...d, monthly:e.target.value})}
-          />
+          <select required name="goal"
+            style={{...inp(!!errors.goal),backgroundImage:selArrow,backgroundRepeat:"no-repeat",backgroundPosition:"right 14px center",cursor:"pointer",paddingRight:40}}
+            value={d.goal} onChange={e=>{setD({...d,goal:e.target.value});setErrors(p=>({...p,goal:""}))}}>
+            <option value="">{T.goal}</option>
+            {T.goals.map(g=><option key={g} value={g}>{g}</option>)}
+          </select>
+          <Err k="goal"/>
         </div>
         <div>
-          <input
-            name="country" autoComplete="country-name"
-            style={inp(false)} placeholder={tx_l.country}
-            value={d.country} onChange={e => setD({...d, country:e.target.value})}
-          />
+          <select name="availability"
+            style={{...inp(false),backgroundImage:selArrow,backgroundRepeat:"no-repeat",backgroundPosition:"right 14px center",cursor:"pointer",paddingRight:40}}
+            value={d.availability} onChange={e=>setD({...d,availability:e.target.value})}>
+            <option value="">{T.availability}</option>
+            {T.availOptions.map(a=><option key={a} value={a}>{a}</option>)}
+          </select>
         </div>
       </div>
 
-      {/* Objetivo */}
-      <div style={{ marginBottom:12 }}>
-        <select
-          required name="goal" autoComplete="off"
-          style={{ ...inp(!!errors.goal), cursor:"pointer", fontSize:16, appearance:"none", backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c8705a' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat:"no-repeat", backgroundPosition:"right 14px center", paddingRight:"40px" }}
-          value={d.goal} onChange={e => { setD({...d, goal:e.target.value}); setErrors(p => ({...p, goal:""})); }}>
-          <option value="">{tx_l.goal}</option>
-          {tx_l.goals?.map(g => <option key={g} value={g}>{g}</option>)}
-        </select>
-        <Err k="goal"/>
-      </div>
-
-      {/* Textarea — cuenta tu caso */}
-      <div style={{ marginBottom:20 }}>
-        <label style={{ display:"block", fontSize:13, fontWeight:600, color:"var(--muted)", marginBottom:6 }}>
-          {tx_l.notes}
-          <span style={{ fontSize:11, color:"var(--muted2)", fontWeight:400, marginLeft:6 }}>
-            {locale==="es"?"(cuanto más detalle, mejor análisis)":locale==="en"?"(more detail = better analysis)":"(plus de détail = meilleure analyse)"}
+      {/* Textarea caso */}
+      <div style={{marginBottom:20}}>
+        <label style={{display:"block",fontSize:13,fontWeight:600,color:"var(--muted)",marginBottom:6}}>
+          {T.notes}
+          <span style={{fontSize:11,color:"var(--muted2)",fontWeight:400,marginLeft:6}}>
+            {locale==="es"?"(cuanto más detalle, mejor)":locale==="en"?"(more detail = better)":"(plus de détail = mieux)"}
           </span>
         </label>
-        <textarea
-          name="notes" autoComplete="off" rows={4}
-          style={{ ...inp(false), resize:"vertical", minHeight:100, maxHeight:240, lineHeight:1.6, fontSize:16 }}
-          placeholder={tx_l.notesPlaceholder}
-          value={d.notes} onChange={e => setD({...d, notes:e.target.value})}
-        />
+        <textarea name="notes" rows={4} placeholder={T.notesPlaceholder} autoComplete="off"
+          style={{...inp(false),resize:"vertical",minHeight:90,maxHeight:220,lineHeight:1.6}}
+          value={d.notes} onChange={e=>setD({...d,notes:e.target.value})}/>
       </div>
 
       <button type="submit" disabled={status==="sending"}
-        style={{ width:"100%", padding:"17px", borderRadius:14, background:status==="sending"?"rgba(196,105,154,0.5)":"var(--pink)", color:"#fff", fontWeight:800, fontSize:16, cursor:status==="sending"?"wait":"pointer", border:"none", fontFamily:"inherit", transition:"all .2s", letterSpacing:"-.2px", boxShadow:"0 4px 20px rgba(196,105,154,0.3)" }}>
-        {status==="sending" ? (locale==="es"?"Enviando…":"Sending…") : tx_l.submit}
+        style={{width:"100%",padding:"17px",borderRadius:14,background:status==="sending"?"rgba(196,105,154,0.5)":"var(--pink)",backgroundImage:status==="sending"?"none":"linear-gradient(135deg,var(--pink),var(--pink2))",color:"#fff",fontWeight:800,fontSize:16,cursor:status==="sending"?"wait":"pointer",border:"none",fontFamily:"inherit",transition:"all .2s",letterSpacing:"-.2px",boxShadow:"0 4px 20px rgba(196,105,154,0.3)"}}>
+        {status==="sending"?(locale==="es"?"Enviando…":"Sending…"):T.submit}
       </button>
 
-      {status==="err" && <p style={{ color:"#e05252", textAlign:"center", marginTop:12, fontSize:13 }}>{tx_l.err}</p>}
-      <p style={{ textAlign:"center", color:"var(--muted2)", fontSize:12, marginTop:12 }}>{tx_l.note}</p>
+      {status==="err"&&<p style={{color:"#e05252",textAlign:"center",marginTop:12,fontSize:13}}>{T.err}</p>}
+      <p style={{textAlign:"center",color:"var(--muted2)",fontSize:12,marginTop:12}}>{T.note}</p>
     </form>
   );
 }
+
 
 export function CounterStat({ value, label, color="var(--pink)" }: { value:string;label:string;color?:string }) {
   const { ref, vis } = useReveal(0.3);

@@ -85,11 +85,13 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         <input name="bot-field"/>
         <input name="name"/>
         <input name="instagram"/>
+        <input name="prefix"/>
         <input name="phone"/>
         <input name="email"/>
         <input name="monthly"/>
         <input name="goal"/>
         <input name="country"/>
+        <input name="availability"/>
         <textarea name="notes"/>
       </form>
       <MegaNav locale={l} posts={navPosts}/>

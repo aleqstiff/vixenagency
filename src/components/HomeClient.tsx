@@ -44,22 +44,20 @@ export function UnlockSection({ locale }: { locale: string }) {
 
 // ── Phone formatter ─────────────────────────────────────────────────────────
 function formatPhone(raw: string): string {
-  // Keep only digits and leading +
-  const clean = raw.replace(/[^\d+]/g, "").replace(/(?!^)\+/g, "");
+  // Strip everything except digits and a leading +
+  let clean = raw.replace(/[^\d+]/g, "").replace(/(?!^)\+/g, "");
   if (!clean) return "";
-  // If starts with +, international format
   if (clean.startsWith("+")) {
-    // +XX XXX XXX XXX
-    const digits = clean.slice(1);
-    if (digits.length <= 2) return "+" + digits;
-    if (digits.length <= 5) return "+" + digits.slice(0,2) + " " + digits.slice(2);
-    if (digits.length <= 8) return "+" + digits.slice(0,2) + " " + digits.slice(2,5) + " " + digits.slice(5);
-    return "+" + digits.slice(0,2) + " " + digits.slice(2,5) + " " + digits.slice(5,8) + " " + digits.slice(8,12);
+    const d = clean.slice(1).slice(0, 12);
+    if (d.length <= 2)  return "+" + d;
+    if (d.length <= 5)  return "+" + d.slice(0,2) + " " + d.slice(2);
+    if (d.length <= 8)  return "+" + d.slice(0,2) + " " + d.slice(2,5) + " " + d.slice(5);
+    return "+" + d.slice(0,2) + " " + d.slice(2,5) + " " + d.slice(5,8) + " " + d.slice(8,12);
   }
-  // Spanish-style: 6XX XXX XXX
-  if (clean.length <= 3) return clean;
-  if (clean.length <= 6) return clean.slice(0,3) + " " + clean.slice(3);
-  return clean.slice(0,3) + " " + clean.slice(3,6) + " " + clean.slice(6,9);
+  const d = clean.slice(0, 9);
+  if (d.length <= 3) return d;
+  if (d.length <= 6) return d.slice(0,3) + " " + d.slice(3);
+  return d.slice(0,3) + " " + d.slice(3,6) + " " + d.slice(6,9);
 }
 
 function validatePhone(phone: string): boolean {
@@ -226,7 +224,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
       <div style={{ marginBottom:12 }}>
         <select
           required name="goal" autoComplete="off"
-          style={{ ...inp(!!errors.goal), cursor:"pointer", appearance:"none", backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c8705a' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat:"no-repeat", backgroundPosition:"right 14px center", paddingRight:"40px" }}
+          style={{ ...inp(!!errors.goal), cursor:"pointer", fontSize:16, appearance:"none", backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c8705a' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat:"no-repeat", backgroundPosition:"right 14px center", paddingRight:"40px" }}
           value={d.goal} onChange={e => { setD({...d, goal:e.target.value}); setErrors(p => ({...p, goal:""})); }}>
           <option value="">{tx_l.goal}</option>
           {tx_l.goals?.map(g => <option key={g} value={g}>{g}</option>)}
@@ -244,7 +242,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
         </label>
         <textarea
           name="notes" autoComplete="off" rows={4}
-          style={{ ...inp(false), resize:"vertical", minHeight:100, maxHeight:240, lineHeight:1.6 }}
+          style={{ ...inp(false), resize:"vertical", minHeight:100, maxHeight:240, lineHeight:1.6, fontSize:16 }}
           placeholder={tx_l.notesPlaceholder}
           value={d.notes} onChange={e => setD({...d, notes:e.target.value})}
         />

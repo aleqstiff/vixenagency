@@ -7,7 +7,6 @@ import {
 import { TR, t, ta, ta2 } from "@/lib/translations";
 import { POSTS } from "@/lib/blog";
 import MegaNav from "@/components/MegaNav";
-import Popup from "@/components/Popup";
 
 export async function generateStaticParams() {
   return LOCALES.map(l => ({ locale: l }));
@@ -82,9 +81,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <MegaNav locale={l} posts={navPosts} />
-      <Popup locale={l} href={href} />
-
-      {/* ════════════════════════════════════════════════════════════
+{/* ════════════════════════════════════════════════════════════
           HERO — Big numbers, minimal copy, dual CTA
       ════════════════════════════════════════════════════════════ */}
       <section style={{ position:"relative", overflow:"hidden", padding:"96px 20px 80px" }}>

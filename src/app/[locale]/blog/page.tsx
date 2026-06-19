@@ -4,7 +4,6 @@ import { LOCALES, type Locale, BASE_URL, LOCALE_COUNTRIES, COUNTRIES, waLink, wa
 import { POSTS } from "@/lib/blog";
 import { t } from "@/lib/translations";
 import MegaNav from "@/components/MegaNav";
-import Popup from "@/components/Popup";
 
 export async function generateStaticParams() {
   return LOCALES.map(locale => ({ locale }));
@@ -53,9 +52,7 @@ export default async function BlogIndex({ params }: { params: Promise<{ locale: 
   return (
     <>
       <MegaNav locale={l} posts={navPosts} />
-      <Popup locale={l} href={waHref} />
-
-      {/* ── Blog hero ───────────────────────────────── */}
+{/* ── Blog hero ───────────────────────────────── */}
       <div style={{ background: "var(--bg2)", padding: "52px 20px 44px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <Link href={`/${l}/`} style={{ fontSize: 12, color: "var(--muted)", textDecoration: "none" }}>← Home</Link>

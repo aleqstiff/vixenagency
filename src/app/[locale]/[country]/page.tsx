@@ -3,7 +3,6 @@ import Link from "next/link";
 import { LOCALES, type Locale, COUNTRIES, LOCALE_COUNTRIES, BASE_URL, WA, waLink, waMsg } from "@/lib/config";
 import { t, ta2 } from "@/lib/translations";
 import MegaNav from "@/components/MegaNav";
-import Popup from "@/components/Popup";
 
 export async function generateStaticParams() {
   const params: { locale: string; country: string }[] = [];
@@ -74,9 +73,7 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <MegaNav locale={l} />
-      <Popup locale={l} href={href} />
-
-      <section style={{ position:"relative",padding:"80px 20px 60px",textAlign:"center",overflow:"hidden" }}>
+<section style={{ position:"relative",padding:"80px 20px 60px",textAlign:"center",overflow:"hidden" }}>
         <div style={{ position:"absolute",inset:0,background:"radial-gradient(ellipse 70% 60% at 50% 0%,rgba(0,229,212,0.1) 0%,transparent 65%)",pointerEvents:"none" }} />
         <div style={{ maxWidth:800,margin:"0 auto",position:"relative" }}>
           <div style={{ fontSize:56,marginBottom:16 }}>{c.flag}</div>

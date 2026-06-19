@@ -40,7 +40,7 @@ export const LOCALE_COUNTRIES: Record<Locale, CountrySlug[]> = {
 // ── SERVICE / KEYWORD PAGES (much more) ──────────────────────────────────────
 export interface ServicePage {
   slug: string; title: string; headline: string; desc: string; kw: string;
-  icon: string; color: string;
+  icon: string; color: string; intent?: "info"|"commercial"|"transactional";
 }
 
 export const SERVICES: Record<Locale, ServicePage[]> = {

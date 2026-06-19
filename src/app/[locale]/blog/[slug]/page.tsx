@@ -7,7 +7,6 @@ import {
 import { POSTS } from "@/lib/blog";
 import { t } from "@/lib/translations";
 import MegaNav from "@/components/MegaNav";
-import Popup from "@/components/Popup";
 
 export async function generateStaticParams() {
   return POSTS.map(p => ({ locale: p.locale, slug: p.slug }));
@@ -198,9 +197,7 @@ export default async function BlogPost({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <MegaNav locale={l} posts={navPosts} />
-      <Popup locale={l} href={href} />
-
-      {/* ── Article hero ───────────────────────────────── */}
+{/* ── Article hero ───────────────────────────────── */}
       <div style={{ background: "var(--bg2)", padding: "52px 20px 40px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth: 740, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20, flexWrap: "wrap" }}>

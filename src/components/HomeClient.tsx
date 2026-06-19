@@ -143,18 +143,31 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setErrors({}); setStatus("sending");
-    try {
-      const fullPhone = d.prefix + " " + d.phone;
-      const body = new URLSearchParams({
-        "form-name":"aplicar",
-        name:d.name, instagram:d.instagram,
-        phone:fullPhone, email:d.email,
-        monthly:d.monthly, goal:d.goal,
-        country:d.country, availability:d.availability, notes:d.notes
-      });
-      const r = await fetch("/", { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:body.toString() });
-      setStatus(r.ok ? "ok" : "err");
-    } catch { setStatus("err"); }
+    const fullPhone = d.prefix + " " + d.phone;
+    const payload = new URLSearchParams({
+      "form-name": "aplicar",
+      name: d.name, instagram: d.instagram,
+      phone: fullPhone, email: d.email,
+      monthly: d.monthly, goal: d.goal,
+      country: d.country, availability: d.availability, notes: d.notes,
+    });
+    // Try multiple endpoints — Netlify processes forms before redirects
+    const endpoints = ["/formulario.html", "/"];
+    for (const url of endpoints) {
+      try {
+        const r = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: payload.toString(),
+        });
+        // Netlify returns 200 on success (even redirecting to thank-you)
+        if (r.ok || r.status === 301 || r.status === 302) {
+          setStatus("ok");
+          return;
+        }
+      } catch (_) { /* try next */ }
+    }
+    setStatus("err");
   }
 
   const inp = (hasError: boolean): React.CSSProperties => ({

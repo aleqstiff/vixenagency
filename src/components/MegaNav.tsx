@@ -27,7 +27,7 @@ export default function MegaNav({ locale, posts = [] }: {
   const PILL: React.CSSProperties = {
     background:"none", border:"none", cursor:"pointer",
     padding:"8px 14px", borderRadius:8, fontSize:14, fontWeight:600,
-    color:"rgba(255,255,255,0.5)", display:"flex", alignItems:"center", gap:5,
+    color:"rgba(26,18,16,0.55)", display:"flex", alignItems:"center", gap:5,
   };
 
   const MEGA: React.CSSProperties = {
@@ -39,11 +39,11 @@ export default function MegaNav({ locale, posts = [] }: {
 
   return (
     <>
-      <nav style={{ position:"sticky", top:0, zIndex:100, background:"rgba(8,8,8,0.97)", backdropFilter:"blur(20px)", borderBottom:"1px solid rgba(26,22,18,0.08)" }}>
+      <nav style={{ position:"sticky", top:0, zIndex:100, background:"rgba(255,255,255,0.96)", backdropFilter:"blur(20px)", borderBottom:"1px solid rgba(26,22,18,0.08)" }}>
         <div style={{ maxWidth:1280, margin:"0 auto", padding:"0 20px", height:64, display:"flex", alignItems:"center", justifyContent:"space-between", gap:8 }}>
 
           {/* Logo */}
-          <Link href={`/${locale}/`} style={{ fontWeight:800, fontSize:20, letterSpacing:"-0.5px", textDecoration:"none", color:"#fff", flexShrink:0 }}>
+          <Link href={`/${locale}/`} style={{ fontWeight:800, fontSize:20, letterSpacing:"-0.5px", textDecoration:"none", color:"var(--dark)", flexShrink:0 }}>
             <span style={{ fontFamily:"'Playfair Display',Georgia,serif", fontStyle:"italic" }}>Vixen</span>
             <span style={{ fontWeight:700 }}>Agency</span>
           </Link>
@@ -61,15 +61,15 @@ export default function MegaNav({ locale, posts = [] }: {
                   <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:8 }}>
                     {services.map(s => (
                       <Link key={s.slug} href={`/${locale}/servicios/${s.slug}/`}
-                        style={{ display:"flex", gap:12, padding:"10px 14px", borderRadius:12, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", textDecoration:"none", transition:"border-color .15s" }}
+                        style={{ display:"flex", gap:12, padding:"10px 14px", borderRadius:12, background:"var(--bg2)", border:"1px solid var(--border-d)", textDecoration:"none", transition:"border-color .15s" }}
                         onMouseEnter={e => ((e.currentTarget as HTMLElement).style.borderColor="rgba(212,130,106,0.4)")}
                         onMouseLeave={e => ((e.currentTarget as HTMLElement).style.borderColor="rgba(255,255,255,0.08)")}>
-                        <div style={{ width:36, height:36, borderRadius:10, background:"rgba(212,130,106,0.08)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:16, flexShrink:0 }}>
+                        <div style={{ width:36, height:36, borderRadius:10, background:"var(--rose-bg)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:16, flexShrink:0 }}>
                           {s.icon}
                         </div>
                         <div>
-                          <p style={{ fontWeight:700, color:"#fff", fontSize:13, marginBottom:2 }}>{s.title.split("—")[0].trim()}</p>
-                          <p style={{ color:"rgba(255,255,255,0.45)", fontSize:11 }}>{s.desc.slice(0,52)}…</p>
+                          <p style={{ fontWeight:700, color:"var(--dark)", fontSize:13, marginBottom:2 }}>{s.title.split("—")[0].trim()}</p>
+                          <p style={{ color:"var(--muted)", fontSize:11 }}>{s.desc.slice(0,52)}…</p>
                         </div>
                       </Link>
                     ))}
@@ -90,13 +90,13 @@ export default function MegaNav({ locale, posts = [] }: {
                         const c = COUNTRIES[ck];
                         return (
                           <Link key={ck} href={`/${locale}/${ck}/`}
-                            style={{ display:"flex", alignItems:"center", gap:10, padding:"10px 12px", borderRadius:10, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", textDecoration:"none" }}
+                            style={{ display:"flex", alignItems:"center", gap:10, padding:"10px 12px", borderRadius:10, background:"var(--bg2)", border:"1px solid var(--border-d)", textDecoration:"none" }}
                             onMouseEnter={e => ((e.currentTarget as HTMLElement).style.borderColor="rgba(212,130,106,0.4)")}
                             onMouseLeave={e => ((e.currentTarget as HTMLElement).style.borderColor="rgba(255,255,255,0.08)")}>
                             <span style={{ fontSize:20 }}>{c.flag}</span>
                             <div>
-                              <p style={{ fontWeight:700, color:"#fff", fontSize:13 }}>{c.name}</p>
-                              <p style={{ color:"rgba(255,255,255,0.45)", fontSize:11 }}>{c.city}</p>
+                              <p style={{ fontWeight:700, color:"var(--dark)", fontSize:13 }}>{c.name}</p>
+                              <p style={{ color:"var(--muted)", fontSize:11 }}>{c.city}</p>
                             </div>
                           </Link>
                         );
@@ -118,11 +118,11 @@ export default function MegaNav({ locale, posts = [] }: {
                   <div style={{ display:"grid", gap:6, marginBottom:12 }}>
                     {posts.slice(0,4).map(p => (
                       <Link key={p.slug} href={`/${locale}/blog/${p.slug}/`}
-                        style={{ display:"flex", gap:10, padding:"10px 12px", borderRadius:10, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", textDecoration:"none" }}
+                        style={{ display:"flex", gap:10, padding:"10px 12px", borderRadius:10, background:"var(--bg2)", border:"1px solid var(--border-d)", textDecoration:"none" }}
                         onMouseEnter={e => ((e.currentTarget as HTMLElement).style.borderColor="rgba(212,130,106,0.4)")}
                         onMouseLeave={e => ((e.currentTarget as HTMLElement).style.borderColor="rgba(255,255,255,0.08)")}>
-                        <div style={{ width:30, height:30, borderRadius:8, background:"rgba(212,130,106,0.08)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:13, flexShrink:0 }}>✍</div>
-                        <p style={{ fontWeight:600, color:"#fff", fontSize:13, lineHeight:1.3 }}>{p.title}</p>
+                        <div style={{ width:30, height:30, borderRadius:8, background:"var(--rose-bg)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:13, flexShrink:0 }}>✍</div>
+                        <p style={{ fontWeight:600, color:"var(--dark)", fontSize:13, lineHeight:1.3 }}>{p.title}</p>
                       </Link>
                     ))}
                   </div>
@@ -159,7 +159,7 @@ export default function MegaNav({ locale, posts = [] }: {
 
           {/* Hamburger */}
           <button className="show-mobile" onClick={() => setMobile(!mobile)} aria-label="Menu"
-            style={{ background:"rgba(255,255,255,0.06)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:10, padding:"10px 12px", cursor:"pointer", flexDirection:"column", gap:5, alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+            style={{ background:"rgba(255,255,255,0.06)", border:"1px solid var(--border-d)", borderRadius:10, padding:"10px 12px", cursor:"pointer", flexDirection:"column", gap:5, alignItems:"center", justifyContent:"center", flexShrink:0 }}>
             {[0,1,2].map(i => (
               <span key={i} style={{ display:"block", width:22, height:2, background:"var(--bg2)", borderRadius:1, transition:"all .25s",
                 transform:mobile?(i===0?"rotate(45deg) translate(5px,5px)":i===2?"rotate(-45deg) translate(5px,-5px)":"none"):"none",
@@ -184,7 +184,7 @@ export default function MegaNav({ locale, posts = [] }: {
         {/* Servicios */}
         <div style={{ marginBottom:6 }}>
           <button onClick={() => setMSection(mSection==="sv"?null:"sv")}
-            style={{ width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", cursor:"pointer", color:"#fff", fontWeight:700, fontSize:15 }}>
+            style={{ width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid var(--border-d)", cursor:"pointer", color:"var(--dark)", fontWeight:700, fontSize:15 }}>
             <span>{L.sv[locale]}</span>
             <span style={{ color:"var(--rose2)", fontSize:22, fontWeight:300, transform:mSection==="sv"?"rotate(45deg)":"none", transition:"transform .2s", lineHeight:1 }}>+</span>
           </button>
@@ -192,11 +192,11 @@ export default function MegaNav({ locale, posts = [] }: {
             <div style={{ padding:"10px 0 0 6px", display:"grid", gap:6 }}>
               {services.map(s => (
                 <Link key={s.slug} href={`/${locale}/servicios/${s.slug}/`} onClick={() => setMobile(false)}
-                  style={{ display:"flex", alignItems:"center", gap:12, padding:"12px 14px", borderRadius:10, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", textDecoration:"none" }}>
+                  style={{ display:"flex", alignItems:"center", gap:12, padding:"12px 14px", borderRadius:10, background:"var(--bg2)", border:"1px solid var(--border-d)", textDecoration:"none" }}>
                   <span style={{ fontSize:20 }}>{s.icon}</span>
                   <div>
-                    <p style={{ fontWeight:700, color:"#fff", fontSize:14 }}>{s.kw}</p>
-                    <p style={{ color:"rgba(255,255,255,0.45)", fontSize:11, marginTop:1 }}>{s.headline.slice(0,42)}…</p>
+                    <p style={{ fontWeight:700, color:"var(--dark)", fontSize:14 }}>{s.kw}</p>
+                    <p style={{ color:"var(--muted)", fontSize:11, marginTop:1 }}>{s.headline.slice(0,42)}…</p>
                   </div>
                 </Link>
               ))}
@@ -208,7 +208,7 @@ export default function MegaNav({ locale, posts = [] }: {
         {countries.length > 1 && (
           <div style={{ marginBottom:6 }}>
             <button onClick={() => setMSection(mSection==="co"?null:"co")}
-              style={{ width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", cursor:"pointer", color:"#fff", fontWeight:700, fontSize:15 }}>
+              style={{ width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid var(--border-d)", cursor:"pointer", color:"var(--dark)", fontWeight:700, fontSize:15 }}>
               <span>{L.co[locale]}</span>
               <span style={{ color:"var(--rose2)", fontSize:22, fontWeight:300, transform:mSection==="co"?"rotate(45deg)":"none", transition:"transform .2s", lineHeight:1 }}>+</span>
             </button>
@@ -218,11 +218,11 @@ export default function MegaNav({ locale, posts = [] }: {
                   const c = COUNTRIES[ck];
                   return (
                     <Link key={ck} href={`/${locale}/${ck}/`} onClick={() => setMobile(false)}
-                      style={{ display:"flex", alignItems:"center", gap:8, padding:"10px 12px", borderRadius:10, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", textDecoration:"none" }}>
+                      style={{ display:"flex", alignItems:"center", gap:8, padding:"10px 12px", borderRadius:10, background:"var(--bg2)", border:"1px solid var(--border-d)", textDecoration:"none" }}>
                       <span style={{ fontSize:20 }}>{c.flag}</span>
                       <div>
-                        <p style={{ fontWeight:700, color:"#fff", fontSize:13 }}>{c.name}</p>
-                        <p style={{ color:"rgba(255,255,255,0.45)", fontSize:11 }}>{c.city}</p>
+                        <p style={{ fontWeight:700, color:"var(--dark)", fontSize:13 }}>{c.name}</p>
+                        <p style={{ color:"var(--muted)", fontSize:11 }}>{c.city}</p>
                       </div>
                     </Link>
                   );
@@ -235,7 +235,7 @@ export default function MegaNav({ locale, posts = [] }: {
         {/* Blog */}
         <div style={{ marginBottom:6 }}>
           <button onClick={() => setMSection(mSection==="blog"?null:"blog")}
-            style={{ width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", cursor:"pointer", color:"#fff", fontWeight:700, fontSize:15 }}>
+            style={{ width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid var(--border-d)", cursor:"pointer", color:"var(--dark)", fontWeight:700, fontSize:15 }}>
             <span>Blog</span>
             <span style={{ color:"var(--rose2)", fontSize:22, fontWeight:300, transform:mSection==="blog"?"rotate(45deg)":"none", transition:"transform .2s", lineHeight:1 }}>+</span>
           </button>
@@ -243,9 +243,9 @@ export default function MegaNav({ locale, posts = [] }: {
             <div style={{ padding:"10px 0 0 6px", display:"grid", gap:6 }}>
               {posts.slice(0,5).map(p => (
                 <Link key={p.slug} href={`/${locale}/blog/${p.slug}/`} onClick={() => setMobile(false)}
-                  style={{ display:"flex", alignItems:"center", gap:10, padding:"12px 14px", borderRadius:10, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", textDecoration:"none" }}>
-                  <div style={{ width:30, height:30, borderRadius:8, background:"rgba(212,130,106,0.08)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:13, flexShrink:0 }}>✍</div>
-                  <p style={{ fontWeight:600, color:"#fff", fontSize:13, lineHeight:1.3 }}>{p.title}</p>
+                  style={{ display:"flex", alignItems:"center", gap:10, padding:"12px 14px", borderRadius:10, background:"var(--bg2)", border:"1px solid var(--border-d)", textDecoration:"none" }}>
+                  <div style={{ width:30, height:30, borderRadius:8, background:"var(--rose-bg)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:13, flexShrink:0 }}>✍</div>
+                  <p style={{ fontWeight:600, color:"var(--dark)", fontSize:13, lineHeight:1.3 }}>{p.title}</p>
                 </Link>
               ))}
             </div>
@@ -253,12 +253,12 @@ export default function MegaNav({ locale, posts = [] }: {
         </div>
 
         <Link href={`/${locale}/#como`} onClick={() => setMobile(false)}
-          style={{ display:"flex", alignItems:"center", gap:10, padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid rgba(255,255,255,0.08)", textDecoration:"none", marginBottom:6 }}>
-          <span style={{ fontWeight:700, color:"#fff", fontSize:15 }}>{L.how[locale]}</span>
+          style={{ display:"flex", alignItems:"center", gap:10, padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid var(--border-d)", textDecoration:"none", marginBottom:6 }}>
+          <span style={{ fontWeight:700, color:"var(--dark)", fontSize:15 }}>{L.how[locale]}</span>
         </Link>
 
         <div style={{ borderTop:"1px solid rgba(255,255,255,0.08)", paddingTop:20, marginTop:16 }}>
-          <p style={{ fontSize:11, color:"rgba(255,255,255,0.45)", fontWeight:700, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12 }}>
+          <p style={{ fontSize:11, color:"var(--muted)", fontWeight:700, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12 }}>
             {locale==="es"?"Idioma":locale==="en"?"Language":"Langue"}
           </p>
           <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>

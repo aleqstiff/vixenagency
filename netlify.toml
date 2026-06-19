@@ -1,11 +1,21 @@
 [build]
   command = "npm install && npm run build"
   publish = "out"
+
 [[redirects]]
   from = "/"
   to = "/es/"
   status = 301
+
+# Allow form submissions (POST to /) to pass through to Netlify
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 301
+  conditions = {Method = ["GET", "HEAD"]}
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false

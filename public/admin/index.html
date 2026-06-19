@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<title>VixenAgency — Admin</title>
+<meta name="robots" content="noindex,nofollow"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fdf5f8;--bg2:#fff;--dark:#1a1018;
+  --pink:#c4699a;--pink2:#d985b0;--pink-lt:#f9dcea;--pink-bg:#fdf0f6;
+  --gold:#b08a5a;--muted:rgba(26,16,24,0.5);--muted2:rgba(26,16,24,0.28);
+  --border:rgba(26,16,24,0.09);--shadow:0 4px 24px rgba(196,105,154,0.12);
+  --green:#22c55e;--purple:#8b6cb0;--amber:#d97706;--red:#dc2626;
+}
+body{background:var(--bg);color:var(--dark);font-family:'DM Sans',system-ui,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit;box-sizing:border-box}
+
+/* ── LOGIN ── */
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:radial-gradient(ellipse 60% 50% at 70% 40%,rgba(249,220,234,0.5) 0%,transparent 65%),
+            radial-gradient(ellipse 40% 50% at 20% 80%,rgba(249,220,234,0.3) 0%,transparent 60%)}
+.login-card{background:#fff;border:1px solid rgba(196,105,154,0.15);border-radius:24px;padding:48px 44px;width:100%;max-width:400px;
+  box-shadow:0 20px 60px rgba(196,105,154,0.12);animation:scale-in .4s cubic-bezier(.4,0,.2,1) both}
+.logo{font-size:24px;font-weight:900;margin-bottom:6px;text-align:center}
+.logo span{background:linear-gradient(135deg,var(--pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-sub{text-align:center;font-size:12px;color:var(--muted2);margin-bottom:32px;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.inp{width:100%;padding:13px 16px;border-radius:12px;border:1.5px solid var(--border);color:var(--dark);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s,transform .15s;background:#fff}
+.inp:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(196,105,154,0.1);transform:translateY(-1px)}
+.btn-login{width:100%;padding:15px;border-radius:12px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;border:none;font-weight:800;font-size:15px;margin-top:8px;transition:all .25s cubic-bezier(.4,0,.2,1);cursor:pointer;letter-spacing:-.2px;box-shadow:0 4px 20px rgba(196,105,154,0.3)}
+.btn-login:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(196,105,154,0.4)}
+.btn-login:disabled{opacity:.6;cursor:wait;transform:none}
+.err-msg{color:#dc2626;font-size:13px;text-align:center;margin-top:12px;padding:10px;background:#fef2f2;border-radius:8px}
+.lock-icon{text-align:center;font-size:36px;margin-bottom:20px;animation:float 4s ease-in-out infinite}
+
+/* ── HEADER ── */
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(196,105,154,0.06)}
+.hlogo{font-size:17px;font-weight:900}
+.hlogo span{color:var(--pink)}
+.hactions{display:flex;align-items:center;gap:10px}
+.dot-live{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s ease-in-out infinite}
+.tag{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.tag-pink{background:var(--pink-bg);color:var(--pink);border:1px solid rgba(196,105,154,0.25)}
+.tag-green{background:rgba(34,197,94,0.08);color:#16a34a;border:1px solid rgba(34,197,94,0.2)}
+.tag-purple{background:rgba(139,108,176,0.1);color:var(--purple);border:1px solid rgba(139,108,176,0.2)}
+.tag-amber{background:rgba(217,119,6,0.08);color:var(--amber);border:1px solid rgba(217,119,6,0.2)}
+.tag-gray{background:rgba(26,16,24,0.05);color:var(--muted);border:1px solid var(--border)}
+
+/* ── MAIN ── */
+main{max-width:1400px;margin:0 auto;padding:28px 24px}
+
+/* ── STATS ── */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px 22px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;cursor:default}
+.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.s1::before{background:var(--pink)}.s2::before{background:var(--purple)}.s3::before{background:var(--green)}.s4::before{background:var(--amber)}
+.stat-num{font-size:30px;font-weight:900;color:var(--dark);letter-spacing:-1.5px;line-height:1}
+.stat-lbl{font-size:12px;color:var(--muted);margin-top:5px;font-weight:500}
+
+/* ── TOOLBAR ── */
+.toolbar{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.search-wrap{flex:1;min-width:180px;position:relative}
+.search-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:13px;pointer-events:none}
+.search-inp{width:100%;padding:10px 14px 10px 34px;border-radius:10px;border:1.5px solid var(--border);font-size:13px;outline:none;transition:border-color .15s,box-shadow .15s;background:#fff;color:var(--dark)}
+.search-inp:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(196,105,154,0.08)}
+.flt-select{padding:10px 14px;border-radius:10px;border:1.5px solid var(--border);font-size:13px;color:var(--dark);background:#fff;outline:none;cursor:pointer;transition:border-color .15s}
+.flt-select:focus{border-color:var(--pink)}
+.btn-sm{padding:9px 16px;border-radius:10px;background:var(--pink-bg);border:1px solid rgba(196,105,154,0.2);color:var(--pink);font-weight:700;font-size:12px;cursor:pointer;transition:all .2s}
+.btn-sm:hover{background:var(--pink);color:#fff}
+.btn-ghost{padding:9px 16px;border-radius:10px;background:rgba(26,16,24,0.04);border:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px;cursor:pointer;transition:all .15s}
+.btn-ghost:hover{background:rgba(26,16,24,0.08)}
+
+/* ── TABLE ── */
+.table-wrap{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 2px 16px rgba(196,105,154,0.06)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead{background:var(--bg)}
+th{padding:12px 16px;text-align:left;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:14px 16px;border-bottom:1px solid rgba(26,16,24,0.04);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr.data-row{cursor:pointer;transition:background .15s}
+tr.data-row:hover td{background:var(--pink-bg)}
+.nm{font-weight:700;color:var(--dark);font-size:14px}
+.sub{font-size:11px;color:var(--muted);margin-top:2px}
+.ig{color:var(--pink);font-weight:600}
+.ph a{color:var(--dark);font-weight:600}
+.ph a:hover{color:var(--pink)}
+.em a{color:#0369a1;font-size:12px}
+.nt{max-width:200px;color:var(--muted);line-height:1.4;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:12px}
+.dt{color:var(--muted2);font-size:11px;white-space:nowrap}
+.status-sel{padding:5px 10px;border-radius:8px;border:1px solid var(--border);font-size:11px;font-weight:700;cursor:pointer;outline:none;background:#fff;transition:border-color .15s}
+.status-sel:focus{border-color:var(--pink)}
+
+/* ── EXPAND ── */
+.exp-row td{padding:0!important;border-bottom:1px solid var(--border)}
+.exp-inner{padding:20px 24px;background:var(--bg);display:grid;grid-template-columns:repeat(3,1fr);gap:16px;animation:fade-up .2s cubic-bezier(.4,0,.2,1)}
+.exp-f label{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;display:block}
+.exp-f p{font-size:13px;color:var(--dark);font-weight:500;line-height:1.5}
+.exp-full{grid-column:1/-1}
+.notes-box{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid var(--border);font-size:13px;color:var(--dark);background:#fff;resize:vertical;min-height:72px;outline:none;transition:border-color .15s}
+.notes-box:focus{border-color:var(--pink)}
+.case-box{background:#fff;padding:14px 16px;border-radius:10px;border:1px solid var(--border);line-height:1.65;color:var(--dark);white-space:pre-wrap;font-size:13px}
+.exp-actions{display:flex;gap:8px;flex-wrap:wrap;grid-column:1/-1;padding-top:10px;border-top:1px solid var(--border);margin-top:4px}
+.ab{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:700;border:none;cursor:pointer;transition:all .15s;text-decoration:none}
+.ab-wa{background:#dcfce7;color:#16a34a}.ab-wa:hover{background:#22c55e;color:#fff}
+.ab-em{background:#dbeafe;color:#1d4ed8}.ab-em:hover{background:#2563eb;color:#fff}
+.ab-nt{background:var(--pink-bg);color:var(--pink);border:1px solid rgba(196,105,154,0.2)}.ab-nt:hover{background:var(--pink);color:#fff}
+.ab-dl{background:#fee2e2;color:#dc2626}.ab-dl:hover{background:#dc2626;color:#fff}
+
+/* ── EMPTY / LOAD ── */
+.empty{text-align:center;padding:60px 24px;color:var(--muted)}
+.loading{text-align:center;padding:60px;color:var(--pink)}
+.spinner{width:34px;height:34px;border:3px solid var(--pink-lt);border-top-color:var(--pink);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px}
+
+/* ── KEYFRAMES ── */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}50%{box-shadow:0 0 0 6px rgba(34,197,94,0)}}
+@keyframes scale-in{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+@keyframes fade-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+@media(max-width:900px){.stats-row{grid-template-columns:repeat(2,1fr)}.exp-inner{grid-template-columns:1fr}}
+@media(max-width:600px){main{padding:16px}.toolbar{flex-direction:column;align-items:stretch}th:nth-child(4),td:nth-child(4),th:nth-child(5),td:nth-child(5){display:none}}
+</style>
+</head>
+<body><div id="app"></div>
+<script>
+const TOKEN="nfp_R3ukrVHYSdFrE3bWj9PTkwe9LT9Qr46j1b65",SITE="539966e5-25ee-4960-9e46-755cfc049bbc",PWD_HASH="144f637a3f634a2a9dd353d9339b1baf804ad79eec4e65b58ba67951124077ba",VALID_USER="vixen";
+const STATUSES=[
+  {val:"nuevo",label:"🔴 Nuevo",cls:"tag-pink"},
+  {val:"contactado",label:"📞 Contactado",cls:"tag-amber"},
+  {val:"negociacion",label:"💬 Negociación",cls:"tag-purple"},
+  {val:"cliente",label:"✅ Cliente",cls:"tag-green"},
+  {val:"descartado",label:"❌ Descartado",cls:"tag-gray"},
+];
+let S={authed:false,loading:false,subs:[],filtered:[],search:"",fStatus:"",fGoal:"",expanded:null,notes:{},statuses:{},error:""};
+try{const p=sessionStorage.getItem("va_s");if(p){const d=JSON.parse(p);S.authed=d.a||false}const n=sessionStorage.getItem("va_n");if(n)S.notes=JSON.parse(n);const st=sessionStorage.getItem("va_st");if(st)S.statuses=JSON.parse(st)}catch(e){}
+
+function saveSession(){try{sessionStorage.setItem("va_s",JSON.stringify({a:S.authed}));sessionStorage.setItem("va_n",JSON.stringify(S.notes));sessionStorage.setItem("va_st",JSON.stringify(S.statuses))}catch(e){}}
+
+async function sha256(str){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(str));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,"0")).join("")}
+
+async function doLogin(){
+  const u=document.getElementById("li-u").value.trim().toLowerCase();
+  const p=document.getElementById("li-p").value;
+  const btn=document.getElementById("li-btn");
+  if(!u||!p)return showErr("Introduce usuario y contraseña");
+  btn.disabled=true;btn.textContent="Verificando...";
+  const h=await sha256(p);
+  if(u!==VALID_USER||h!==PWD_HASH){btn.disabled=false;btn.textContent="Entrar →";return showErr("Usuario o contraseña incorrectos")}
+  S.authed=true;saveSession();
+  await fetchSubs();
+}
+
+function showErr(m){const e=document.getElementById("li-err");if(e){e.textContent=m;e.style.display="block"}}
+
+async function fetchSubs(){
+  S.loading=true;render();
+  try{
+    const fr=await fetch(`https://api.netlify.com/api/v1/sites/${SITE}/forms`,{headers:{Authorization:`Bearer ${TOKEN}`}});
+    if(!fr.ok)throw new Error(`HTTP ${fr.status}`);
+    const forms=await fr.json();
+    const form=forms.find(f=>f.name==="aplicar");
+    if(!form)throw new Error(`Formulario "aplicar" no encontrado. Disponibles: ${forms.map(f=>f.name).join(", ")}`);
+    const sr=await fetch(`https://api.netlify.com/api/v1/forms/${form.id}/submissions?per_page=100`,{headers:{Authorization:`Bearer ${TOKEN}`}});
+    if(!sr.ok)throw new Error(`HTTP ${sr.status}`);
+    S.subs=await sr.json();
+    S.loading=false;applyF();
+  }catch(e){S.loading=false;S.error=e.message;render()}
+}
+
+function applyF(){
+  let l=[...S.subs];
+  if(S.search){const q=S.search.toLowerCase();l=l.filter(s=>{const d=s.data||{};return[d.name,d.instagram,d.phone,d.email,d.country,d.goal,d.notes].some(v=>v&&String(v).toLowerCase().includes(q))})}
+  if(S.fStatus)l=l.filter(s=>(S.statuses[s.id]||"nuevo")===S.fStatus);
+  if(S.fGoal)l=l.filter(s=>(s.data||{}).goal===S.fGoal);
+  l.sort((a,b)=>new Date(b.created_at).getTime()-new Date(a.created_at).getTime());
+  S.filtered=l;S.loading=false;render();
+}
+
+function render(){document.getElementById("app").innerHTML=S.authed?renderDash():renderLogin();attachE()}
+
+function renderLogin(){return`<div class="login"><div class="login-card"><div class="lock-icon">🌸</div><div class="logo"><span>Vixen</span>Agency</div><div class="logo-sub">Panel de Administración</div><div class="field"><label>Usuario</label><input class="inp" id="li-u" type="text" autocomplete="username" placeholder="usuario" onkeydown="if(event.key==='Enter')document.getElementById('li-p').focus()"/></div><div class="field"><label>Contraseña</label><input class="inp" id="li-p" type="password" autocomplete="current-password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"/></div><button class="btn-login" id="li-btn" onclick="doLogin()">Entrar →</button><p class="err-msg" id="li-err" style="display:none"></p></div></div>`}
+
+function renderDash(){
+  const subs=S.subs;
+  const c={nuevo:0,contactado:0,negociacion:0,cliente:0,descartado:0};
+  subs.forEach(s=>{const st=S.statuses[s.id]||"nuevo";if(c[st]!==undefined)c[st]++});
+  const goals=[...new Set(subs.map(s=>(s.data||{}).goal).filter(Boolean))];
+  if(S.error)return`<header><div class="hlogo"><span>Vixen</span>Agency <small style="font-size:11px;color:var(--muted)">Admin</small></div></header><div style="padding:60px;text-align:center;color:#dc2626"><p style="font-size:18px;margin-bottom:10px">⚠️ ${S.error}</p><button class="btn-sm" onclick="S.error='';fetchSubs()" style="margin-top:12px">Reintentar</button></div>`;
+  return`
+  <header>
+    <div class="hlogo"><span>Vixen</span>Agency <small style="font-size:11px;color:var(--muted);font-weight:600">Admin</small></div>
+    <div class="hactions">
+      <span class="dot-live"></span>
+      <span style="font-size:12px;color:var(--muted);font-weight:600">${subs.length} aplicaciones</span>
+      <button class="btn-sm" onclick="fetchSubs()">↻ Actualizar</button>
+      <button class="btn-ghost" onclick="logout()">Salir</button>
+    </div>
+  </header>
+  <main>
+    <div class="stats-row">
+      <div class="stat-card s1"><div class="stat-num">${subs.length}</div><div class="stat-lbl">Total aplicaciones</div></div>
+      <div class="stat-card s2"><div class="stat-num">${c.nuevo}</div><div class="stat-lbl">🔴 Sin contactar</div></div>
+      <div class="stat-card s3"><div class="stat-num">${c.cliente}</div><div class="stat-lbl">✅ Clientes activos</div></div>
+      <div class="stat-card s4"><div class="stat-num">${c.contactado+c.negociacion}</div><div class="stat-lbl">En proceso</div></div>
+    </div>
+    <div class="toolbar">
+      <div class="search-wrap"><span class="search-ic">🔍</span><input class="search-inp" id="srch" placeholder="Buscar nombre, Instagram, teléfono..." value="${S.search}" oninput="S.search=this.value;applyF()"/></div>
+      <select class="flt-select" onchange="S.fStatus=this.value;applyF()"><option value="">Todos los estados</option>${STATUSES.map(s=>`<option value="${s.val}" ${S.fStatus===s.val?"selected":""}>${s.label}</option>`).join("")}</select>
+      ${goals.length?`<select class="flt-select" onchange="S.fGoal=this.value;applyF()"><option value="">Todos los objetivos</option>${goals.map(g=>`<option value="${g}" ${S.fGoal===g?"selected":""}>${g}</option>`).join("")}</select>`:""}
+      <button class="btn-sm" onclick="exportCSV()">↓ CSV</button>
+    </div>
+    <div class="table-wrap">
+      ${S.loading?`<div class="loading"><div class="spinner"></div>Cargando aplicaciones...</div>`:
+        S.filtered.length===0?`<div class="empty">Sin resultados${S.search||S.fStatus?` — <a href="#" onclick="S.search='';S.fStatus='';S.fGoal='';applyF();return false" style="color:var(--pink)">limpiar filtros</a>`:""}</div>`:
+        `<table><thead><tr><th>Creadora</th><th>Contacto</th><th>País / Ingresos</th><th>Objetivo</th><th>Caso</th><th>Estado</th><th>Fecha</th><th></th></tr></thead><tbody>${S.filtered.map(renderRow).join("")}</tbody></table>`}
+    </div>
+  </main>`;
+}
+
+function renderRow(s){
+  const d=s.data||{},st=S.statuses[s.id]||"nuevo",tag=STATUSES.find(x=>x.val===st)||STATUSES[0];
+  const isOpen=S.expanded===s.id;
+  const date=new Date(s.created_at);
+  const ds=date.toLocaleDateString("es-ES",{day:"2-digit",month:"short"})+" "+date.toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"});
+  const waN=(d.phone||"").replace(/\D/g,"");
+  const waN2=waN.startsWith("0")?waN.slice(1):waN;
+  const waHref=waN2?`https://wa.me/${waN2}?text=${encodeURIComponent(`Hola ${d.name||""}, soy VixenAgency. He revisado tu solicitud y me gustaría hablar contigo. ¿Tienes unos minutos?`)}`:"#";
+  const goalIcons={"Empezar desde cero":"🚀","Aumentar lo que ya gano":"📈","Llegar a +5.000€/mes":"💰","Máximo anonimato":"🔒","Start from scratch":"🚀","Increase my current income":"📈","Reach $5,000+/month":"💰","Full anonymity":"🔒"};
+  const gi=goalIcons[d.goal]||"🎯";
+  return`
+  <tr class="data-row" onclick="toggleExp('${s.id}')">
+    <td><div class="nm">${d.name||"—"}</div><div class="sub ig">@${d.instagram||"—"}</div></td>
+    <td class="ph"><a href="${waHref}" target="_blank" onclick="event.stopPropagation()">📱 ${d.phone||"—"}</a><div class="sub em"><a href="mailto:${d.email||""}" onclick="event.stopPropagation()">✉ ${d.email||"—"}</a></div></td>
+    <td><div style="font-weight:600;font-size:13px">${d.country||"—"}</div><div class="sub">${d.monthly||"No indicado"}</div></td>
+    <td><span style="font-size:15px">${gi}</span> <span style="font-size:11px;color:var(--muted);font-weight:600">${(d.goal||"—").slice(0,18)}</span></td>
+    <td class="nt">${d.notes||'<span style="font-style:italic;color:var(--muted2)">Sin detalle</span>'}</td>
+    <td onclick="event.stopPropagation()"><select class="status-sel" onchange="setStatus('${s.id}',this.value)">${STATUSES.map(x=>`<option value="${x.val}" ${x.val===st?"selected":""}>${x.label}</option>`).join("")}</select></td>
+    <td class="dt">${ds}</td>
+    <td style="text-align:center;color:var(--muted);font-size:14px">${isOpen?"▲":"▼"}</td>
+  </tr>
+  ${isOpen?renderExp(s):""}`;
+}
+
+function renderExp(s){
+  const d=s.data||{},an=S.notes[s.id]||"";
+  const waN=(d.phone||"").replace(/\D/g,"").replace(/^0/,"");
+  const waMsg=encodeURIComponent(`Hola ${d.name||""}, soy VixenAgency. He revisado tu solicitud y me gustaría hablar contigo. ¿Tienes unos minutos?`);
+  const emailSub=encodeURIComponent("Tu solicitud en VixenAgency");
+  const emailBody=encodeURIComponent(`Hola ${d.name||""},\n\nHemos revisado tu solicitud y nos gustaría conocer más sobre tu caso.\n\nUn saludo,\nVixenAgency`);
+  return`<tr class="exp-row"><td colspan="8"><div class="exp-inner">
+    <div class="exp-f"><label>Nombre</label><p>${d.name||"—"}</p></div>
+    <div class="exp-f"><label>Instagram / TikTok</label><p><a href="https://instagram.com/${(d.instagram||"").replace("@","")}" target="_blank" style="color:var(--pink)">@${d.instagram||"—"}</a></p></div>
+    <div class="exp-f"><label>Teléfono</label><p><a href="tel:${d.phone}" style="font-weight:700">${d.phone||"—"}</a></p></div>
+    <div class="exp-f"><label>Email</label><p><a href="mailto:${d.email}" style="color:#0369a1">${d.email||"—"}</a></p></div>
+    <div class="exp-f"><label>País</label><p>${d.country||"—"}</p></div>
+    <div class="exp-f"><label>Ingresos actuales</label><p style="font-weight:800;color:var(--pink)">${d.monthly||"No indicado"}</p></div>
+    <div class="exp-f"><label>Objetivo</label><p>${d.goal||"—"}</p></div>
+    <div class="exp-f"><label>Fecha</label><p>${new Date(s.created_at).toLocaleString("es-ES")}</p></div>
+    <div class="exp-f"><label>ID</label><p style="font-size:10px;font-family:monospace;color:var(--muted2)">${s.id}</p></div>
+    ${d.notes?`<div class="exp-f exp-full"><label>Caso detallado (escrito por la creadora)</label><div class="case-box">${d.notes}</div></div>`:""}
+    <div class="exp-f exp-full"><label>Notas internas del equipo</label><textarea class="notes-box" placeholder="Añade notas internas..." onchange="saveNote('${s.id}',this.value)">${an}</textarea></div>
+    <div class="exp-actions">
+      ${waN?`<a href="https://wa.me/${waN}?text=${waMsg}" target="_blank" class="ab ab-wa">💬 WhatsApp</a>`:""}
+      ${d.email?`<a href="mailto:${d.email}?subject=${emailSub}&body=${emailBody}" class="ab ab-em">✉ Email</a>`:""}
+      <button class="ab ab-nt" onclick="document.querySelector('.exp-inner textarea').focus()">📝 Nota interna</button>
+      <button class="ab ab-dl" onclick="if(confirm('¿Eliminar esta aplicación?'))delSub('${s.id}')">🗑 Eliminar</button>
+    </div>
+  </div></td></tr>`;
+}
+
+function attachE(){}
+function toggleExp(id){S.expanded=S.expanded===id?null:id;render()}
+function setStatus(id,v){S.statuses[id]=v;saveSession();applyF()}
+function saveNote(id,v){S.notes[id]=v;saveSession()}
+async function delSub(id){
+  try{await fetch(`https://api.netlify.com/api/v1/submissions/${id}`,{method:"DELETE",headers:{Authorization:`Bearer ${TOKEN}`}});S.subs=S.subs.filter(s=>s.id!==id);S.expanded=null;applyF()}
+  catch(e){alert("Error: "+e.message)}
+}
+function logout(){S.authed=false;S.expanded=null;saveSession();render()}
+function exportCSV(){
+  const h=["Fecha","Nombre","Instagram","Teléfono","Email","País","Ingresos","Objetivo","Caso","Estado"];
+  const rows=S.filtered.map(s=>{const d=s.data||{},st=STATUSES.find(x=>x.val===(S.statuses[s.id]||"nuevo"))?.label||"Nuevo";return[new Date(s.created_at).toLocaleString("es-ES"),d.name||"",d.instagram||"",d.phone||"",d.email||"",d.country||"",d.monthly||"",d.goal||"",(d.notes||"").replace(/\n/g," "),st].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",")});
+  const blob=new Blob(["\uFEFF"+[h.join(","),...rows].join("\n")],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`aplicaciones-${new Date().toISOString().slice(0,10)}.csv`;a.click();
+}
+if(S.authed)fetchSubs();else render();
+</script>
+</body>
+</html>

@@ -80,11 +80,17 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
-      {/* Netlify form detection (hidden) */}
+      {/* Netlify form detection (hidden — DO NOT REMOVE) */}
       <form name="aplicar" data-netlify="true" hidden>
-        <input name="bot-field"/><input name="name"/>
-        <input name="instagram"/><input name="monthly"/>
-        <input name="goal"/><input name="country"/><input name="email"/>
+        <input name="bot-field"/>
+        <input name="name"/>
+        <input name="instagram"/>
+        <input name="phone"/>
+        <input name="email"/>
+        <input name="monthly"/>
+        <input name="goal"/>
+        <input name="country"/>
+        <textarea name="notes"/>
       </form>
       <MegaNav locale={l} posts={navPosts}/>
 

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head><title>Aplicar — VixenAgency</title></head>
+<head><meta charset="utf-8"><title>Aplicar</title></head>
 <body>
-<!-- Netlify form detection -->
 <form name="aplicar" netlify netlify-honeypot="bot-field" hidden>
   <input name="bot-field"/>
   <input name="name"/>
   <input name="instagram"/>
+  <input type="tel" name="phone"/>
+  <input type="email" name="email"/>
   <input name="monthly"/>
-  <input name="goal"/>
+  <select name="goal"><option>-</option></select>
   <input name="country"/>
-  <input name="email"/>
+  <textarea name="notes"></textarea>
 </form>
 </body>
 </html>

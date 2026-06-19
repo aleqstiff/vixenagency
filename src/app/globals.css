@@ -162,3 +162,16 @@ details[open] > summary .plus-icon { transform: rotate(45deg); }
   .section-pad { padding: 60px 18px !important; }
   .hide-sm { display: none !important; }
 }
+
+/* ── HERO SPLIT RESPONSIVE ─────────────────────────── */
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .hero-img-col { display: none !important; }
+  .lifestyle-grid { grid-template-columns: 1fr !important; }
+  .lifestyle-mosaic { grid-template-rows: 200px 200px !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
+  .footer-brand { grid-column: 1/-1 !important; }
+}
+@media (max-width: 520px) {
+  .footer-grid { grid-template-columns: 1fr !important; }
+}

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
-<title>VixenAgency — Admin</title>
+<title>Only Sweety Agency — Admin</title>
 <meta name="robots" content="noindex,nofollow"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -207,7 +207,7 @@ function render(){document.getElementById("app").innerHTML=S.authed?renderDash()
 function renderLogin(){
   return`<div class="login"><div class="login-card">
     <div class="lock-icon">🌸</div>
-    <div class="logo"><span>Vixen</span>Agency</div>
+    <div class="logo"><span>Only Sweety</span> Agency</div>
     <div class="logo-sub">Panel de Administración</div>
     <div class="field"><label>Usuario</label><input class="inp" id="li-u" type="text" autocomplete="username" placeholder="stifflings" onkeydown="if(event.key==='Enter')document.getElementById('li-p').focus()"/></div>
     <div class="field"><label>Contraseña</label><input class="inp" id="li-p" type="password" autocomplete="current-password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"/></div>
@@ -221,14 +221,14 @@ function renderLogin(){
 }
 
 function renderDash(){
-  if(S.error)return`<header><div class="hlogo"><span>Vixen</span>Agency <small style="font-size:11px;color:var(--muted)">Admin</small></div></header><div style="padding:60px;text-align:center;color:#dc2626"><p style="font-size:16px;margin-bottom:10px">⚠️ ${S.error}</p><button class="btn-sm" onclick="S.error='';fetchSubs()" style="margin-top:12px">Reintentar</button></div>`;
+  if(S.error)return`<header><div class="hlogo"><span>Only Sweety</span> Agency <small style="font-size:11px;color:var(--muted)">Admin</small></div></header><div style="padding:60px;text-align:center;color:#dc2626"><p style="font-size:16px;margin-bottom:10px">⚠️ ${S.error}</p><button class="btn-sm" onclick="S.error='';fetchSubs()" style="margin-top:12px">Reintentar</button></div>`;
   const subs=S.subs;
   const c={nuevo:0,contactado:0,negociacion:0,cliente:0,descartado:0};
   subs.forEach(s=>{const st=S.statuses[s.id]||"nuevo";if(c[st]!==undefined)c[st]++});
   const goals=[...new Set(subs.map(s=>(s.data||{}).goal).filter(Boolean))];
   return`
   <header>
-    <div class="hlogo"><span>Vixen</span>Agency <small style="font-size:11px;color:var(--muted);font-weight:600">Admin</small></div>
+    <div class="hlogo"><span>Only Sweety</span> Agency <small style="font-size:11px;color:var(--muted);font-weight:600">Admin</small></div>
     <div class="hactions">
       <span class="dot-live"></span>
       <span style="font-size:12px;color:var(--muted);font-weight:600">${subs.length} aplicaciones</span>
@@ -263,7 +263,7 @@ function renderRow(s){
   const date=new Date(s.created_at);
   const ds=date.toLocaleDateString("es-ES",{day:"2-digit",month:"short"})+" "+date.toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"});
   const waN=(d.phone||"").replace(/\D/g,"").replace(/^0/,"");
-  const waHref=waN?`https://wa.me/${waN}?text=${encodeURIComponent(`Hola ${d.name||""}, soy VixenAgency. He revisado tu solicitud y me gustaría hablar contigo. ¿Tienes unos minutos?`)}`:"#";
+  const waHref=waN?`https://wa.me/${waN}?text=${encodeURIComponent(`Hola ${d.name||""}, soy Only Sweety Agency. He revisado tu solicitud y me gustaría hablar contigo. ¿Tienes unos minutos?`)}`:"#";
   const gi={"Empezar desde cero":"🚀","Aumentar lo que ya gano":"📈","Llegar a +5.000€/mes":"💰","Máximo anonimato":"🔒","Start from scratch":"🚀","Increase my current income":"📈","Reach $5,000+/month":"💰","Full anonymity":"🔒"}[d.goal]||"🎯";
   return`
   <tr class="data-row" onclick="toggleExp('${s.id}')">
@@ -282,9 +282,9 @@ function renderRow(s){
 function renderExp(s){
   const d=s.data||{},an=S.notes[s.id]||"";
   const waN=(d.phone||"").replace(/\D/g,"").replace(/^0/,"");
-  const waMsg=encodeURIComponent(`Hola ${d.name||""}, soy VixenAgency. He revisado tu solicitud y me gustaría hablar contigo. ¿Tienes unos minutos?`);
-  const emailSub=encodeURIComponent("Tu solicitud en VixenAgency");
-  const emailBody=encodeURIComponent(`Hola ${d.name||""},\n\nHemos revisado tu solicitud y nos gustaría conocer más sobre tu caso.\n\nUn saludo,\nVixenAgency`);
+  const waMsg=encodeURIComponent(`Hola ${d.name||""}, soy Only Sweety Agency. He revisado tu solicitud y me gustaría hablar contigo. ¿Tienes unos minutos?`);
+  const emailSub=encodeURIComponent("Tu solicitud en Only Sweety Agency");
+  const emailBody=encodeURIComponent(`Hola ${d.name||""},\n\nHemos revisado tu solicitud y nos gustaría conocer más sobre tu caso.\n\nUn saludo,\nOnly Sweety Agency`);
   return`<tr class="exp-row"><td colspan="8"><div class="exp-inner">
     <div class="exp-f"><label>Nombre</label><p>${d.name||"—"}</p></div>
     <div class="exp-f"><label>Instagram / TikTok</label><p><a href="https://instagram.com/${(d.instagram||"").replace("@","")}" target="_blank" style="color:var(--pink)">@${d.instagram||"—"}</a></p></div>

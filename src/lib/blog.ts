@@ -20,7 +20,7 @@ Los tres factores más importantes son: la consistencia del contenido (publicar 
 
 **El multiplicador de la gestión profesional**
 
-Las creadoras que trabajamos en VixenAgency superan consistentemente la media del mercado. El motivo no es el contenido — es que tienen chatters 24/7, marketing activo en redes y una estrategia PPV optimizada. Estos tres elementos juntos tienen un efecto multiplicador que una creadora sola difícilmente puede replicar.`
+Las creadoras que trabajamos en Only Sweety Agency superan consistentemente la media del mercado. El motivo no es el contenido — es que tienen chatters 24/7, marketing activo en redes y una estrategia PPV optimizada. Estos tres elementos juntos tienen un efecto multiplicador que una creadora sola difícilmente puede replicar.`
   },
   { slug:"agencia-onlyfans-espana-2026", locale:"es", date:"2026-06-05",
     title:"Agencia OnlyFans España 2026 — Guía Definitiva para Elegir",
@@ -40,7 +40,7 @@ Las creadoras que trabajamos en VixenAgency superan consistentemente la media de
 
 En España hemos visto varias tácticas de agencias poco serias: cobrar "fee de setup" por adelantado (entre 200€ y 500€), pedir exclusividad de 12 meses con penalización por salida, o prometer "top 1% garantizado en 30 días". Ninguna de estas promesas es honesta.
 
-**Cómo funciona VixenAgency en España**
+**Cómo funciona Only Sweety Agency en España**
 
 Operamos desde España con creadoras en todo el país. Chatters nativos en español, estrategia específica para el mercado hispano en USA (que paga entre 3 y 5 veces más que el mercado español local), y sin cuotas fijas.`
   },
@@ -48,7 +48,7 @@ Operamos desde España con creadoras en todo el país. Chatters nativos en espa�
     title:"OnlyFans sin Mostrar la Cara en España — Estrategia Completa 2026",
     excerpt:"Guía completa para ganar dinero en OnlyFans siendo anónima en España. Qué crear, cómo proteger tu identidad y cuánto se puede ganar sin mostrar el rostro.",
     kw:["onlyfans sin mostrar cara","onlyfans anónima españa","onlyfans sin identidad","ganar onlyfans anónima"],
-    content:`Ser anónima en OnlyFans no es una limitación, es una estrategia. Algunas de las creadoras con ingresos más altos que gestionamos en VixenAgency son completamente anónimas.
+    content:`Ser anónima en OnlyFans no es una limitación, es una estrategia. Algunas de las creadoras con ingresos más altos que gestionamos en Only Sweety Agency son completamente anónimas.
 
 **Por qué el anonimato puede ser una ventaja**
 
@@ -62,7 +62,7 @@ La clave está en construir una identidad artística coherente: un nombre artís
 
 Los nichos donde el anonimato funciona mejor son: fitness (cuerpo y entrenamiento), lifestyle y estética, contenido de audio/voz, manos y pies, moda íntima y ropa interior, y contenido artístico o temático. En todos estos nichos, la cara no es necesaria para generar ingresos altos.
 
-**Protocolo de protección de identidad en VixenAgency**
+**Protocolo de protección de identidad en Only Sweety Agency**
 
 Para creadoras que quieren total anonimato, implementamos: cuentas de redes sociales separadas sin conexión a identidad real, email específico para OnlyFans, páginas puente que filtran el tráfico, y chatters que mantienen la voz y el tono del personaje de forma consistente.`
   },
@@ -130,11 +130,11 @@ Los mensajes masivos de PPV funcionan bien cuando la audiencia está calentada. 
 
 **Por qué las creadoras colombianas triunfan en el mercado USA**
 
-El mercado anglosajón tiene un alto interés en el contenido de creadoras latinoamericanas. Colombia en particular tiene una imagen muy positiva en términos de estética. Las creadoras colombianas que trabajan con VixenAgency y se posicionan en el mercado USA reportan ingresos 3 a 5 veces superiores a los que generarían apuntando solo al mercado local.
+El mercado anglosajón tiene un alto interés en el contenido de creadoras latinoamericanas. Colombia en particular tiene una imagen muy positiva en términos de estética. Las creadoras colombianas que trabajan con Only Sweety Agency y se posicionan en el mercado USA reportan ingresos 3 a 5 veces superiores a los que generarían apuntando solo al mercado local.
 
 **Cobros desde Colombia**
 
-OnlyFans paga en USD por transferencia internacional. Desde Colombia, las opciones más usadas son: Wise (Transferwise), Payoneer, y cuentas en bancos internacionales. El proceso es más sencillo de lo que parece y VixenAgency asesora sobre cada paso.
+OnlyFans paga en USD por transferencia internacional. Desde Colombia, las opciones más usadas son: Wise (Transferwise), Payoneer, y cuentas en bancos internacionales. El proceso es más sencillo de lo que parece y Only Sweety Agency asesora sobre cada paso.
 
 **La estrategia de Medellín y Bogotá**
 
@@ -224,7 +224,7 @@ Common warning signs: upfront setup fees (often $200-500), guaranteed "top 1% in
 
 Ask specifically: How many creators do you currently manage? Can I speak with one? How exactly does your chatter team work — are they real people? What marketing channels do you use and can you show me examples? What happens to my account if I leave?
 
-**VixenAgency's differentiator**
+**Only Sweety Agency's differentiator**
 
 We operate on a pure percentage model, use real native-speaking chatters (not bots), have verifiable results across 200+ creators, and allow exit with 15 days notice. We do not take on every creator — we only work with those we're confident we can grow.`
   },
@@ -288,7 +288,7 @@ US market preferences lean toward: personality-driven content (fans want to feel
 
 **Tax considerations for US and Canadian creators**
 
-OnlyFans income is taxable in both the US and Canada. In the US, you will receive a 1099 form for earnings over $600. In Canada, this is considered business income. Many creators work with accountants to structure their earnings efficiently, and VixenAgency can provide guidance on this aspect.
+OnlyFans income is taxable in both the US and Canada. In the US, you will receive a 1099 form for earnings over $600. In Canada, this is considered business income. Many creators work with accountants to structure their earnings efficiently, and Only Sweety Agency can provide guidance on this aspect.
 
 **The Latin American creator advantage in the US market**
 
@@ -358,7 +358,7 @@ The highest earners generate income from multiple streams: subscriptions, PPV co
 
 Le marché français est unique : MYM est très présent. Les meilleures agences gèrent les deux plateformes simultanément pour maximiser les revenus. OnlyFans est plus fort sur le marché anglophone; MYM sur le marché francophone. Une bonne stratégie utilise les deux.
 
-**VixenAgency en France**
+**Only Sweety Agency en France**
 
 Nous opérons avec des créatrices à Paris, Lyon, Marseille et dans toute la France. Nos chatteuses sont des francophones natives, notre stratégie inclut spécifiquement le marché américain francophone (qui paie bien) et le marché américain général. Pas de frais fixes, juste des résultats.`
   },
@@ -378,11 +378,11 @@ MYM (MeetYourMaker), plateforme française, représente souvent 30 à 40% des re
 
 **Ce que les agences apportent concrètement**
 
-Les créatrices françaises qui travaillent avec VixenAgency voient en moyenne une multiplication de leurs revenus par 3 à 5 dans les 3 premiers mois. La différence principale ? Des chatteuses 24/7 qui maximisent chaque interaction, et une stratégie marketing externe qui amène continuellement de nouveaux fans.
+Les créatrices françaises qui travaillent avec Only Sweety Agency voient en moyenne une multiplication de leurs revenus par 3 à 5 dans les 3 premiers mois. La différence principale ? Des chatteuses 24/7 qui maximisent chaque interaction, et une stratégie marketing externe qui amène continuellement de nouveaux fans.
 
 **Fiscalité pour les créatrices françaises**
 
-Les revenus OnlyFans sont imposables en France. Les créatrices peuvent opter pour la micro-entreprise (jusqu\'à 77.700€ de chiffre d\'affaires) ou l\'entreprise individuelle classique. VixenAgency peut orienter vers des comptables spécialisés dans ce domaine.`
+Les revenus OnlyFans sont imposables en France. Les créatrices peuvent opter pour la micro-entreprise (jusqu\'à 77.700€ de chiffre d\'affaires) ou l\'entreprise individuelle classique. Only Sweety Agency peut orienter vers des comptables spécialisés dans ce domaine.`
   },
   { slug:"chatteuses-onlyfans-pourquoi-essentielles", locale:"fr", date:"2026-05-20",
     title:"Pourquoi les Chatteuses OnlyFans sont Essentielles aux Revenus Élevés",
@@ -436,7 +436,7 @@ Instagram fonctionne différemment. L\'objectif est de convertir des abonnés en
 
 **Reddit : la source la plus sous-estimée**
 
-Reddit est là où les fans actifs d\'OnlyFans cherchent leurs créatrices préférées. Les subreddits spécifiques à votre niche ont des taux de conversion très élevés. VixenAgency gère des campagnes Reddit pour ses créatrices avec des résultats mesurables et reproductibles.`
+Reddit est là où les fans actifs d\'OnlyFans cherchent leurs créatrices préférées. Les subreddits spécifiques à votre niche ont des taux de conversion très élevés. Only Sweety Agency gère des campagnes Reddit pour ses créatrices avec des résultats mesurables et reproductibles.`
   },
 
   // ── DE (4 posts) ──────────────────────────────────────────────────────────
@@ -452,11 +452,11 @@ Erstens: Vergütungsmodell — seriöse Agenturen nehmen Prozentsatz auf Einnahm
 
 **Der US-Markt und DACH-Creator**
 
-DACH-Creator haben einen strategischen Vorteil auf dem US-Markt: deutschsprachige Creator gelten als exotisch und attraktiv für die angloamerikanische Zielgruppe. VixenAgency positioniert deutsche, österreichische und Schweizer Creator gezielt auf dem US-Markt, der 3-5x mehr zahlt als der lokale Markt.
+DACH-Creator haben einen strategischen Vorteil auf dem US-Markt: deutschsprachige Creator gelten als exotisch und attraktiv für die angloamerikanische Zielgruppe. Only Sweety Agency positioniert deutsche, österreichische und Schweizer Creator gezielt auf dem US-Markt, der 3-5x mehr zahlt als der lokale Markt.
 
 **Steuerliche Aspekte für Creator in Deutschland**
 
-OnlyFans-Einnahmen sind in Deutschland steuerpflichtig. Je nach Umsatzhöhe kann man als Kleinunternehmer (bis 22.000€) oder reguläres Gewerbe operieren. VixenAgency kann Kontakte zu Steuerberatern herstellen, die sich auf digitale Creator spezialisiert haben.`
+OnlyFans-Einnahmen sind in Deutschland steuerpflichtig. Je nach Umsatzhöhe kann man als Kleinunternehmer (bis 22.000€) oder reguläres Gewerbe operieren. Only Sweety Agency kann Kontakte zu Steuerberatern herstellen, die sich auf digitale Creator spezialisiert haben.`
   },
   { slug:"geld-verdienen-onlyfans-anonym", locale:"de", date:"2026-05-20",
     title:"Anonym Geld Verdienen auf OnlyFans 2026 — Der Komplette Guide",
@@ -530,9 +530,9 @@ Standard-Content: 8€-15€. Aufwändigerer oder exklusiver Content: 18€-30�
 
 **Il mercato USA per le creator italiane**
 
-Le creator italiane che si posizionano sul mercato americano possono generare entrate 3-5 volte superiori rispetto al mercato locale. VixenAgency posiziona le creator italiane specificamente sul mercato USA attraverso strategie di marketing mirate e chatter in inglese.
+Le creator italiane che si posizionano sul mercato americano possono generare entrate 3-5 volte superiori rispetto al mercato locale. Only Sweety Agency posiziona le creator italiane specificamente sul mercato USA attraverso strategie di marketing mirate e chatter in inglese.
 
-**VixenAgency in Italia**
+**Only Sweety Agency in Italia**
 
 Operiamo con creator a Milano, Roma, Napoli, Torino e in tutta Italia. Nessuna quota fissa, solo percentuale sui risultati. Chatter italiani nativi, strategia specifica per il mercato americano.`
   },
@@ -608,11 +608,11 @@ Contenuto standard: 8€-15€. Contenuto più elaborato o esclusivo: 18€-30�
 
 **O mercado americano para creators brasileiras**
 
-Creators brasileiras que se posicionam no mercado americano podem gerar receitas 5-7 vezes superiores ao mercado local. O mercado hispano nos EUA também é enorme e bem remunerado. VixenAgency posiciona creators brasileiras especificamente nesses mercados.
+Creators brasileiras que se posicionam no mercado americano podem gerar receitas 5-7 vezes superiores ao mercado local. O mercado hispano nos EUA também é enorme e bem remunerado. Only Sweety Agency posiciona creators brasileiras especificamente nesses mercados.
 
 **Recebimentos no Brasil**
 
-OnlyFans paga em USD por transferência internacional. No Brasil, as opções mais usadas são: Wise, Payoneer e contas em bancos internacionais. O processo é simples e VixenAgency orienta sobre cada etapa.`
+OnlyFans paga em USD por transferência internacional. No Brasil, as opções mais usadas são: Wise, Payoneer e contas em bancos internacionais. O processo é simples e Only Sweety Agency orienta sobre cada etapa.`
   },
   { slug:"ganhar-dinheiro-onlyfans-brasil-2026", locale:"pt", date:"2026-06-01",
     title:"Como Ganhar Dinheiro no OnlyFans no Brasil 2026 — Guia Definitivo",
@@ -626,7 +626,7 @@ A mediana das creators OnlyFans no Brasil gana entre R$300 e R$800/mês. Com ges
 
 **O fator dólar**
 
-Uma assinatura de US$9,99 no mercado americano equivale a aproximadamente R$50 na cotação atual. Uma creator brasileira com 200 assinantes americanos ganha R$10.000/mês apenas de assinaturas, sem contar PPV e mensagens. Esse é o mercado onde VixenAgency posiciona suas creators.
+Uma assinatura de US$9,99 no mercado americano equivale a aproximadamente R$50 na cotação atual. Uma creator brasileira com 200 assinantes americanos ganha R$10.000/mês apenas de assinaturas, sem contar PPV e mensagens. Esse é o mercado onde Only Sweety Agency posiciona suas creators.
 
 **O papel dos chatters**
 
@@ -636,7 +636,7 @@ Nossos chatters em inglês gerenciam as conversas com fans americanos 24/7. Isso
     title:"OnlyFans Anônima no Brasil — Como Ganhar Dinheiro sem Mostrar o Rosto 2026",
     excerpt:"É possível ter sucesso no OnlyFans sem revelar sua identidade no Brasil. Descubra as estratégias das creators anônimas mais bem-sucedidas.",
     kw:["onlyfans anonima brasil","onlyfans sem mostrar rosto","onlyfans sem identidade brasil","creator onlyfans anonima"],
-    content:`Ser anônima no OnlyFans não é uma limitação, é uma estratégia. Algumas das creators com melhores ganhos que gerenciamos na VixenAgency são completamente anônimas.
+    content:`Ser anônima no OnlyFans não é uma limitação, é uma estratégia. Algumas das creators com melhores ganhos que gerenciamos na Only Sweety Agency são completamente anônimas.
 
 **Por que o anonimato pode ser uma vantagem**
 
@@ -682,7 +682,7 @@ Los fans hispanos en USA combinan el poder adquisitivo americano (mucho mayor qu
 
 **La estrategia de doble mercado**
 
-Las creadoras más inteligentes no eligen entre el mercado latino o el americano: operan en ambos simultáneamente. Contenido en español para los fans latinoamericanos y para el mercado hispano USA, y chatters en inglés para los fans anglófonos que también las siguen. VixenAgency gestiona exactamente este modelo con chatters bilingües.
+Las creadoras más inteligentes no eligen entre el mercado latino o el americano: operan en ambos simultáneamente. Contenido en español para los fans latinoamericanos y para el mercado hispano USA, y chatters en inglés para los fans anglófonos que también las siguen. Only Sweety Agency gestiona exactamente este modelo con chatters bilingües.
 
 **Cómo posicionarse en el mercado hispano USA**
 
@@ -722,7 +722,7 @@ Si tus ingresos anuales superan los 22.000€, deberás cobrar IVA en tus servic
 
 **Optimización legal**
 
-Las principales deducciones para creadoras de contenido incluyen: equipo fotográfico y de vídeo, suscripciones a herramientas digitales, parte proporcional del alquiler si trabajas desde casa, agencias de gestión (como VixenAgency), y ropa y accesorios usados exclusivamente para contenido.`
+Las principales deducciones para creadoras de contenido incluyen: equipo fotográfico y de vídeo, suscripciones a herramientas digitales, parte proporcional del alquiler si trabajas desde casa, agencias de gestión (como Only Sweety Agency), y ropa y accesorios usados exclusivamente para contenido.`
   },
   { slug:"red-flags-agencia-onlyfans-estafa", locale:"es", date:"2026-06-03",
     title:"🚨 Red Flags de Agencias OnlyFans Falsas — Cómo Detectar una Estafa en 2026",
@@ -814,7 +814,7 @@ Fansly has a marginally more permissive content policy. Both platforms are relat
 
 **The multi-platform strategy**
 
-The answer to "which should I use?" is almost always "both." The marginal cost of running a second platform when you have management support is low, and the income diversification is valuable. Creators managed by VixenAgency who run both platforms earn an average of 35% more than those on a single platform.`
+The answer to "which should I use?" is almost always "both." The marginal cost of running a second platform when you have management support is low, and the income diversification is valuable. Creators managed by Only Sweety Agency who run both platforms earn an average of 35% more than those on a single platform.`
   },
 
   // ── EXTRA FR ──────────────────────────────────────────────────────────────
@@ -872,7 +872,7 @@ Bis 22.000€ Jahresumsatz kannst du die Kleinunternehmerregelung nutzen — du 
 
 **Absetzbare Kosten**
 
-Als Creator kannst du Folgendes absetzen: Foto- und Videoausrüstung, Software-Abonnements, Kosten für Management-Agenturen wie VixenAgency, Kleidung und Accessoires die ausschließlich für Content verwendet werden, und anteilige Wohnkosten wenn du von zuhause aus arbeitest.`
+Als Creator kannst du Folgendes absetzen: Foto- und Videoausrüstung, Software-Abonnements, Kosten für Management-Agenturen wie Only Sweety Agency, Kleidung und Accessoires die ausschließlich für Content verwendet werden, und anteilige Wohnkosten wenn du von zuhause aus arbeitest.`
   },
   { slug:"onlyfans-content-strategie-deutschland", locale:"de", date:"2026-06-08",
     title:"OnlyFans Content-Strategie 2026 — Was Wirklich Funktioniert",
@@ -910,7 +910,7 @@ OnlyFans accredita i compensi in USD. Per la dichiarazione fiscale italiana, que
 
 **Cosa si può dedurre**
 
-Come creator puoi dedurre: attrezzatura fotografica e video, abbonamenti a software e strumenti digitali, costi di agenzia di gestione come VixenAgency, abbigliamento e accessori usati esclusivamente per i contenuti, e quota parte dell'affitto se lavori da casa.`
+Come creator puoi dedurre: attrezzatura fotografica e video, abbonamenti a software e strumenti digitali, costi di agenzia di gestione come Only Sweety Agency, abbigliamento e accessori usati esclusivamente per i contenuti, e quota parte dell'affitto se lavori da casa.`
   },
   { slug:"onlyfans-reddit-italia", locale:"it", date:"2026-06-08",
     title:"Reddit per OnlyFans in Italia — La Strategia più Sottovalutata nel 2026",
@@ -948,7 +948,7 @@ Os pagamentos do OnlyFans chegam em dólar. Para a Receita Federal, esses valore
 
 **O que pode ser deduzido**
 
-Como creator você pode deduzir: equipamentos de foto e vídeo, assinaturas de ferramentas digitais, custos de agências de gestão como VixenAgency, roupas e acessórios usados exclusivamente para conteúdos, e parte do aluguel se trabalha de casa.`
+Como creator você pode deduzir: equipamentos de foto e vídeo, assinaturas de ferramentas digitais, custos de agências de gestão como Only Sweety Agency, roupas e acessórios usados exclusivamente para conteúdos, e parte do aluguel se trabalha de casa.`
   },
   { slug:"reddit-onlyfans-brasil", locale:"pt", date:"2026-06-08",
     title:"Reddit para OnlyFans no Brasil — A Estratégia Mais Subestimada de 2026",
@@ -993,7 +993,7 @@ No, si el chatter está bien formado. Los chatters aprenden el estilo de escritu
 
 **¿Cuánto cobran los chatters de OnlyFans?**
 
-Los chatters de OnlyFans pueden cobrar de varias formas: salario fijo (entre 15€ y 30€/hora para chatters cualificados), porcentaje de las ventas PPV cerradas (entre el 5% y el 15%), o una combinación de ambos. Las agencias como VixenAgency incluyen el coste de los chatters dentro de su comisión general.
+Los chatters de OnlyFans pueden cobrar de varias formas: salario fijo (entre 15€ y 30€/hora para chatters cualificados), porcentaje de las ventas PPV cerradas (entre el 5% y el 15%), o una combinación de ambos. Las agencias como Only Sweety Agency incluyen el coste de los chatters dentro de su comisión general.
 
 **Chatters internos vs agencia**
 
@@ -1015,9 +1015,9 @@ Una agencia seria cobra porcentaje sobre los ingresos generados, nunca cuota fij
 
 En España, el porcentaje de mercado oscila entre el 20% y el 35% para gestión completa. Por encima del 40% sin justificación clara es señal de alarma.
 
-**VixenAgency en el mercado español**
+**Only Sweety Agency en el mercado español**
 
-VixenAgency opera en España con creadoras en Madrid, Barcelona, Valencia, Sevilla y muchas otras ciudades. Modelo 100% por porcentaje, chatters nativos en español y posicionamiento específico en el mercado hispano de USA. Puedes aplicar directamente sin compromiso para ver si encajas con nuestro modelo.
+Only Sweety Agency opera en España con creadoras en Madrid, Barcelona, Valencia, Sevilla y muchas otras ciudades. Modelo 100% por porcentaje, chatters nativos en español y posicionamiento específico en el mercado hispano de USA. Puedes aplicar directamente sin compromiso para ver si encajas con nuestro modelo.
 
 **Los red flags que debes evitar**
 
@@ -1067,7 +1067,7 @@ Ambas cobran el 20% de comisión. Ambas requieren verificación de identidad y m
 
 **La estrategia correcta: las dos plataformas**
 
-La respuesta a "¿cuál elegir?" es casi siempre "las dos". Con una agencia que gestiona ambas, el coste marginal es bajo y el beneficio de diversificar ingresos y audiencias es significativo. Las creadoras de VixenAgency que usan ambas plataformas generan entre un 30% y un 40% más de ingresos totales.`
+La respuesta a "¿cuál elegir?" es casi siempre "las dos". Con una agencia que gestiona ambas, el coste marginal es bajo y el beneficio de diversificar ingresos y audiencias es significativo. Las creadoras de Only Sweety Agency que usan ambas plataformas generan entre un 30% y un 40% más de ingresos totales.`
   },
   { slug:"ganar-dinero-onlyfans-sin-mostrar-cara-2026", locale:"es", date:"2026-06-13",
     title:"Ganar Dinero en OnlyFans sin Mostrar la Cara — Guía Completa 2026",
@@ -1083,7 +1083,7 @@ Fitness y entrenamiento: el cuerpo es el protagonista, no el rostro. Lingerie y 
 
 Las creadoras anónimas más exitosas no son "una persona sin cara". Son un personaje completo con nombre artístico memorable, estética visual coherente (colores, lighting, moda reconocibles), tono y voz propios en los mensajes, y una historia detrás. Los fans no se enganchan con caras — se enganchan con personajes.
 
-**El protocolo de privacidad de VixenAgency**
+**El protocolo de privacidad de Only Sweety Agency**
 
 Para creadoras que requieren máximo anonimato implementamos: email dedicado solo para OnlyFans sin conexión a identidad real, cuentas de redes sociales nuevas sin historial personal, páginas puente que filtran tráfico antes de llegar al perfil, dispositivo separado para toda la actividad de OnlyFans, y chatters que mantienen la voz del personaje de forma consistente en todos los mensajes.`
   },
@@ -1225,7 +1225,7 @@ Non, si la chatteuse est bien formée. Les chatteuses apprennent le style d'écr
 
 **MYM et OnlyFans : les deux plateformes simultanément**
 
-En France, la stratégie optimale est de gérer les deux plateformes : OnlyFans pour le marché anglophone (5x plus rémunérateur) et MYM pour l'audience francophone fidèle. VixenAgency gère les deux avec des chatteuses francophones et anglophones.`
+En France, la stratégie optimale est de gérer les deux plateformes : OnlyFans pour le marché anglophone (5x plus rémunérateur) et MYM pour l'audience francophone fidèle. Only Sweety Agency gère les deux avec des chatteuses francophones et anglophones.`
   },
   { slug:"agence-onlyfans-guide-choisir-2026", locale:"fr", date:"2026-06-16",
     title:"Comment Choisir une Agence OnlyFans en 2026 — Guide Sans Filtre",
@@ -1245,7 +1245,7 @@ Paiement à l'avance, promesses de "top 1% garanti en 30 jours", exclusivité de
 
 Combien de créatrices gérez-vous actuellement ? Puis-je parler à l'une d'elles directement ? Comment fonctionne exactement votre équipe de chatteuses ? Quels canaux marketing utilisez-vous et pouvez-vous me montrer des exemples ? Que se passe-t-il si je veux partir dans 3 mois ?
 
-**VixenAgency en France**
+**Only Sweety Agency en France**
 
 Nous opérons avec des créatrices à Paris, Lyon, Marseille et dans toute la France. Modèle 100% à la commission, chatteuses francophones natives et positionnement sur le marché américain francophone. Candidature sans engagement.`
   },
@@ -1287,7 +1287,7 @@ Eine seriöse Agentur arbeitet auf Provisionsbasis deiner Einnahmen. Wenn eine A
 
 Vorauszahlungen jeglicher Art, "Top 1% garantiert in 30 Tagen"-Versprechen, 12-monatige Exklusivität mit hohen Ausstiegsstrafen, Bot-Chatter statt echter Menschen, fehlende verifizierbare Referenzen aktueller Creator. Jeder dieser Punkte reicht aus, um nicht zu unterschreiben.
 
-**VixenAgency in der DACH-Region**
+**Only Sweety Agency in der DACH-Region**
 
 Wir arbeiten mit Creator in Deutschland, Österreich und der Schweiz. 100% Provisionsmodell, deutschsprachige Chatter und gezieltes Positioning auf dem US-Markt. Unverbindliche Bewerbung möglich.`
   },
@@ -1329,7 +1329,7 @@ Segundo dados do setor em 2026, creators que ganham mais de $5.000/mês obtêm e
 
 **O fuso horário como vantagem estratégica**
 
-Creators brasileiras têm uma vantagem enorme: quando estão dormindo (de madrugada no Brasil), os fãs americanos estão acordados e ativos. Com chatters em inglês da VixenAgency disponíveis 24/7, nenhuma oportunidade de venda é perdida. É exatamente aí que os maiores ganhos acontecem.`
+Creators brasileiras têm uma vantagem enorme: quando estão dormindo (de madrugada no Brasil), os fãs americanos estão acordados e ativos. Com chatters em inglês da Only Sweety Agency disponíveis 24/7, nenhuma oportunidade de venda é perdida. É exatamente aí que os maiores ganhos acontecem.`
   },
 
 ];

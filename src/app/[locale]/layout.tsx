@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     keywords: tr.meta_kw,
     robots: { index:true, follow:true, googleBot:{ index:true, follow:true } },
     alternates: { canonical:`${BASE_URL}/${l}/`, languages:langs },
-    openGraph: { title:tr.meta_title, description:tr.meta_desc, url:`${BASE_URL}/${l}/`, siteName:"VixenAgency", locale:l, type:"website" },
+    openGraph: { title:tr.meta_title, description:tr.meta_desc, url:`${BASE_URL}/${l}/`, siteName:"Only Sweety Agency", locale:l, type:"website" },
     twitter: { card:"summary_large_image", title:tr.meta_title, description:tr.meta_desc },
   };
 }
@@ -29,7 +29,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const { locale } = await params;
   const l = locale as Locale;
   const schema = {
-    "@context":"https://schema.org","@type":"Organization","name":"VixenAgency","url":BASE_URL,
+    "@context":"https://schema.org","@type":"Organization","name":"Only Sweety Agency","url":BASE_URL,
     "description":"Professional OnlyFans management agency operating in 15+ countries",
     "contactPoint":{"@type":"ContactPoint","contactType":"customer service","availableLanguage":["Spanish","English","French","German","Italian","Portuguese"]},
     "areaServed":["ES","MX","AR","CO","CL","PE","US","CA","FR","DE","IT","BR"],

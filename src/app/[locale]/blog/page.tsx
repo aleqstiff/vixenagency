@@ -12,12 +12,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const l = locale as Locale;
   const titles: Record<Locale, string> = {
-    es: "Blog Agencia OnlyFans — Guías y Estrategias 2026 | VixenAgency",
-    en: "OnlyFans Agency Blog — Guides & Strategies 2026 | VixenAgency",
-    fr: "Blog Agence OnlyFans — Guides & Stratégies 2026 | VixenAgency",
-    de: "OnlyFans Agentur Blog — Ratgeber 2026 | VixenAgency",
-    it: "Blog Agenzia OnlyFans — Guide 2026 | VixenAgency",
-    pt: "Blog Agência OnlyFans — Guias 2026 | VixenAgency",
+    es: "Blog Agencia OnlyFans — Guías y Estrategias 2026 | Only Sweety Agency",
+    en: "OnlyFans Agency Blog — Guides & Strategies 2026 | Only Sweety Agency",
+    fr: "Blog Agence OnlyFans — Guides & Stratégies 2026 | Only Sweety Agency",
+    de: "OnlyFans Agentur Blog — Ratgeber 2026 | Only Sweety Agency",
+    it: "Blog Agenzia OnlyFans — Guide 2026 | Only Sweety Agency",
+    pt: "Blog Agência OnlyFans — Guias 2026 | Only Sweety Agency",
   };
   return { title: titles[l], alternates: { canonical: `${BASE_URL}/${l}/blog/` } };
 }

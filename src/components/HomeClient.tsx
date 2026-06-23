@@ -130,7 +130,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
   function buildWaMessage(){
     const socials = [d.ig1, d.social2, d.social3].filter(Boolean).join(", ");
     const lines = [
-      `👋 *Nueva solicitud — VixenAgency*`,
+      `👋 *Nueva solicitud — Only Sweety Agency*`,
       ``,
       `*Nombre:* ${d.name}`,
       `*Redes:* ${socials}`,
@@ -141,7 +141,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
       d.country ? `*País:* ${d.country}` : null,
       d.availability ? `*Disponibilidad:* ${d.availability}` : null,
       d.notes ? `\n*Mi caso:* ${d.notes}` : null,
-      `\n_He rellenado el formulario en vixenagency.net_`,
+      `\n_He rellenado el formulario en onlysweety.net_`,
     ].filter(Boolean).join("\n");
     return lines;
   }

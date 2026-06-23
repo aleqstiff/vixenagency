@@ -1,4 +1,4 @@
-export const BASE_URL = "https://vixenagency.net";
+export const BASE_URL = "https://onlysweety.net";
 export const WA = "34644462216";
 export const waLink = (msg: string) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
 
@@ -196,12 +196,12 @@ export const SERVICES: Record<Locale, ServicePage[]> = {
 
 export function waMsg(locale: Locale): string {
   const m: Record<Locale,string> = {
-    es: "Hola, quiero que VixenAgency gestione mi OnlyFans. ¿Podemos hablar?",
-    en: "Hi, I want VixenAgency to manage my OnlyFans. Can we talk?",
-    fr: "Bonjour, je veux que VixenAgency gère mon OnlyFans. Pouvons-nous parler ?",
-    de: "Hallo, ich möchte, dass VixenAgency meinen OnlyFans verwaltet. Können wir sprechen?",
-    it: "Ciao, voglio che VixenAgency gestisca il mio OnlyFans. Possiamo parlare?",
-    pt: "Olá, quero que a VixenAgency gerencie meu OnlyFans. Podemos conversar?",
+    es: "Hola, quiero que Only Sweety Agency gestione mi OnlyFans. ¿Podemos hablar?",
+    en: "Hi, I want Only Sweety Agency to manage my OnlyFans. Can we talk?",
+    fr: "Bonjour, je veux que Only Sweety Agency gère mon OnlyFans. Pouvons-nous parler ?",
+    de: "Hallo, ich möchte, dass Only Sweety Agency meinen OnlyFans verwaltet. Können wir sprechen?",
+    it: "Ciao, voglio che Only Sweety Agency gestisca il mio OnlyFans. Possiamo parlare?",
+    pt: "Olá, quero que a Only Sweety Agency gerencie meu OnlyFans. Podemos conversar?",
   };
   return m[locale];
 }

@@ -153,7 +153,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <div className="hero-img" style={{position:"relative"}}>
             <div style={{position:"absolute",width:440,height:440,borderRadius:"50%",background:"rgba(245,213,204,0.5)",filter:"blur(60px)",top:"50%",left:"50%",transform:"translate(-50%,-50%)",pointerEvents:"none"}}/>
             <div style={{borderRadius:28,overflow:"hidden",boxShadow:"0 32px 80px rgba(196,105,154,0.15)",aspectRatio:"4/5",position:"relative"}}>
-              <img src={IMGS.hero} alt="Creator managed by VixenAgency" width={520} height={650}
+              <img src={IMGS.hero} alt="Creator managed by Only Sweety Agency" width={520} height={650}
                 style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,18,16,0.55) 0%,transparent 55%)"}}/>
               <div style={{position:"absolute",bottom:22,left:18,right:18,background:"rgba(255,255,255,0.95)",backdropFilter:"blur(16px)",borderRadius:14,padding:"14px 18px"}}>
@@ -449,7 +449,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <div className="footer-4" style={{display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:36,marginBottom:44}}>
             <div className="footer-brand">
               <div style={{fontSize:24,fontWeight:900,marginBottom:14,letterSpacing:"-0.5px",display:"flex",alignItems:"center",gap:10}}>
-                <span style={{color:"var(--pink2)"}}>Vixen</span><span style={{color:"#fff"}}>Agency</span>
+                <span style={{color:"var(--pink2)"}}>Only Sweety</span><span style={{color:"#fff"}}>Agency</span>
                 <OFLogo size={22}/>
               </div>
               <p style={{fontSize:13,color:"rgba(255,255,255,0.35)",lineHeight:1.7,maxWidth:260,marginBottom:20}}>{t(l,"footer_desc")}</p>
@@ -494,7 +494,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             </div>
           </div>
           <div style={{borderTop:"1px solid rgba(255,255,255,0.05)",paddingTop:20,display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:10}}>
-            <p style={{fontSize:12,color:"rgba(255,255,255,0.15)"}}>© 2026 VixenAgency · {t(l,"footer_rights")}</p>
+            <p style={{fontSize:12,color:"rgba(255,255,255,0.15)"}}>© 2026 Only Sweety Agency · {t(l,"footer_rights")}</p>
             <p style={{fontSize:11,color:"rgba(255,255,255,0.08)"}}>{t(l,"footer_disclaimer")}</p>
           </div>
         </div>

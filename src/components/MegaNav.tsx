@@ -44,7 +44,7 @@ export default function MegaNav({ locale, posts = [] }: {
 
           {/* Logo */}
           <Link href={`/${locale}/`} style={{ fontWeight:800, fontSize:20, letterSpacing:"-0.5px", textDecoration:"none", color:"var(--dark)", flexShrink:0 }}>
-            <span style={{ fontFamily:"'Playfair Display',Georgia,serif", fontStyle:"italic" }}>Vixen</span>
+            <span style={{ fontFamily:"'Playfair Display',Georgia,serif", fontStyle:"italic" }}>Only Sweety</span>
             <span style={{ fontWeight:700 }}>Agency</span>
           </Link>
 

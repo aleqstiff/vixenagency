@@ -23,17 +23,17 @@ export async function generateMetadata({
   const l = locale as Locale;
   const s = SERVICES[l]?.find(x => x.slug === service);
   if (!s) return {};
-  const desc = `${s.desc} VixenAgency — agencia especializada con +200 creadoras gestionadas.`;
+  const desc = `${s.desc} Only Sweety Agency — agencia especializada con +200 creadoras gestionadas.`;
   return {
-    title: `${s.title} | VixenAgency`,
+    title: `${s.title} | Only Sweety Agency`,
     description: desc.slice(0, 160),
-    keywords: [s.kw, "vixenagency", "onlyfans", "agencia onlyfans"].join(","),
+    keywords: [s.kw, "onlysweety", "onlyfans", "agencia onlyfans"].join(","),
     alternates: { canonical: `${BASE_URL}/${l}/servicios/${service}/` },
     openGraph: {
       title: s.title,
       description: s.desc,
       url: `${BASE_URL}/${l}/servicios/${service}/`,
-      siteName: "VixenAgency",
+      siteName: "Only Sweety Agency",
       type: "website",
     },
   };
@@ -103,7 +103,7 @@ export default async function ServicePage({
     "@context":"https://schema.org","@type":"Service",
     "name":s.title,"description":s.desc,
     "keywords":s.kw,
-    "provider":{"@type":"Organization","name":"VixenAgency","url":BASE_URL},
+    "provider":{"@type":"Organization","name":"Only Sweety Agency","url":BASE_URL},
     "areaServed":"Worldwide",
     "hasOfferCatalog":{"@type":"OfferCatalog","name":s.title},
   };
@@ -236,7 +236,7 @@ export default async function ServicePage({
           {/* Sidebar CTA */}
           <div style={{ position:"relative" }}>
             <div className="card-glow" style={{ padding:28 }}>
-              <div style={{ fontSize:10, fontWeight:700, color:s.color, textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:14 }}>VixenAgency</div>
+              <div style={{ fontSize:10, fontWeight:700, color:s.color, textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:14 }}>Only Sweety Agency</div>
               <h3 style={{ fontWeight:900, color:"#fff", fontSize:20, marginBottom:10, letterSpacing:"-0.5px", lineHeight:1.2 }}>
                 {l==="es"?"¿Lista para empezar?":l==="en"?"Ready to start?":l==="fr"?"Prête à commencer ?":l==="de"?"Bereit loszulegen?":"Pronta per iniziare?"}
               </h3>

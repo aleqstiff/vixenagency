@@ -20,7 +20,7 @@ export async function generateMetadata({
   const post = POSTS.find(p => p.locale === locale && p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | VixenAgency`,
+    title: `${post.title} | Only Sweety Agency`,
     description: post.excerpt,
     keywords: post.kw,
     alternates: { canonical: `${BASE_URL}/${locale}/blog/${slug}/` },
@@ -189,8 +189,8 @@ export default async function BlogPost({
     description: post.excerpt,
     datePublished: post.date,
     keywords: post.kw.join(", "),
-    author: { "@type": "Organization", name: "VixenAgency", url: BASE_URL },
-    publisher: { "@type": "Organization", name: "VixenAgency", url: BASE_URL },
+    author: { "@type": "Organization", name: "Only Sweety Agency", url: BASE_URL },
+    publisher: { "@type": "Organization", name: "Only Sweety Agency", url: BASE_URL },
   };
 
   return (
@@ -250,7 +250,7 @@ export default async function BlogPost({
             textAlign: "center",
           }}>
             <p style={{ fontSize: 11, fontWeight: 700, color: accentColor, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>
-              VixenAgency
+              Only Sweety Agency
             </p>
             <h3 style={{ fontWeight: 900, color: "#fff", fontSize: "clamp(1.2rem,2.5vw,1.6rem)", marginBottom: 10, letterSpacing: "-0.5px" }}>
               {l === "es" ? "¿Lista para aplicar esto?" :
@@ -261,12 +261,12 @@ export default async function BlogPost({
                "Pronta para aplicar isso?"}
             </h3>
             <p style={{ color: "var(--muted)", fontSize: 14, marginBottom: 24 }}>
-              {l === "es" ? "VixenAgency gestiona todo esto por ti. Consulta gratuita, sin compromiso." :
-               l === "en" ? "VixenAgency handles all of this for you. Free consultation, no commitment." :
-               l === "fr" ? "VixenAgency gère tout ça pour vous. Consultation gratuite, sans engagement." :
-               l === "de" ? "VixenAgency übernimmt das alles für dich. Kostenlos, unverbindlich." :
-               l === "it" ? "VixenAgency gestisce tutto per te. Consulenza gratuita, senza impegno." :
-               "VixenAgency cuida de tudo por você. Consulta gratuita, sem compromisso."}
+              {l === "es" ? "Only Sweety Agency gestiona todo esto por ti. Consulta gratuita, sin compromiso." :
+               l === "en" ? "Only Sweety Agency handles all of this for you. Free consultation, no commitment." :
+               l === "fr" ? "Only Sweety Agency gère tout ça pour vous. Consultation gratuite, sans engagement." :
+               l === "de" ? "Only Sweety Agency übernimmt das alles für dich. Kostenlos, unverbindlich." :
+               l === "it" ? "Only Sweety Agency gestisce tutto per te. Consulenza gratuita, senza impegno." :
+               "Only Sweety Agency cuida de tudo por você. Consulta gratuita, sem compromisso."}
             </p>
             <a href="#form" className="btn btn-cta" style={{ fontSize: 15, padding: "14px 32px" }}>
               {t(l, "cta_btn")}

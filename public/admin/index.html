@@ -207,7 +207,7 @@ function render(){document.getElementById("app").innerHTML=S.authed?renderDash()
 function renderLogin(){
   return`<div class="login"><div class="login-card">
     <div class="lock-icon">🌸</div>
-    <div class="logo"><span>Only Sweety</span> Agency</div>
+    <div class="logo"><img src="/logo.svg" alt="Only Sweety Agency" style="height:44px;display:block;margin:0 auto 4px" onerror="this.style.display='none'"/><span>Only Sweety</span> Agency</div>
     <div class="logo-sub">Panel de Administración</div>
     <div class="field"><label>Usuario</label><input class="inp" id="li-u" type="text" autocomplete="username" placeholder="stifflings" onkeydown="if(event.key==='Enter')document.getElementById('li-p').focus()"/></div>
     <div class="field"><label>Contraseña</label><input class="inp" id="li-p" type="password" autocomplete="current-password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"/></div>
@@ -228,7 +228,7 @@ function renderDash(){
   const goals=[...new Set(subs.map(s=>(s.data||{}).goal).filter(Boolean))];
   return`
   <header>
-    <div class="hlogo"><span>Only Sweety</span> Agency <small style="font-size:11px;color:var(--muted);font-weight:600">Admin</small></div>
+    <div class="hlogo"><img src="/logo.svg" alt="" style="height:28px;vertical-align:middle;margin-right:8px" onerror="this.style.display='none'"/><small style="font-size:11px;color:var(--muted);font-weight:600;margin-left:4px">Admin</small></div>
     <div class="hactions">
       <span class="dot-live"></span>
       <span style="font-size:12px;color:var(--muted);font-weight:600">${subs.length} aplicaciones</span>

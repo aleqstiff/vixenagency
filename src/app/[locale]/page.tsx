@@ -134,9 +134,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             <p style={{fontSize:12,color:"var(--muted2)"}}>{t(l,"hero_trust")}</p>
 
             {/* Mobile hero image — solo móvil */}
-            <div className="show-mobile" style={{marginTop:24,borderRadius:20,overflow:"hidden",position:"relative",aspectRatio:"4/3",boxShadow:"0 16px 40px rgba(196,105,154,0.15)"}}>
-              <img src={IMGS.hero} alt="Only Sweety Agency" width={500} height={375}
-                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
+            <div className="show-mobile" style={{marginTop:24,borderRadius:20,overflow:"hidden",position:"relative",aspectRatio:"4/5",maxHeight:"60vh",boxShadow:"0 16px 40px rgba(196,105,154,0.15)"}}>
+              <img src={IMGS.hero} alt="Only Sweety Agency" width={500} height={625}
+                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center 30%",display:"block"}}/>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,16,24,0.6),transparent 55%)"}}/>
               <div style={{position:"absolute",bottom:14,left:14,right:14,background:"rgba(255,255,255,0.95)",backdropFilter:"blur(12px)",borderRadius:12,padding:"10px 14px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
                 <div>
@@ -232,7 +232,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             <div key={i} style={{aspectRatio:"3/4",borderRadius:14,overflow:"hidden",position:"relative",boxShadow:"0 8px 24px rgba(196,105,154,0.1)"}}>
               <img src={src} alt={l==="es"?"Creadora de contenido gestionada por Only Sweety Agency":"Content creator managed by Only Sweety Agency"}
                 width={400} height={520} loading="lazy"
-                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
+                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center 25%",display:"block"}}/>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,16,24,0.3),transparent 50%)"}}/>
             </div>
           ))}
@@ -241,7 +241,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           {GALLERY.slice(3,6).map((src,i)=>(
             <div key={i} style={{aspectRatio:"3/4",borderRadius:14,overflow:"hidden",position:"relative",boxShadow:"0 8px 24px rgba(196,105,154,0.1)"}}>
               <img src={src} alt="Only Sweety Agency model" width={400} height={520} loading="lazy"
-                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
+                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center 25%",display:"block"}}/>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,16,24,0.3),transparent 50%)"}}/>
             </div>
           ))}

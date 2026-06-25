@@ -65,6 +65,12 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
       ["¿En qué países operáis?","España, México, Argentina, Colombia, Chile, Perú, Venezuela, USA, Canadá, Francia, Alemania, Italia y Brasil."],
       ["¿Cómo protegéis mi identidad?","Páginas puente, cuentas de redes separadas, protocolos de privacidad, nunca pedimos más datos de los necesarios y nunca compartimos información de creadoras."],
       ["¿Trabajáis también con Fansly o MYM?","Sí. OnlyFans es la principal, pero gestionamos también Fansly, Fanvue y MYM para diversificar y maximizar."],
+      ["¿Qué hace exactamente una agencia de OnlyFans?","Una agencia de gestión de OnlyFans se encarga de los chatters (responder mensajes y vender contenido PPV), el marketing en redes sociales para atraer fans, la estrategia de precios y promociones, la planificación de contenido y los informes de resultados. Tú solo creas el contenido; nosotras gestionamos todo lo demás."],
+      ["¿Cuánto dinero se puede ganar en OnlyFans con una agencia?","Depende de tu punto de partida, nicho y constancia. Nuestras creadoras pasan de media de unos cientos de dólares al mes a varios miles en 2-4 meses. Algunas superan los 5.000$/mes. Ninguna agencia seria puede garantizar cifras exactas: desconfía de quien lo haga."],
+      ["¿Son legales las agencias de OnlyFans?","Sí, son completamente legales. Una agencia es una empresa de marketing y gestión que presta servicios a creadoras de contenido para adultos, igual que un mánager gestiona a un artista. Trabajamos con contratos transparentes y cumplimiento legal."],
+      ["¿Qué son los chatters de OnlyFans?","Los chatters son el equipo que responde los mensajes privados de tus fans, construye relación con ellos y vende contenido personalizado (PPV). Un buen equipo de chatters puede multiplicar tus ingresos porque la mayoría del dinero en OnlyFans viene de los mensajes directos, no de la suscripción."],
+      ["¿Necesito mostrar la cara para ganar dinero en OnlyFans?","No es obligatorio. Muchas creadoras exitosas trabajan de forma anónima centrándose en un nicho concreto. Te ayudamos a construir una marca potente y a vender contenido sin revelar tu identidad si así lo prefieres."],
+      ["¿Cuánto cuesta contratar una agencia de OnlyFans?","Las agencias serias trabajan a comisión: un porcentaje de los ingresos que generan, sin cuota inicial. Esto alinea sus intereses con los tuyos. Desconfía de agencias que cobran cuotas fijas altas por adelantado."],
     ],
     // cta
     cta_title:"¿Lista para multiplicar tus ingresos?",
@@ -131,6 +137,10 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
     faq_title:"Frequently asked questions",
     faqs:[
       ["Do I have to show my face?","No. Many of our best-performing creators are 100% anonymous. We advise on building a powerful presence without revealing your identity."],
+      ["What does an OnlyFans agency actually do?","An OnlyFans management agency handles chatting (replying to messages and selling PPV content), social media marketing to attract fans, pricing and promotion strategy, content planning and performance reporting. You only create content; we manage everything else."],
+      ["How much money can you make on OnlyFans with an agency?","It depends on your starting point, niche and consistency. Our creators go on average from a few hundred dollars a month to several thousand within 2-4 months. No serious agency can guarantee exact figures — be wary of anyone who does."],
+      ["Are OnlyFans agencies legal?","Yes, completely legal. An agency is a marketing and management company providing services to adult content creators, just like a manager represents an artist. We work with transparent contracts and full legal compliance."],
+      ["What are OnlyFans chatters?","Chatters are the team that replies to your fans' private messages, builds rapport and sells personalised content (PPV). A good chatting team can multiply your income because most OnlyFans revenue comes from direct messages, not subscriptions."],
       ["How much do you charge?","A percentage of the income we generate. No fixed fees, no upfront payment. If your income doesn\'t go up, we don\'t charge."],
       ["Can I leave whenever I want?","Yes. 15 days notice and that\'s it. No penalties, no trap contracts. Your account is always yours."],
       ["Do you accept beginners?","Yes. We guide you from the start: account creation, verification, first content, first subscribers."],

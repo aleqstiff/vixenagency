@@ -6,7 +6,7 @@ import {
 } from "@/lib/config";
 import { TR, t, ta, ta2 } from "@/lib/translations";
 import { POSTS } from "@/lib/blog";
-import { IMGS } from "@/lib/images";
+import { IMGS, GALLERY } from "@/lib/images";
 import MegaNav from "@/components/MegaNav";
 import { UnlockSection, ApplyForm, CounterStat, useReveal } from "@/components/HomeClient";
 
@@ -133,6 +133,22 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             </div>
             <p style={{fontSize:12,color:"var(--muted2)"}}>{t(l,"hero_trust")}</p>
 
+            {/* Mobile hero image — solo móvil */}
+            <div className="show-mobile" style={{marginTop:24,borderRadius:20,overflow:"hidden",position:"relative",aspectRatio:"4/3",boxShadow:"0 16px 40px rgba(196,105,154,0.15)"}}>
+              <img src={IMGS.hero} alt="Only Sweety Agency" width={500} height={375}
+                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
+              <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,16,24,0.6),transparent 55%)"}}/>
+              <div style={{position:"absolute",bottom:14,left:14,right:14,background:"rgba(255,255,255,0.95)",backdropFilter:"blur(12px)",borderRadius:12,padding:"10px 14px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <div>
+                  <p style={{fontSize:9,color:"var(--muted)",textTransform:"uppercase",letterSpacing:"0.08em",fontWeight:600}}>Camila R. · Colombia 🇨🇴</p>
+                  <p style={{fontWeight:800,fontSize:14,color:"var(--dark)"}}>680€ → <span style={{color:"var(--pink)"}}>4.200€/mes</span></p>
+                </div>
+                <div style={{background:"var(--dark)",color:"#fff",borderRadius:8,padding:"5px 10px"}}>
+                  <p style={{fontSize:14,fontWeight:900,color:"var(--pink2)"}}>+518%</p>
+                </div>
+              </div>
+            </div>
+
             {/* Social proof card */}
             <div style={{marginTop:28,padding:"16px 20px",background:"var(--bg2)",borderRadius:16,border:"1px solid var(--border)",display:"flex",alignItems:"center",gap:14,maxWidth:400,boxShadow:"0 2px 12px rgba(196,105,154,0.08)"}}>
               <div style={{display:"flex"}}>
@@ -208,6 +224,29 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
       {/* ═══ UNLOCK — rosa claro ══════════════════════════ */}
       <UnlockSection locale={l}/>
+
+      {/* ═══ GALERÍA — fotos modelos (visible móvil) ═══════ */}
+      <section style={{padding:"0",background:"var(--bg2)",overflow:"hidden"}}>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:6,maxWidth:1280,margin:"0 auto",padding:"0 6px 6px"}}>
+          {GALLERY.slice(0,3).map((src,i)=>(
+            <div key={i} style={{aspectRatio:"3/4",borderRadius:14,overflow:"hidden",position:"relative",boxShadow:"0 8px 24px rgba(196,105,154,0.1)"}}>
+              <img src={src} alt={l==="es"?"Creadora de contenido gestionada por Only Sweety Agency":"Content creator managed by Only Sweety Agency"}
+                width={400} height={520} loading="lazy"
+                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
+              <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,16,24,0.3),transparent 50%)"}}/>
+            </div>
+          ))}
+        </div>
+        <div className="hide-mobile" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:6,maxWidth:1280,margin:"0 auto",padding:"0 6px 6px"}}>
+          {GALLERY.slice(3,6).map((src,i)=>(
+            <div key={i} style={{aspectRatio:"3/4",borderRadius:14,overflow:"hidden",position:"relative",boxShadow:"0 8px 24px rgba(196,105,154,0.1)"}}>
+              <img src={src} alt="Only Sweety Agency model" width={400} height={520} loading="lazy"
+                style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
+              <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,16,24,0.3),transparent 50%)"}}/>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* ═══ SERVICIOS ════════════════════════════════════ */}
       <section id="servicios" style={{padding:"88px 24px",background:"#fff"}}>

@@ -16,60 +16,34 @@ export function useReveal(threshold = 0.12) {
 
 // ── Unlock animation ────────────────────────────────────────────────────────
 export function UnlockSection({ locale }: { locale: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [vis, setVis] = useState(false);
-  useEffect(() => {
-    const el = ref.current; if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold: .1 });
-    obs.observe(el); return () => obs.disconnect();
-  }, []);
+  const { ref, vis } = useReveal(0.1);
   const words = ({ es:["MULTIPLICA","TU","POTENCIAL"], en:["UNLOCK","YOUR","POTENTIAL"], fr:["LIBÈRE","TON","POTENTIEL"], de:["ENTFALTE","DEIN","POTENZIAL"], it:["LIBERA","IL TUO","POTENZIALE"], pt:["LIBERA","SEU","POTENCIAL"] } as Record<string,string[]>)[locale] ?? ["MULTIPLICA","TU","POTENCIAL"];
+  // 3 distinct model photos — no duplicates
   const imgs = [
-    "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=120&h=120&fit=crop&crop=face&q=80",
-    "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=120&h=120&fit=crop&crop=top&q=80",
-    "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=120&h=120&fit=crop&crop=face&q=80",
+    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=160&h=160&fit=crop&crop=faces&q=82",
+    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=160&h=160&fit=crop&crop=faces&q=82",
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&h=160&fit=crop&crop=faces&q=82",
   ];
   return (
-    <div ref={ref} style={{ padding:"72px 0", overflow:"hidden", userSelect:"none", background:"var(--bg2)" }}>
+    <div ref={ref} style={{ padding:"64px 0", overflow:"hidden", userSelect:"none", background:"var(--bg2)" }}>
       {words.map((word, i) => (
-        <div key={i} className="unlock-row" style={{ justifyContent:i%2===0?"flex-start":"flex-end", paddingLeft:i%2===0?"5vw":"0", paddingRight:i%2!==0?"5vw":"0", opacity:vis?1:0, transform:vis?"translateY(0)":"translateY(40px)", transition:`opacity .7s ease ${i*.15}s,transform .7s ease ${i*.15}s` }}>
-          {i%2===0 && <img src={imgs[i%imgs.length]} alt="" className="unlock-img" style={{ opacity:vis?1:0, transition:`opacity .5s ease ${i*.2+.3}s` }}/>}
+        <div key={i} className="unlock-row" style={{
+          justifyContent: i % 2 === 0 ? "flex-start" : "flex-end",
+          paddingLeft: i % 2 === 0 ? "5vw" : "0",
+          paddingRight: i % 2 !== 0 ? "5vw" : "0",
+          opacity: vis ? 1 : 0,
+          transform: vis ? "translateY(0)" : "translateY(40px)",
+          transition: `opacity .7s ease ${i*.15}s,transform .7s ease ${i*.15}s`,
+        }}>
+          {i % 2 === 0 && <img src={imgs[i]} alt="" className="unlock-img" style={{ opacity: vis ? 1 : 0, transition:`opacity .5s ease ${i*.2+.3}s` }} />}
           <span className="unlock-text g-pink">{word}</span>
-          {i%2!==0 && <img src={imgs[(i+1)%imgs.length]} alt="" className="unlock-img" style={{ opacity:vis?1:0, transition:`opacity .5s ease ${i*.2+.3}s` }}/>}
+          {i % 2 !== 0 && <img src={imgs[i]} alt="" className="unlock-img" style={{ opacity: vis ? 1 : 0, transition:`opacity .5s ease ${i*.2+.3}s` }} />}
         </div>
       ))}
     </div>
   );
 }
 
-// ── Phone formatter ─────────────────────────────────────────────────────────
-function formatPhone(raw: string): string {
-  // Strip everything except digits and a leading +
-  let clean = raw.replace(/[^\d+]/g, "").replace(/(?!^)\+/g, "");
-  if (!clean) return "";
-  if (clean.startsWith("+")) {
-    const d = clean.slice(1).slice(0, 12);
-    if (d.length <= 2)  return "+" + d;
-    if (d.length <= 5)  return "+" + d.slice(0,2) + " " + d.slice(2);
-    if (d.length <= 8)  return "+" + d.slice(0,2) + " " + d.slice(2,5) + " " + d.slice(5);
-    return "+" + d.slice(0,2) + " " + d.slice(2,5) + " " + d.slice(5,8) + " " + d.slice(8,12);
-  }
-  const d = clean.slice(0, 9);
-  if (d.length <= 3) return d;
-  if (d.length <= 6) return d.slice(0,3) + " " + d.slice(3);
-  return d.slice(0,3) + " " + d.slice(3,6) + " " + d.slice(6,9);
-}
-
-function validatePhone(phone: string): boolean {
-  const digits = phone.replace(/\D/g, "");
-  return digits.length >= 8 && digits.length <= 15;
-}
-
-function validateEmail(email: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
-}
-
-// ── Apply Form ──────────────────────────────────────────────────────────────
 export function ApplyForm({ locale, href }: { locale: string; href: string }) {
   const [status, setStatus] = useState<"idle"|"sending"|"ok"|"err">("idle");
   const [d, setD] = useState({

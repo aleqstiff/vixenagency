@@ -2,14 +2,10 @@
   command = "npm install && npm run build"
   publish = "out"
 
-# Root → /es/ solo GET
-[[redirects]]
-  from = "/"
-  to = "/es/"
-  status = 301
-  conditions = {Method = ["GET", "HEAD"]}
+# NO redirect on root "/" — serve public/index.html which has Trustpilot meta + JS redirect to /es/
+# This lets verification bots (Trustpilot, Google) read the meta tag at the root.
 
-# SPA fallback — solo GET/HEAD, no POST
+# SPA fallback for other paths — solo GET/HEAD, no POST (no rompe el formulario)
 [[redirects]]
   from = "/*"
   to = "/index.html"

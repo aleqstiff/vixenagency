@@ -334,3 +334,8 @@ details>div{
 .stagger>*:nth-child(4){animation-delay:.26s}
 .stagger>*:nth-child(5){animation-delay:.33s}
 .stagger>*:nth-child(6){animation-delay:.40s}
+
+/* Blog featured card — stack on mobile */
+@media(max-width:680px){
+  article.card[style*="gridTemplateColumns"]{grid-template-columns:1fr!important}
+}

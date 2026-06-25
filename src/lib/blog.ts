@@ -1332,4 +1332,258 @@ Segundo dados do setor em 2026, creators que ganham mais de $5.000/mês obtêm e
 Creators brasileiras têm uma vantagem enorme: quando estão dormindo (de madrugada no Brasil), os fãs americanos estão acordados e ativos. Com chatters em inglês da Only Sweety Agency disponíveis 24/7, nenhuma oportunidade de venda é perdida. É exatamente aí que os maiores ganhos acontecem.`
   },
 
+
+  // ── NUEVOS POSTS SEO ALTO VOLUMEN ──────────────────────────────────────────
+  // ES
+  { slug:"que-es-onlyfans-como-funciona", locale:"es", date:"2026-06-20",
+    title:"¿Qué es OnlyFans y Cómo Funciona? Guía Completa 2026",
+    excerpt:"Qué es OnlyFans, cómo funciona la plataforma, cuánto cobra de comisión y cómo ganan dinero las creadoras. La guía definitiva para entenderlo todo.",
+    kw:["que es onlyfans","como funciona onlyfans","onlyfans españa","onlyfans como funciona"],
+    content:`OnlyFans es una plataforma de suscripción donde las creadoras de contenido cobran a sus seguidores (los "fans") por acceder a contenido exclusivo. Funciona como Netflix: el fan paga una cuota mensual y recibe contenido a cambio. La plataforma tiene su sede en Londres y supera los 4 millones de creadoras registradas.
+
+**Cómo funciona OnlyFans paso a paso**
+
+El modelo es sencillo: la creadora abre una cuenta, fija un precio de suscripción mensual (mínimo 4,99$), y los fans pagan para acceder a su contenido. Además de la suscripción, hay otras tres formas de ganar: PPV (contenido de pago por visión enviado por mensaje), propinas, y servicios premium personalizados.
+
+**Cuánto cobra OnlyFans de comisión**
+
+OnlyFans se queda con el 20% de tus ingresos. La creadora recibe el 80% restante de todo: suscripciones, mensajes de pago y propinas. Es una de las comisiones estándar del sector.
+
+**De dónde viene realmente el dinero**
+
+Un error común es pensar que la mayoría del dinero viene de las suscripciones. En cuentas bien gestionadas, el PPV y las propinas superan ampliamente los ingresos de suscripción. Por eso las creadoras con mejores resultados invierten en chatters: especialistas que gestionan las conversaciones y convierten suscriptores en compradores recurrentes.
+
+**¿Hay que mostrar la cara?**
+
+No es obligatorio. Existen creadoras anónimas en el top 1% de la plataforma. El factor determinante no es mostrar la cara, sino la estrategia de captación de tráfico externo y la optimización del chatting y el PPV.
+
+**El papel de una agencia**
+
+Una agencia de OnlyFans gestiona todo lo que no requiere ser tú: marketing en redes, estrategia PPV, chatting con suscriptores y análisis de métricas. Tú creas el contenido; la agencia se encarga del resto. El modelo estándar es comisión por resultados, sin cuota fija.`
+  },
+  { slug:"como-empezar-onlyfans-desde-cero", locale:"es", date:"2026-06-18",
+    title:"Cómo Empezar en OnlyFans desde Cero en 2026 (Paso a Paso)",
+    excerpt:"Guía paso a paso para empezar en OnlyFans sin seguidores. Cómo crear la cuenta, verificarte, fijar precios y conseguir tus primeros suscriptores.",
+    kw:["como empezar onlyfans","empezar onlyfans desde cero","crear cuenta onlyfans","onlyfans principiantes"],
+    content:`Empezar en OnlyFans desde cero es totalmente posible en 2026, pero ya no basta con abrir una cuenta y esperar. El mercado hispanohablante está menos saturado que el anglosajón, lo que sigue siendo una ventaja para quien empieza con estrategia.
+
+**Paso 1: Crear y verificar la cuenta**
+
+Necesitas ser mayor de edad y verificar tu identidad con un documento oficial. La verificación es obligatoria y protege la plataforma. Una vez verificada, configuras tu perfil: nombre artístico, foto, biografía y precio de suscripción.
+
+**Paso 2: Fijar el precio correcto**
+
+La estrategia más efectiva para creadoras nuevas: arrancar entre 9,99€ y 14,99€ con un descuento de lanzamiento del 50% las primeras 2-4 semanas. Esto genera suscriptores iniciales y luego subes gradualmente. Evita precios por debajo de 5€: atraen al suscriptor menos comprometido.
+
+**Paso 3: El tráfico externo es todo**
+
+OnlyFans no tiene descubrimiento interno. Nadie te va a encontrar dentro de la plataforma. Todo el crecimiento viene de fuera: Twitter/X, Reddit, TikTok e Instagram. Sin redes sociales activas, no hay crecimiento posible. Esta es la parte que más subestiman las creadoras que empiezan.
+
+**Paso 4: Usa el mensaje de bienvenida para vender**
+
+El welcome message es el primer contacto con cada nuevo suscriptor. Úsalo para generar una primera venta inmediata. Es uno de los momentos de mayor conversión.
+
+**Errores que frenan al 70% de las creadoras nuevas**
+
+Publicar dos semanas y desaparecer tres (la inconsistencia destruye la retención), venderse demasiado barato por miedo, y no hacer upselling (dejar que los suscriptores consuman solo la suscripción base sin ofrecer PPV).
+
+**¿Hay que declarar los ingresos a Hacienda?**
+
+Sí. Los ingresos de OnlyFans son ingresos como autónoma sujetos a tributación. En España, si superas los 1.000€/año estás obligada a declararlos. Lo recomendable es darte de alta como autónoma y trabajar con un gestor especializado.`
+  },
+  { slug:"onlyfans-impuestos-hacienda-espana", locale:"es", date:"2026-06-15",
+    title:"OnlyFans e Impuestos en España: Cómo Declarar a Hacienda 2026",
+    excerpt:"Todo sobre los impuestos de OnlyFans en España: cuándo declarar, cómo darte de alta como autónoma, qué IVA aplica y cómo tributan tus ingresos.",
+    kw:["onlyfans impuestos","onlyfans hacienda","declarar onlyfans españa","onlyfans autonomo"],
+    content:`Los ingresos de OnlyFans son ingresos reales sujetos a tributación en España. Ignorar esto puede salirte caro: OnlyFans reporta información fiscal cuando se requiere, y los ingresos son rastreables a través de los movimientos bancarios.
+
+**¿Cuándo estás obligada a declarar?**
+
+En España, si superas los 1.000€ anuales de ingresos, estás obligada a declararlos. En la práctica, si generas ingresos regulares, lo recomendable es darte de alta como autónoma desde el principio.
+
+**Cómo tributan los ingresos**
+
+Los ingresos de OnlyFans tributan como actividad económica (autónoma). Esto implica dos obligaciones principales: el IRPF (sobre tus beneficios) y, según el caso, el IVA. Al ser OnlyFans una empresa con sede fuera de España, la fiscalidad del IVA tiene particularidades que conviene revisar con un gestor.
+
+**El alta de autónoma**
+
+Darte de alta en Hacienda (modelo 036/037) y en la Seguridad Social como autónoma es el paso formal. Existe la tarifa plana para nuevos autónomos que reduce la cuota los primeros meses.
+
+**Por qué necesitas un gestor especializado**
+
+La fiscalidad de las actividades digitales con plataformas extranjeras tiene matices (IVA intracomunitario, retenciones, deducciones aplicables). Un gestor especializado en creadoras de contenido te ahorra problemas y optimiza lo que pagas legalmente.
+
+**Importante**
+
+Este artículo es informativo y no sustituye el asesoramiento de un profesional. La normativa fiscal cambia y cada situación es distinta. Consulta siempre con un gestor o asesor fiscal colegiado antes de tomar decisiones.`
+  },
+  // EN
+  { slug:"how-much-do-onlyfans-models-make", locale:"en", date:"2026-06-20",
+    title:"How Much Do OnlyFans Models Make in 2026? Real Numbers",
+    excerpt:"Real OnlyFans earnings by percentile in 2026. Averages, what top earners actually make, and the factors that separate the top 1% from everyone else.",
+    kw:["how much do onlyfans models make","onlyfans income 2026","onlyfans earnings","average onlyfans income"],
+    content:`The reality of OnlyFans earnings in 2026 is more nuanced than headlines suggest. The top 10% of creators generate roughly 73% of all platform revenue. Most creators working alone earn under $200/month.
+
+**The real market data**
+
+Industry estimates: about 75% of creators earn under $150/month, 20% earn between $150 and $1,500/month, 4% earn between $1,500 and $8,000/month, and the top 1% earn over $8,000/month. The arithmetic average is heavily distorted by elite creators.
+
+**What determines your percentile**
+
+The three biggest factors are content consistency (posting at least 4-5 times a week), external traffic strategy (without outside traffic there is no growth), and fan relationship management (chatting and PPV). These three combined separate someone earning $500/month from someone earning $5,000/month with similar content.
+
+**Where the money actually comes from**
+
+A common mistake is assuming most income comes from subscriptions. In well-managed accounts, PPV and tips vastly exceed subscription revenue. That's why top creators invest in chatters: specialists who manage conversations and turn subscribers into repeat buyers.
+
+**The professional management multiplier**
+
+Creators we work with at Only Sweety Agency consistently beat market averages. The reason isn't the content — it's that they have 24/7 chatters, active social media marketing, and an optimized PPV strategy. Together these have a multiplier effect a solo creator can rarely replicate.`
+  },
+  { slug:"how-to-start-onlyfans-from-scratch", locale:"en", date:"2026-06-17",
+    title:"How to Start OnlyFans From Scratch in 2026 (Step by Step)",
+    excerpt:"Step-by-step guide to starting OnlyFans with no followers. Account setup, verification, pricing strategy and getting your first paying subscribers.",
+    kw:["how to start onlyfans","start onlyfans from scratch","onlyfans for beginners","create onlyfans account"],
+    content:`Starting OnlyFans from scratch is entirely possible in 2026, but opening an account and waiting no longer works. Success now requires strategy from day one.
+
+**Step 1: Create and verify your account**
+
+You must be of legal age and verify your identity with official ID. Verification is mandatory. Once verified, set up your profile: stage name, photo, bio and subscription price.
+
+**Step 2: Set the right price**
+
+The most effective strategy for new creators: start between $9.99 and $14.99 with a 50% launch discount for the first 2-4 weeks. This generates initial subscribers, then you raise gradually. Avoid prices under $5 — they attract the least committed subscribers.
+
+**Step 3: External traffic is everything**
+
+OnlyFans has no internal discovery. Nobody finds you inside the platform. All growth comes from outside: Twitter/X, Reddit, TikTok and Instagram. Without active social media, growth is impossible. This is what new creators underestimate most.
+
+**Step 4: Use your welcome message to sell**
+
+The welcome message is your first contact with each new subscriber. Use it to generate an immediate first sale — it's one of the highest-converting moments.
+
+**Mistakes that stall 70% of new creators**
+
+Posting for two weeks then disappearing for three (inconsistency destroys retention), underpricing out of fear, and not upselling (letting subscribers consume only the base subscription without offering PPV).`
+  },
+  // FR
+  { slug:"combien-gagne-onlyfans-2026", locale:"fr", date:"2026-06-19",
+    title:"Combien Gagne-t-on sur OnlyFans en 2026 ? Chiffres Réels",
+    excerpt:"Les revenus réels d'OnlyFans par percentile en 2026. Moyennes, ce que gagnent vraiment les meilleures et ce qui sépare le top 1% du reste.",
+    kw:["combien gagne onlyfans","revenus onlyfans 2026","gains onlyfans","salaire onlyfans"],
+    content:`La réalité des revenus OnlyFans en 2026 est plus nuancée que ce que suggèrent les gros titres. Les 10% de créatrices les mieux classées génèrent environ 73% des revenus de la plateforme. La majorité travaillant seule gagne moins de 200$/mois.
+
+**Les vraies données du marché**
+
+Estimations du secteur : environ 75% des créatrices gagnent moins de 150$/mois, 20% entre 150$ et 1 500$/mois, 4% entre 1 500$ et 8 000$/mois, et le top 1% plus de 8 000$/mois. La moyenne arithmétique est fortement faussée par les créatrices d'élite.
+
+**Ce qui détermine votre percentile**
+
+Les trois facteurs principaux : la régularité du contenu (publier au moins 4-5 fois par semaine), la stratégie de trafic externe (sans trafic extérieur, pas de croissance) et la gestion de la relation avec les fans (le chatting et le PPV).
+
+**D'où vient vraiment l'argent**
+
+Une erreur fréquente : croire que l'essentiel vient des abonnements. Dans les comptes bien gérés, le PPV et les pourboires dépassent largement les revenus d'abonnement. C'est pourquoi les meilleures créatrices investissent dans des chatteuses.
+
+**Le multiplicateur de la gestion professionnelle**
+
+Les créatrices que nous accompagnons chez Only Sweety Agency dépassent constamment les moyennes du marché grâce à des chatteuses 24/7, un marketing actif et une stratégie PPV optimisée.`
+  },
+  // DE
+  { slug:"wie-viel-verdient-man-onlyfans-2026", locale:"de", date:"2026-06-19",
+    title:"Wie viel verdient man auf OnlyFans 2026? Echte Zahlen",
+    excerpt:"Echte OnlyFans-Einnahmen nach Perzentil 2026. Durchschnitte, was Top-Verdienerinnen wirklich verdienen und was das Top 1% vom Rest unterscheidet.",
+    kw:["wie viel verdient man onlyfans","onlyfans einnahmen 2026","onlyfans verdienst","onlyfans geld verdienen"],
+    content:`Die Realität der OnlyFans-Einnahmen 2026 ist differenzierter als Schlagzeilen vermuten lassen. Die obersten 10% der Creator erwirtschaften rund 73% der Plattform-Einnahmen. Die meisten Solo-Creator verdienen unter 200$/Monat.
+
+**Die echten Marktdaten**
+
+Branchenschätzungen: etwa 75% der Creator verdienen unter 150$/Monat, 20% zwischen 150$ und 1.500$/Monat, 4% zwischen 1.500$ und 8.000$/Monat, das Top 1% über 8.000$/Monat. Der arithmetische Durchschnitt wird von Elite-Creatorn stark verzerrt.
+
+**Was dein Perzentil bestimmt**
+
+Die drei wichtigsten Faktoren: Content-Konstanz (mindestens 4-5 mal pro Woche posten), externe Traffic-Strategie (ohne Außen-Traffic kein Wachstum) und Fan-Beziehungsmanagement (Chatting und PPV).
+
+**Woher das Geld wirklich kommt**
+
+Ein häufiger Irrtum: anzunehmen, das meiste komme aus Abos. In gut geführten Accounts übersteigen PPV und Trinkgelder die Abo-Einnahmen bei weitem. Deshalb investieren Top-Creator in Chatter.
+
+**Der Multiplikator professioneller Verwaltung**
+
+Creator, die wir bei Only Sweety Agency betreuen, übertreffen konstant den Marktdurchschnitt — dank 24/7-Chattern, aktivem Marketing und optimierter PPV-Strategie.`
+  },
+  // IT
+  { slug:"quanto-si-guadagna-onlyfans-2026", locale:"it", date:"2026-06-19",
+    title:"Quanto si Guadagna su OnlyFans nel 2026? Cifre Reali",
+    excerpt:"I guadagni reali di OnlyFans per percentile nel 2026. Medie, quanto guadagnano davvero le migliori e cosa separa il top 1% dal resto.",
+    kw:["quanto si guadagna onlyfans","guadagni onlyfans 2026","stipendio onlyfans","soldi onlyfans"],
+    content:`La realtà dei guadagni OnlyFans nel 2026 è più sfumata di quanto suggeriscano i titoli. Il 10% delle creator più in alto genera circa il 73% dei ricavi della piattaforma. La maggior parte che lavora da sola guadagna meno di 200$/mese.
+
+**I veri dati di mercato**
+
+Stime del settore: circa il 75% delle creator guadagna meno di 150$/mese, il 20% tra 150$ e 1.500$/mese, il 4% tra 1.500$ e 8.000$/mese, il top 1% oltre 8.000$/mese. La media aritmetica è fortemente distorta dalle creator d'élite.
+
+**Cosa determina il tuo percentile**
+
+I tre fattori principali: la costanza del contenuto (pubblicare almeno 4-5 volte a settimana), la strategia di traffico esterno (senza traffico esterno non c'è crescita) e la gestione della relazione con i fan (chatting e PPV).
+
+**Da dove vengono davvero i soldi**
+
+Un errore comune: pensare che la maggior parte venga dagli abbonamenti. Negli account ben gestiti, PPV e mance superano ampiamente i ricavi degli abbonamenti. Per questo le migliori creator investono in chatter.
+
+**Il moltiplicatore della gestione professionale**
+
+Le creator che seguiamo in Only Sweety Agency superano costantemente le medie di mercato grazie a chatter 24/7, marketing attivo e strategia PPV ottimizzata.`
+  },
+  // PT
+  { slug:"quanto-se-ganha-onlyfans-2026", locale:"pt", date:"2026-06-19",
+    title:"Quanto se Ganha no OnlyFans em 2026? Números Reais",
+    excerpt:"Os ganhos reais do OnlyFans por percentil em 2026. Médias, quanto as melhores realmente ganham e o que separa o top 1% do resto.",
+    kw:["quanto se ganha onlyfans","ganhos onlyfans 2026","renda onlyfans","dinheiro onlyfans"],
+    content:`A realidade dos ganhos do OnlyFans em 2026 é mais matizada do que as manchetes sugerem. Os 10% de criadoras no topo geram cerca de 73% da receita da plataforma. A maioria que trabalha sozinha ganha menos de 200$/mês.
+
+**Os dados reais do mercado**
+
+Estimativas do setor: cerca de 75% das criadoras ganham menos de 150$/mês, 20% entre 150$ e 1.500$/mês, 4% entre 1.500$ e 8.000$/mês, o top 1% mais de 8.000$/mês. A média aritmética é fortemente distorcida pelas criadoras de elite.
+
+**O que determina o seu percentil**
+
+Os três fatores principais: a consistência do conteúdo (publicar pelo menos 4-5 vezes por semana), a estratégia de tráfego externo (sem tráfego externo não há crescimento) e a gestão da relação com os fãs (chatting e PPV).
+
+**De onde vem realmente o dinheiro**
+
+Um erro comum: achar que a maior parte vem das assinaturas. Em contas bem geridas, o PPV e as gorjetas superam amplamente a receita de assinaturas. Por isso as melhores criadoras investem em chatters.
+
+**O multiplicador da gestão profissional**
+
+As criadoras que acompanhamos na Only Sweety Agency superam consistentemente as médias do mercado graças a chatters 24/7, marketing ativo e estratégia PPV otimizada.`
+  },
+
 ];
+
+
+// ── Header images by topic (Unsplash, commercial-free) ──────────────────────
+const TOPIC_IMAGES: Record<string,string> = {
+  income:   "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&h=420&fit=crop&q=82",
+  agency:   "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&h=420&fit=crop&q=82",
+  anonymous:"https://images.unsplash.com/photo-1492288991661-058aa541ff43?w=900&h=420&fit=crop&q=82",
+  start:    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&h=420&fit=crop&crop=top&q=82",
+  marketing:"https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=900&h=420&fit=crop&q=82",
+  chatters: "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=900&h=420&fit=crop&q=82",
+  growth:   "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=420&fit=crop&q=82",
+  model:    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900&h=420&fit=crop&crop=top&q=82",
+  money:    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=900&h=420&fit=crop&q=82",
+  default:  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&h=420&fit=crop&crop=top&q=82",
+};
+
+export function postImage(post: { slug:string; kw:string[] }): string {
+  const s = (post.slug + " " + post.kw.join(" ")).toLowerCase();
+  if (/gana|ingreso|income|cuanto|earn|verdien|guadagn|dinero|money|euro|dolar/.test(s)) return TOPIC_IMAGES.income;
+  if (/agencia|agency|agence|agentur/.test(s)) return TOPIC_IMAGES.agency;
+  if (/cara|anonim|anonym|face|sin mostrar/.test(s)) return TOPIC_IMAGES.anonymous;
+  if (/empezar|start|comenzar|crear cuenta|cómo empezar|beginn|iniziare|começar/.test(s)) return TOPIC_IMAGES.start;
+  if (/marketing|promocion|tiktok|reddit|instagram|traffic|tráfico/.test(s)) return TOPIC_IMAGES.marketing;
+  if (/chatter|ppv|mensaj|chat|message/.test(s)) return TOPIC_IMAGES.chatters;
+  if (/crecer|crecimiento|grow|escalar|scale|aumentar/.test(s)) return TOPIC_IMAGES.growth;
+  return TOPIC_IMAGES.default;
+}

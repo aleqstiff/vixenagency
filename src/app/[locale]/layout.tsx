@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: { canonical:`${BASE_URL}/${l}/`, languages:langs },
     openGraph: { title:tr.meta_title, description:tr.meta_desc, url:`${BASE_URL}/${l}/`, siteName:"Only Sweety Agency", locale:l, type:"website" },
     twitter: { card:"summary_large_image", title:tr.meta_title, description:tr.meta_desc },
+    other: { "trustpilot-one-time-domain-verification-id": "bd17ee5f-9e04-42a1-8d72-1b7c35a21004" },
   };
 }
 

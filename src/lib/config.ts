@@ -1,4 +1,4 @@
-export const BASE_URL = "https://onlysweety.net";
+export const BASE_URL = "https://onlysweety.com";
 export const WA = "34644462216";
 export const waLink = (msg: string) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
 

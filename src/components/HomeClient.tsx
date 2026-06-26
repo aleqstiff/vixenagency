@@ -115,7 +115,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
       d.country ? `*País:* ${d.country}` : null,
       d.availability ? `*Disponibilidad:* ${d.availability}` : null,
       d.notes ? `\n*Mi caso:* ${d.notes}` : null,
-      `\n_He rellenado el formulario en onlysweety.net_`,
+      `\n_He rellenado el formulario en onlysweety.com_`,
     ].filter(Boolean).join("\n");
     return lines;
   }

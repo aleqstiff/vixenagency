@@ -82,7 +82,7 @@ export default async function ServicePage({
   const { locale, service } = await params;
   const l = locale as Locale;
   const s = SERVICES[l]?.find(x => x.slug === service);
-  if (!s) return <div style={{ color:"#fff",padding:40 }}>Not found</div>;
+  if (!s) return <div style={{ color:"var(--dark)",padding:40 }}>Not found</div>;
 
   const wa = waMsg(l);
   const href = waLink(wa);
@@ -130,7 +130,7 @@ export default async function ServicePage({
       <MegaNav locale={l} posts={navPosts} />
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <div style={{ background:"var(--bg2)", padding:"56px 20px 44px", borderBottom:"1px solid rgba(255,255,255,0.06)", position:"relative", overflow:"hidden" }}>
+      <div style={{ background:"var(--bg2)", padding:"56px 20px 44px", borderBottom:"1px solid var(--border)", position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0, background:`radial-gradient(ellipse 60% 70% at 50% 0%, ${s.color}10 0%, transparent 70%)`, pointerEvents:"none" }} />
         <div style={{ maxWidth:820, margin:"0 auto", position:"relative" }}>
           <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:20, flexWrap:"wrap" }}>
@@ -160,7 +160,7 @@ export default async function ServicePage({
             </span>
           </div>
 
-          <h1 style={{ fontSize:"clamp(1.8rem,4vw,3rem)", fontWeight:900, color:"#fff", lineHeight:1.1, letterSpacing:"-1.5px", marginBottom:12 }}>
+          <h1 style={{ fontSize:"clamp(1.8rem,4vw,3rem)", fontWeight:900, color:"var(--dark)", lineHeight:1.1, letterSpacing:"-1.5px", marginBottom:12 }}>
             {s.title}
           </h1>
           <p style={{ fontSize:18, fontWeight:700, color:s.color, marginBottom:14 }}>
@@ -171,7 +171,7 @@ export default async function ServicePage({
           </p>
 
           <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
-            <a href="#form" className="btn btn-cta" style={{ fontSize:15, padding:"16px 36px" }}>
+            <a href="#form" className="btn btn-rose" style={{ fontSize:15, padding:"16px 36px" }}>
               {l==="es"?"Solicitar consulta gratuita":l==="en"?"Request free consultation":l==="fr"?"Demander une consultation":l==="de"?"Kostenlose Beratung":"Consulenza gratuita"}
             </a>
             <div style={{ display:"flex", alignItems:"center", gap:8, color:"var(--muted2)", fontSize:13 }}>
@@ -183,7 +183,7 @@ export default async function ServicePage({
       </div>
 
       {/* ── Stats strip ─────────────────────────────────── */}
-      <div style={{ background:"var(--bg3)", borderBottom:"1px solid rgba(255,255,255,0.05)" }}>
+      <div style={{ background:"var(--bg3)", borderBottom:"1px solid var(--border)" }}>
         <div style={{ maxWidth:900, margin:"0 auto", padding:"20px", display:"flex", gap:0, flexWrap:"wrap" }}>
           {([
             ["+200", l==="es"?"creadoras activas":l==="en"?"active creators":"creator attivi"],
@@ -191,7 +191,7 @@ export default async function ServicePage({
             ["30 días", l==="es"?"primeros resultados":l==="en"?"first results":"primi risultati"],
             ["24/7", l==="es"?"disponibilidad":l==="en"?"availability":"disponibilità"],
           ] as [string,string][]).map(([v,lbl]) => (
-            <div key={v} style={{ flex:1, minWidth:120, padding:"8px 20px", textAlign:"center", borderRight:"1px solid rgba(255,255,255,0.06)" }}>
+            <div key={v} style={{ flex:1, minWidth:120, padding:"8px 20px", textAlign:"center", borderRight:"1px solid var(--border)" }}>
               <div style={{ fontSize:22, fontWeight:900, color:s.color, letterSpacing:"-1px", lineHeight:1 }}>{v}</div>
               <div style={{ fontSize:11, color:"var(--muted2)", marginTop:3 }}>{lbl}</div>
             </div>
@@ -205,7 +205,7 @@ export default async function ServicePage({
 
           {/* Content */}
           <div>
-            <h2 style={{ fontSize:"clamp(1.4rem,2.5vw,1.9rem)", fontWeight:900, color:"#fff", marginBottom:20, letterSpacing:"-0.5px" }}>
+            <h2 style={{ fontSize:"clamp(1.4rem,2.5vw,1.9rem)", fontWeight:900, color:"var(--dark)", marginBottom:20, letterSpacing:"-0.5px" }}>
               {l==="es"?"Qué incluye este servicio":l==="en"?"What this service includes":l==="fr"?"Ce que comprend ce service":l==="de"?"Was dieser Service beinhaltet":"Cosa include questo servizio"}
             </h2>
             <div style={{ display:"grid", gap:12, marginBottom:40 }}>
@@ -215,7 +215,7 @@ export default async function ServicePage({
                     {icon}
                   </div>
                   <div>
-                    <p style={{ fontWeight:700, color:"#fff", fontSize:15, marginBottom:4 }}>{title}</p>
+                    <p style={{ fontWeight:700, color:"var(--dark)", fontSize:15, marginBottom:4 }}>{title}</p>
                     <p style={{ color:"var(--muted)", fontSize:13, lineHeight:1.6 }}>{desc}</p>
                   </div>
                 </div>
@@ -223,13 +223,13 @@ export default async function ServicePage({
             </div>
 
             {/* FAQ section — key for SEO */}
-            <h2 style={{ fontSize:"clamp(1.3rem,2.5vw,1.7rem)", fontWeight:900, color:"#fff", marginBottom:16, letterSpacing:"-0.5px" }}>
+            <h2 style={{ fontSize:"clamp(1.3rem,2.5vw,1.7rem)", fontWeight:900, color:"var(--dark)", marginBottom:16, letterSpacing:"-0.5px" }}>
               {l==="es"?"Preguntas frecuentes":l==="en"?"Frequently asked questions":l==="fr"?"Questions fréquentes":l==="de"?"Häufige Fragen":"Domande frequenti"}
             </h2>
             <div style={{ display:"grid", gap:8, marginBottom:48 }}>
               {allFaqs.map(([q,a],i) => (
                 <details key={i} className="card" style={{ padding:0 }}>
-                  <summary style={{ padding:"16px 20px", fontWeight:700, color:"#fff", cursor:"pointer", fontSize:14, display:"flex", justifyContent:"space-between", alignItems:"center", userSelect:"none", listStyle:"none" }}>
+                  <summary style={{ padding:"16px 20px", fontWeight:700, color:"var(--dark)", cursor:"pointer", fontSize:14, display:"flex", justifyContent:"space-between", alignItems:"center", userSelect:"none", listStyle:"none" }}>
                     <span style={{ flex:1, paddingRight:12 }}>{q}</span>
                     <span className="plus-icon" style={{ color:s.color, fontSize:22, fontWeight:300, lineHeight:1, flexShrink:0 }}>+</span>
                   </summary>
@@ -243,15 +243,15 @@ export default async function ServicePage({
 
           {/* Sidebar CTA */}
           <div style={{ position:"relative" }}>
-            <div className="card-glow" style={{ padding:28 }}>
+            <div className="card" style={{ padding:28 }}>
               <div style={{ fontSize:10, fontWeight:700, color:s.color, textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:14 }}>Only Sweety Agency</div>
-              <h3 style={{ fontWeight:900, color:"#fff", fontSize:20, marginBottom:10, letterSpacing:"-0.5px", lineHeight:1.2 }}>
+              <h3 style={{ fontWeight:900, color:"var(--dark)", fontSize:20, marginBottom:10, letterSpacing:"-0.5px", lineHeight:1.2 }}>
                 {l==="es"?"¿Lista para empezar?":l==="en"?"Ready to start?":l==="fr"?"Prête à commencer ?":l==="de"?"Bereit loszulegen?":"Pronta per iniziare?"}
               </h3>
               <p style={{ color:"var(--muted)", fontSize:13, lineHeight:1.65, marginBottom:22 }}>
                 {s.desc.slice(0, 100)}…
               </p>
-              <a href="#form" className="btn btn-cta"
+              <a href="#form" className="btn btn-rose"
                 style={{ display:"flex", justifyContent:"center", width:"100%", padding:"14px", fontSize:14, marginBottom:12 }}>
                 {l==="es"?"Consulta gratuita — WhatsApp":l==="en"?"Free consultation — WhatsApp":l==="fr"?"Consultation gratuite":l==="de"?"Kostenlose Beratung":"Consulenza gratuita"}
               </a>
@@ -280,7 +280,7 @@ export default async function ServicePage({
                       className="card" style={{ padding:"10px 14px", display:"flex", gap:10, alignItems:"center", textDecoration:"none" }}>
                       <span style={{ fontSize:18 }}>{rp.icon}</span>
                       <div>
-                        <p style={{ fontSize:12, fontWeight:700, color:"#fff", lineHeight:1.2 }}>{rp.kw}</p>
+                        <p style={{ fontSize:12, fontWeight:700, color:"var(--dark)", lineHeight:1.2 }}>{rp.kw}</p>
                         <p style={{ fontSize:11, color:rp.color }}>{rp.intent === "transactional" ? "Servicio" : rp.intent === "commercial" ? "Comparativa" : "Guía"}</p>
                       </div>
                     </Link>
@@ -294,12 +294,12 @@ export default async function ServicePage({
 
       {/* ── Bottom CTA ──────────────────────────────────── */}
       <div style={{ padding:"0 20px 64px" }}>
-        <div style={{ maxWidth:680, margin:"0 auto", background:"linear-gradient(135deg,rgba(0,229,204,0.06),rgba(124,58,237,0.04))", border:"1px solid rgba(0,229,204,0.2)", borderRadius:20, padding:"36px", textAlign:"center" }}>
-          <h2 style={{ fontWeight:900, color:"#fff", fontSize:22, marginBottom:10, letterSpacing:"-0.5px" }}>
+        <div style={{ maxWidth:680, margin:"0 auto", background:"linear-gradient(135deg,var(--bg2),var(--bg3))", border:"1px solid rgba(196,105,154,0.25)", borderRadius:20, padding:"36px", textAlign:"center" }}>
+          <h2 style={{ fontWeight:900, color:"var(--dark)", fontSize:22, marginBottom:10, letterSpacing:"-0.5px" }}>
             {t(l,"cta_title")}
           </h2>
           <p style={{ color:"var(--muted)", fontSize:14, marginBottom:24 }}>{t(l,"cta_sub")}</p>
-          <a href="#form" className="btn btn-cta" style={{ fontSize:15, padding:"16px 36px" }}>
+          <a href="#form" className="btn btn-rose" style={{ fontSize:15, padding:"16px 36px" }}>
             {t(l,"cta_btn")}
           </a>
           <p style={{ fontSize:11, color:"var(--muted2)", marginTop:14 }}>{t(l,"cta_note")}</p>

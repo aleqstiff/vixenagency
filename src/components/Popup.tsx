@@ -30,7 +30,7 @@ export default function Popup({ locale, href }: { locale: Locale; href: string }
       {show && !gone && (
         <div style={{ position:"fixed",inset:0,zIndex:60,display:"flex",alignItems:"flex-end",justifyContent:"center",padding:"0 16px 24px",background:"rgba(0,0,0,0.55)" }}
           onClick={dismiss}>
-          <div className="card-glow fade-up" style={{ width:"100%",maxWidth:420,padding:28,position:"relative" }}
+          <div className="fade-up" style={{ width:"100%",maxWidth:420,padding:28,position:"relative",background:"linear-gradient(135deg,var(--dark),#2a1a26)",borderRadius:22,border:"1px solid rgba(217,133,176,0.25)",boxShadow:"0 24px 70px rgba(0,0,0,0.45)" }}
             onClick={e => e.stopPropagation()}>
             <button onClick={dismiss} style={{ position:"absolute",top:12,right:16,background:"none",border:"none",color:"rgba(232,240,248,0.4)",fontSize:20,cursor:"pointer" }}>✕</button>
             <div style={{ fontSize:40,marginBottom:12 }}>💰</div>

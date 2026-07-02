@@ -146,7 +146,7 @@ export const SERVICES: Record<Locale, ServicePage[]> = {
       headline:"OnlyFans pour l\\'international, MYM pour la France",
       desc:"La stratégie biplateforme optimale pour les créatrices francophones : OnlyFans pour le marché anglophone (5x plus rémunérateur), MYM pour l\\'audience francophone fidèle." },
     { slug:"anonymat-onlyfans", icon:"🔒", color:"#6366f1",
-      kw:"anonymat onlyfans", title:"OnlyFans Anonyme — Protection Totale d\\'Identité",
+      kw:"anonymat onlyfans", title:"OnlyFans Anonyme — Protection d\\'Identité",
       headline:"Gagnez très bien sans que personne sache qui vous êtes",
       desc:"Protocole d\\'anonymat en couches : pages relais, comptes séparés, appareils indépendants et chatteuses qui maintiennent votre personnage." },
   ],

@@ -3,7 +3,7 @@ import type { Locale } from "./config";
 export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
   es: {
     meta_title: "Agencia OnlyFans — Multiplica tus ingresos ×3 | Only Sweety",
-    meta_desc: "Agencia de gestión OnlyFans #1 en habla hispana. Chatters 24/7, marketing digital, protección de identidad. España, México, Argentina, Colombia y más. Aplicación gratuita.",
+    meta_desc: "Agencia de gestión OnlyFans #1 en habla hispana. Chatters 24/7, marketing digital, protección de identidad. España, México, Argentina, Colombia y más.",
     meta_kw: "agencia onlyfans,gestión onlyfans,agencia modelos onlyfans,agencia onlyfans españa,ganar dinero onlyfans,chatters onlyfans",
     // nav
     nav_services:"Servicios", nav_countries:"Países", nav_blog:"Blog", nav_apply:"Aplicar gratis",
@@ -14,7 +14,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
     hero_eyebrow:"Gestión profesional · Discreción total · Pago por resultados",
     hero_h1:"Multiplica tus ingresos en OnlyFans",
     hero_h1_accent:"sin tocar la gestión",
-    hero_desc:"Gestionamos tu OnlyFans al completo: chatters 24/7 en tu idioma, captación de fans en TikTok e Instagram, estrategia PPV y anonimato total. Tú creas. Nosotros escalamos.",
+    hero_desc:"Gestionamos tu OnlyFans al completo: chatters 24/7 en tu idioma, captación de fans en TikTok e Instagram, estrategia PPV y anonimato total. Tú creas.",
     hero_cta:"Solicitar análisis gratuito",
     hero_cta2:"Ver resultados",
     hero_trust:"✓ Sin pago inicial  ✓ Sin permanencia  ✓ Solo cobramos si tú ganas",
@@ -173,7 +173,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
     hero_eyebrow:"Gestion complète · Discrétion totale · Paiement aux résultats",
     hero_h1:"Multipliez vos revenus OnlyFans",
     hero_h1_accent:"sans rien gérer vous-même",
-    hero_desc:"Gestion complète de votre OnlyFans et MYM : chatteuses francophones 24/7, acquisition de fans sur TikTok et Instagram, stratégie PPV et anonymat total. Vous créez. Nous faisons le reste.",
+    hero_desc:"Gestion complète de votre OnlyFans et MYM : chatteuses francophones 24/7, acquisition de fans sur TikTok et Instagram, stratégie PPV et anonymat total.",
     hero_cta:"Demander une analyse gratuite",
     hero_cta2:"Voir les résultats",
     hero_trust:"✓ Sans frais initiaux  ✓ Sans engagement  ✓ On ne gagne que quand vous gagnez",
@@ -234,7 +234,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
 
   de: {
     meta_title: "OnlyFans Agentur — Einnahmen verdreifachen | Only Sweety",
-    meta_desc: "OnlyFans Management Agentur #1 für DACH-Creator. Deutschsprachige Chatter 24/7, Social-Media-Marketing, volle Anonymität. Deutschland, Österreich, Schweiz. Kostenlose Bewerbung.",
+    meta_desc: "OnlyFans Management Agentur #1 für DACH-Creator. Deutschsprachige Chatter 24/7, Social-Media-Marketing, volle Anonymität. Deutschland, Österreich, Schweiz.",
     meta_kw: "onlyfans agentur,onlyfans management,onlyfans agentur deutschland,onlyfans chatter,geld verdienen onlyfans",
     nav_services:"Services", nav_countries:"Länder", nav_blog:"Blog", nav_apply:"Kostenlos bewerben",
     nav_mega_services_title:"Unsere Services",
@@ -243,7 +243,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
     hero_eyebrow:"Vollständiges Management · Totale Diskretion · Zahlung bei Ergebnissen",
     hero_h1:"Verdreifache deine OnlyFans-Einnahmen",
     hero_h1_accent:"ohne selbst zu verwalten",
-    hero_desc:"Vollständiges OnlyFans-Management: deutschsprachige Chatter 24/7, Fan-Gewinnung auf TikTok und Instagram, PPV-Strategie und Identitätsschutz. Du erstellst. Wir skalieren.",
+    hero_desc:"Vollständiges OnlyFans-Management: deutschsprachige Chatter 24/7, Fan-Gewinnung auf TikTok und Instagram, PPV-Strategie und Identitätsschutz. Du erstellst.",
     hero_cta:"Kostenlose Analyse anfordern",
     hero_cta2:"Ergebnisse sehen",
     hero_trust:"✓ Keine Vorauszahlung  ✓ Keine Bindung  ✓ Wir verdienen nur, wenn du verdienst",

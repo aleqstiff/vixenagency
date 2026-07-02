@@ -339,3 +339,9 @@ details>div{
 @media(max-width:680px){
   article.card[style*="gridTemplateColumns"]{grid-template-columns:1fr!important}
 }
+
+/* Country page responsive */
+@media(max-width:768px){
+  .country-hero{grid-template-columns:1fr!important;gap:32px!important}
+  .stats-3{grid-template-columns:1fr!important}
+}

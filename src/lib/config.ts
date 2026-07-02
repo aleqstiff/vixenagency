@@ -17,6 +17,18 @@ export const COUNTRIES = {
   chile:      { locale:"es" as Locale, name:"Chile",        flag:"🇨🇱", city:"Santiago" },
   peru:       { locale:"es" as Locale, name:"Perú",         flag:"🇵🇪", city:"Lima" },
   venezuela:  { locale:"es" as Locale, name:"Venezuela",    flag:"🇻🇪", city:"Caracas" },
+  ecuador:    { locale:"es" as Locale, name:"Ecuador",      flag:"🇪🇨", city:"Guayaquil" },
+  bolivia:    { locale:"es" as Locale, name:"Bolivia",      flag:"🇧🇴", city:"Santa Cruz" },
+  paraguay:   { locale:"es" as Locale, name:"Paraguay",     flag:"🇵🇾", city:"Asunción" },
+  uruguay:    { locale:"es" as Locale, name:"Uruguay",      flag:"🇺🇾", city:"Montevideo" },
+  guatemala:  { locale:"es" as Locale, name:"Guatemala",    flag:"🇬🇹", city:"Guatemala" },
+  costarica:  { locale:"es" as Locale, name:"Costa Rica",   flag:"🇨🇷", city:"San José" },
+  panama:     { locale:"es" as Locale, name:"Panamá",       flag:"🇵🇦", city:"Panamá" },
+  republicadominicana: { locale:"es" as Locale, name:"República Dominicana", flag:"🇩🇴", city:"Santo Domingo" },
+  puertorico: { locale:"es" as Locale, name:"Puerto Rico",  flag:"🇵🇷", city:"San Juan" },
+  honduras:   { locale:"es" as Locale, name:"Honduras",     flag:"🇭🇳", city:"Tegucigalpa" },
+  elsalvador: { locale:"es" as Locale, name:"El Salvador",  flag:"🇸🇻", city:"San Salvador" },
+  nicaragua:  { locale:"es" as Locale, name:"Nicaragua",    flag:"🇳🇮", city:"Managua" },
   eeuu:       { locale:"en" as Locale, name:"United States",flag:"🇺🇸", city:"New York" },
   canada:     { locale:"en" as Locale, name:"Canada",       flag:"🇨🇦", city:"Toronto" },
   france:     { locale:"fr" as Locale, name:"France",       flag:"🇫🇷", city:"Paris" },
@@ -29,7 +41,7 @@ export const COUNTRIES = {
 export type CountrySlug = keyof typeof COUNTRIES;
 
 export const LOCALE_COUNTRIES: Record<Locale, CountrySlug[]> = {
-  es: ["espana","mexico","argentina","colombia","chile","peru","venezuela"],
+  es: ["espana","mexico","colombia","argentina","venezuela","chile","peru","ecuador","bolivia","paraguay","uruguay","guatemala","costarica","panama","republicadominicana","puertorico","honduras","elsalvador","nicaragua"],
   en: ["eeuu","canada"],
   fr: ["france","belgique"],
   de: ["deutschland","oesterreich"],

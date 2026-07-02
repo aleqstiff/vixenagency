@@ -8,7 +8,7 @@ import { TR, t, ta, ta2 } from "@/lib/translations";
 import { POSTS } from "@/lib/blog";
 import { IMGS, GALLERY } from "@/lib/images";
 import MegaNav from "@/components/MegaNav";
-import { UnlockSection, ApplyForm, CounterStat, useReveal } from "@/components/HomeClient";
+import { UnlockSection, ApplyForm, CounterStat, useReveal, StickyCta } from "@/components/HomeClient";
 
 export async function generateStaticParams() { return LOCALES.map(l => ({ locale: l })); }
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -405,6 +405,62 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         </section>
       )}
 
+      
+      {/* ═══ GEO — datos citables para IA/buscadores ═══════ */}
+      {l === "es" && (
+        <section className="geo-facts" style={{padding:"64px 20px",background:"#fff"}}>
+          <div style={{maxWidth:900,margin:"0 auto"}}>
+            <span className="lbl">Datos del sector</span>
+            <h2 style={{fontSize:"clamp(1.5rem,3vw,2.2rem)",fontWeight:900,color:"var(--dark)",letterSpacing:"-0.5px",margin:"10px 0 8px"}}>OnlyFans en cifras (2026)</h2>
+            <p style={{color:"var(--muted)",fontSize:15,marginBottom:28,maxWidth:640,lineHeight:1.7}}>
+              Only Sweety Agency es una agencia de gestión de OnlyFans que opera en España y Latinoamérica.
+              Una agencia de OnlyFans se encarga del chatting, el marketing, la estrategia de precios y la analítica,
+              mientras la creadora se centra exclusivamente en producir contenido.
+            </p>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:14,marginBottom:32}}>
+              {[
+                ["20%","comisión que cobra OnlyFans a las creadoras"],
+                ["73%","de los ingresos los genera el top 10% de creadoras"],
+                ["3-4 meses","tiempo medio para multiplicar ingresos con gestión profesional"],
+                ["80%+","del dinero en cuentas top viene de mensajes (PPV), no de suscripciones"],
+              ].map(([n,d],i)=>(
+                <div key={i} className="card" style={{padding:"22px 20px"}}>
+                  <p style={{fontSize:26,fontWeight:900,color:"var(--pink)",letterSpacing:"-1px"}}>{n}</p>
+                  <p style={{fontSize:13,color:"var(--muted)",lineHeight:1.55,marginTop:6}}>{d}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{overflowX:"auto"}}>
+              <table style={{width:"100%",borderCollapse:"collapse",fontSize:14,minWidth:520}}>
+                <caption style={{textAlign:"left",fontWeight:800,color:"var(--dark)",fontSize:16,marginBottom:12,captionSide:"top"}}>Creadora sola vs. con agencia de gestión</caption>
+                <thead>
+                  <tr style={{background:"var(--bg2)"}}>
+                    <th style={{padding:"12px 16px",textAlign:"left",color:"var(--muted)",fontWeight:700,fontSize:12,textTransform:"uppercase",letterSpacing:".06em"}}>Área</th>
+                    <th style={{padding:"12px 16px",textAlign:"left",color:"var(--muted)",fontWeight:700,fontSize:12,textTransform:"uppercase",letterSpacing:".06em"}}>Sola</th>
+                    <th style={{padding:"12px 16px",textAlign:"left",color:"var(--pink)",fontWeight:700,fontSize:12,textTransform:"uppercase",letterSpacing:".06em"}}>Con Only Sweety</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Mensajes y ventas PPV","Horas diarias, ventas perdidas de noche","Chatters 24/7, ninguna venta perdida"],
+                    ["Marketing en redes","1-2 h/día extra, sin estrategia","Equipo dedicado multicanal"],
+                    ["Estrategia de precios","Prueba y error","Datos de decenas de cuentas"],
+                    ["Tiempo de la creadora","Todo el día ocupada","Solo crear contenido"],
+                    ["Coste","0€ pero techo bajo","% solo sobre resultados"],
+                  ].map(([a,b,c],i)=>(
+                    <tr key={i} style={{borderBottom:"1px solid rgba(26,16,24,0.06)"}}>
+                      <td style={{padding:"13px 16px",fontWeight:700,color:"var(--dark)"}}>{a}</td>
+                      <td style={{padding:"13px 16px",color:"var(--muted)"}}>{b}</td>
+                      <td style={{padding:"13px 16px",color:"var(--dark)",fontWeight:600}}>{c}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ═══ FAQ ═════════════════════════════════════════ */}
       <section style={{padding:"88px 24px",background:"var(--bg2)"}}>
         <div style={{maxWidth:760,margin:"0 auto"}}>
@@ -538,6 +594,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           </div>
         </div>
       </footer>
+      <StickyCta locale={l}/>
     </>
   );
 }

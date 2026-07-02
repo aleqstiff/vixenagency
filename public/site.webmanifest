@@ -1,0 +1,21 @@
+{
+ "name": "Only Sweety Agency",
+ "short_name": "Only Sweety",
+ "description": "Agencia de gesti\u00f3n OnlyFans \u2014 chatters 24/7, marketing y gesti\u00f3n completa",
+ "start_url": "/es/",
+ "display": "standalone",
+ "background_color": "#fdf0f6",
+ "theme_color": "#c4699a",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

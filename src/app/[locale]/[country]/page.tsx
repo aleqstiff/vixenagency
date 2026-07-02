@@ -78,6 +78,13 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
 
   const h1 = meta?.title.split("|")[0].trim() ?? `Agencia OnlyFans ${c.name}`;
 
+  const breadcrumb = {
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    itemListElement:[
+      {"@type":"ListItem",position:1,name:"Home",item:`${BASE_URL}/${l}/`},
+      {"@type":"ListItem",position:2,name:c.name,item:`${BASE_URL}/${l}/${country}/`},
+    ],
+  };
   const schema = {
     "@context":"https://schema.org","@type":"LocalBusiness","name":`Only Sweety Agency — ${c.name}`,
     "description": meta?.desc ?? "",
@@ -113,6 +120,7 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <MegaNav locale={l} />
 

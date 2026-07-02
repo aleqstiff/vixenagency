@@ -99,6 +99,13 @@ export default async function ServicePage({
       "@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}
     })),
   };
+  const breadcrumb = {
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    itemListElement:[
+      {"@type":"ListItem",position:1,name:"Home",item:`${BASE_URL}/${l}/`},
+      {"@type":"ListItem",position:2,name:s!.title,item:`${BASE_URL}/${l}/servicios/${service}/`},
+    ],
+  };
   const serviceSchema = {
     "@context":"https://schema.org","@type":"Service",
     "name":s.title,"description":s.desc,
@@ -119,6 +126,7 @@ export default async function ServicePage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <MegaNav locale={l} posts={navPosts} />
 
       {/* ── Hero ─────────────────────────────────────────── */}

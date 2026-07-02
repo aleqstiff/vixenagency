@@ -120,7 +120,7 @@ export const SERVICES: Record<Locale, ServicePage[]> = {
       headline:"Earn well without anyone knowing who you are",
       desc:"Layered anonymity protocol: bridge pages, separate accounts, independent devices and chatters that maintain your persona. Many of our top creators are 100% anonymous." },
     { slug:"onlyfans-agency-usa", icon:"🇺🇸", color:"#ef4444",
-      kw:"onlyfans agency usa", title:"OnlyFans Agency USA — Management for American Creators",
+      kw:"onlyfans agency usa", title:"OnlyFans Agency USA — For American Creators",
       headline:"The highest-paying market, managed professionally",
       desc:"Specialized management for creators in the US market. Native English chatters, Reddit growth strategy, tax-compliant income structuring and positioning for top 1% revenue." },
   ],

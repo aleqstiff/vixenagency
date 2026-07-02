@@ -152,6 +152,14 @@ export default async function BlogPost({ params }: { params: Promise<{ locale: s
   const readMin = Math.max(2, Math.round(words / 200));
   const readLabel: Record<string,string> = { es:"min de lectura", en:"min read", fr:"min de lecture", de:"Min. Lesezeit", it:"min di lettura", pt:"min de leitura" };
 
+  const breadcrumb = {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${BASE_URL}/${l}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE_URL}/${l}/blog/` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${BASE_URL}/${l}/blog/${slug}/` },
+    ],
+  };
   const schema = {
     "@context": "https://schema.org", "@type": "Article",
     headline: post.title, description: post.excerpt, datePublished: post.date,
@@ -163,6 +171,7 @@ export default async function BlogPost({ params }: { params: Promise<{ locale: s
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <MegaNav locale={l} posts={navPosts} />
 
       {/* ── Hero with image ── */}

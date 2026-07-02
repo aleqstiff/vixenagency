@@ -185,7 +185,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
 
       {/* Nombre */}
       <div style={{marginBottom:10}}>
-        <input required autoComplete="name" placeholder={tx.name} style={inp(!!errors.name)}
+        <input required autoComplete="name" placeholder={tx.name} aria-label={tx.name} style={inp(!!errors.name)}
           value={d.name} onChange={e=>setD({...d,name:e.target.value})}
           onBlur={()=>{if(!d.name.trim())setErrors(p=>({...p,name:tx.req}));else setErrors(p=>({...p,name:""}))}}/>
         <Err k="name"/>
@@ -193,20 +193,20 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
 
       {/* Redes sociales */}
       <div style={{marginBottom:10}}>
-        <input required autoComplete="username" placeholder={tx.ig} style={inp(!!errors.ig1)}
+        <input required autoComplete="username" placeholder={tx.ig} aria-label={tx.ig} style={inp(!!errors.ig1)}
           value={d.ig1} onChange={e=>setD({...d,ig1:e.target.value})}
           onBlur={()=>{if(!d.ig1.trim())setErrors(p=>({...p,ig1:tx.req}));else setErrors(p=>({...p,ig1:""}))}}/>
         <Err k="ig1"/>
       </div>
       {showSocial2&&(
         <div style={{marginBottom:10}}>
-          <input placeholder={tx.social2} style={inp(false)}
+          <input placeholder={tx.social2} aria-label={tx.social2} style={inp(false)}
             value={d.social2} onChange={e=>setD({...d,social2:e.target.value})}/>
         </div>
       )}
       {showSocial2&&showSocial3&&(
         <div style={{marginBottom:10}}>
-          <input placeholder={tx.social3} style={inp(false)}
+          <input placeholder={tx.social3} aria-label={tx.social3} style={inp(false)}
             value={d.social3} onChange={e=>setD({...d,social3:e.target.value})}/>
         </div>
       )}
@@ -220,11 +220,11 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
       {/* Teléfono */}
       <div style={{marginBottom:10}}>
         <div style={{display:"flex",gap:8}}>
-          <select style={{...selStyle(false),width:130,flexShrink:0}} value={d.prefix} onChange={e=>setD({...d,prefix:e.target.value})}>
+          <select aria-label={tx.prefix} style={{...selStyle(false),width:130,flexShrink:0}} value={d.prefix} onChange={e=>setD({...d,prefix:e.target.value})}>
             {PREFIXES.map(p=><option key={p.code} value={p.code}>{p.flag} {p.code}</option>)}
           </select>
           <div style={{flex:1}}>
-            <input required type="tel" autoComplete="tel-national" placeholder={tx.phone} style={inp(!!errors.phone)}
+            <input required type="tel" autoComplete="tel-national" placeholder={tx.phone} aria-label={tx.phone} style={inp(!!errors.phone)}
               value={d.phone}
               onChange={e=>{const v=e.target.value.replace(/[^\d\s\-\(\)]/g,"");setD({...d,phone:v});if(errors.phone&&valPhone(v))setErrors(p=>({...p,phone:""}))}}
               onBlur={()=>{if(!d.phone.trim())setErrors(p=>({...p,phone:tx.req}));else if(!valPhone(d.phone))setErrors(p=>({...p,phone:tx.badPhone}));else setErrors(p=>({...p,phone:""}))}}/>
@@ -235,7 +235,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
 
       {/* Email */}
       <div style={{marginBottom:10}}>
-        <input required type="email" autoComplete="email" placeholder={tx.email} style={inp(!!errors.email)}
+        <input required type="email" autoComplete="email" placeholder={tx.email} aria-label={tx.email} style={inp(!!errors.email)}
           value={d.email}
           onChange={e=>{setD({...d,email:e.target.value});if(errors.email&&valEmail(e.target.value))setErrors(p=>({...p,email:""}))}}
           onBlur={()=>{if(!d.email.trim())setErrors(p=>({...p,email:tx.req}));else if(!valEmail(d.email))setErrors(p=>({...p,email:tx.badEmail}));else setErrors(p=>({...p,email:""}))}}/>
@@ -244,9 +244,9 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
 
       {/* Ingresos + País */}
       <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
-        <input placeholder={tx.monthlyPh} style={inp(false)}
+        <input placeholder={tx.monthlyPh} aria-label={tx.monthlyPh} style={inp(false)}
           value={d.monthly} onChange={e=>setD({...d,monthly:e.target.value})}/>
-        <select style={selStyle(false)} value={d.country} onChange={e=>setD({...d,country:e.target.value})}>
+        <select aria-label={tx.country} style={selStyle(false)} value={d.country} onChange={e=>setD({...d,country:e.target.value})}>
           <option value="">{tx.country}</option>
           {countries.map(c=><option key={c} value={c}>{c}</option>)}
         </select>
@@ -255,14 +255,14 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
       {/* Objetivo + Disponibilidad */}
       <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
         <div>
-          <select required style={selStyle(!!errors.goal)} value={d.goal}
+          <select required aria-label={tx.goal} style={selStyle(!!errors.goal)} value={d.goal}
             onChange={e=>{setD({...d,goal:e.target.value});setErrors(p=>({...p,goal:""}))}}>
             <option value="">{tx.goal}</option>
             {tx.goals.map(g=><option key={g} value={g}>{g}</option>)}
           </select>
           <Err k="goal"/>
         </div>
-        <select style={selStyle(false)} value={d.availability} onChange={e=>setD({...d,availability:e.target.value})}>
+        <select aria-label={tx.availability} style={selStyle(false)} value={d.availability} onChange={e=>setD({...d,availability:e.target.value})}>
           <option value="">{tx.availability}</option>
           {tx.avail.map(a=><option key={a} value={a}>{a}</option>)}
         </select>
@@ -270,7 +270,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
 
       {/* Textarea */}
       <div style={{marginBottom:20}}>
-        <textarea rows={3} placeholder={tx.notesPh} autoComplete="off"
+        <textarea rows={3} placeholder={tx.notesPh} aria-label={tx.notesPh} autoComplete="off"
           style={{...inp(false),resize:"vertical",minHeight:80,lineHeight:1.6}}
           value={d.notes} onChange={e=>setD({...d,notes:e.target.value})}/>
       </div>
@@ -295,6 +295,35 @@ export function CounterStat({ value, label, color="var(--pink)" }: { value:strin
     <div ref={ref} style={{ textAlign:"center", opacity:vis?1:0, transform:vis?"translateY(0)":"translateY(24px)", transition:"opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)" }}>
       <div style={{ fontSize:"clamp(2.2rem,4.5vw,3.8rem)", fontWeight:900, color, letterSpacing:"-2px", lineHeight:1 }}>{value}</div>
       <div style={{ fontSize:13, color:"var(--muted)", marginTop:8, fontWeight:500 }}>{label}</div>
+    </div>
+  );
+}
+
+export function StickyCta({ locale }: { locale: string }) {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 700);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const label = ({ es:"Análisis gratuito →", en:"Free analysis →", fr:"Analyse gratuite →", de:"Kostenlose Analyse →", it:"Analisi gratuita →", pt:"Análise gratuita →" } as Record<string,string>)[locale] ?? "Análisis gratuito →";
+  return (
+    <div className="show-mobile" aria-hidden={!show} style={{
+      position:"fixed", left:0, right:0, bottom:0, zIndex:90,
+      padding:"10px 14px calc(10px + env(safe-area-inset-bottom))",
+      background:"rgba(255,255,255,0.92)", backdropFilter:"blur(14px)",
+      borderTop:"1px solid rgba(196,105,154,0.18)",
+      transform: show ? "translateY(0)" : "translateY(110%)",
+      transition:"transform .35s cubic-bezier(.4,0,.2,1)",
+      boxShadow:"0 -8px 30px rgba(196,105,154,0.12)",
+    }}>
+      <a href="#form" style={{
+        display:"flex", alignItems:"center", justifyContent:"center", gap:8,
+        width:"100%", padding:"14px", borderRadius:13,
+        background:"linear-gradient(135deg,var(--pink),var(--pink2))",
+        color:"#fff", fontWeight:800, fontSize:15, letterSpacing:"-.2px",
+        boxShadow:"0 4px 18px rgba(196,105,154,0.35)",
+      }}>{label}</a>
     </div>
   );
 }

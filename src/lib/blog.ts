@@ -1559,6 +1559,231 @@ Um erro comum: achar que a maior parte vem das assinaturas. Em contas bem gerida
 As criadoras que acompanhamos na Only Sweety Agency superam consistentemente as médias do mercado graças a chatters 24/7, marketing ativo e estratégia PPV otimizada.`
   },
 
+
+  // ── POSTS ALTO TRÁFICO (batch élite) ────────────────────────────────────────
+  { slug:"como-promocionar-onlyfans", locale:"es", date:"2026-06-28",
+    title:"Cómo Promocionar OnlyFans en 2026: 9 Canales que Funcionan",
+    excerpt:"Guía completa para promocionar tu OnlyFans: TikTok, Instagram, Reddit, Twitter/X y más. Qué funciona en cada canal, qué evitar y cómo combinar estrategias.",
+    kw:["como promocionar onlyfans","promocionar onlyfans","publicitar onlyfans","conseguir suscriptores onlyfans"],
+    content:`Promocionar OnlyFans es el 80% del trabajo. La plataforma no tiene descubrimiento interno: nadie te encuentra dentro. Todo suscriptor viene de fuera, y dominar los canales de tráfico externo es lo que separa una cuenta de 100€/mes de una de 5.000€/mes.
+
+**Los 9 canales ordenados por efectividad**
+
+1. **Twitter/X** — El único canal grande que permite contenido adulto explícito. Imprescindible: publica diario, usa hilos y colabora con otras creadoras para intercambiar audiencias.
+2. **Reddit** — Tráfico masivo y gratuito en subreddits de nicho. Los suscriptores que vienen de Reddit son de los que más convierten porque ya buscan contenido.
+3. **TikTok** — El mayor alcance orgánico, pero prohíbe contenido adulto: la estrategia es contenido "SFW" con personalidad que redirige a tu link-in-bio.
+4. **Instagram** — Ideal para construir marca personal y confianza. Reels diarios + Stories con engagement. Nunca menciones OnlyFans directamente: usa link-in-bio intermedio.
+5. **Telegram** — Canal propio para tu comunidad más fiel. Funciona como embudo intermedio: de TikTok/IG a Telegram, de Telegram a OnlyFans.
+6. **YouTube Shorts** — Menos competencia que TikTok en el nicho y el algoritmo empuja Shorts con fuerza.
+7. **Colaboraciones** — Shoutouts cruzados con creadoras de tamaño similar. Gratis y muy efectivo.
+8. **Dating apps** — Funcionan pero con riesgo alto de baneo. Úsalas solo como canal secundario.
+9. **Tráfico de pago** — Solo cuando ya facturas: ads en plataformas adult-friendly y compra de shoutouts en cuentas grandes.
+
+**La regla del embudo**
+
+El error más común es enlazar OnlyFans directamente desde TikTok o Instagram: te expones a baneos. La estructura correcta es: contenido viral en redes SFW → link-in-bio (Linktree, Beacons) o Telegram → OnlyFans. Cada capa filtra curiosos y protege tus cuentas.
+
+**Cuánto tiempo dedicar**
+
+Una creadora sola necesita 3-4 horas diarias solo de promoción para crecer de verdad. Es exactamente el trabajo que una agencia absorbe: nosotras gestionamos la promoción multicanal mientras tú solo creas contenido.`
+  },
+  { slug:"ideas-contenido-onlyfans", locale:"es", date:"2026-06-27",
+    title:"50 Ideas de Contenido para OnlyFans que Aumentan Ingresos",
+    excerpt:"Ideas de contenido para OnlyFans organizadas por objetivo: retención, PPV, propinas y crecimiento. Con ejemplos concretos y frecuencia recomendada.",
+    kw:["ideas contenido onlyfans","que subir a onlyfans","contenido para onlyfans","ideas onlyfans"],
+    content:`Quedarse sin ideas de contenido es la razón nº1 por la que las creadoras pierden consistencia — y la inconsistencia mata cuentas. Esta guía organiza el contenido por objetivo de negocio, no solo por formato.
+
+**Contenido de retención (para que no cancelen)**
+
+- Series con continuidad semanal: los fans renuevan para ver "el siguiente capítulo"
+- Contenido de "buenos días/buenas noches" recurrente que crea hábito
+- Detrás de cámaras de tus sesiones de fotos
+- Encuestas donde los fans votan tu próximo contenido
+- Contenido de tu día a día que humaniza (cocinando, entrenando, gaming)
+
+**Contenido PPV (donde está el dinero real)**
+
+- Sets temáticos exclusivos que nunca van al feed
+- Contenido personalizado bajo pedido (lo mejor pagado)
+- Videos largos premium vs. clips cortos del feed
+- Packs de "lo mejor del mes" para nuevos suscriptores
+
+**Contenido que genera propinas**
+
+- Retos y metas visibles: "si llegamos a X propinas, hago Y"
+- Juegos interactivos en mensajes (ruletas, dados, cartas)
+- Agradecimientos personalizados con nombre
+
+**Contenido de crecimiento (para redes externas)**
+
+- Clips SFW con personalidad para TikTok/Reels
+- Transformaciones y "get ready with me"
+- Reacciones y trends adaptados a tu nicho
+- Fotos lifestyle aesthetic para Instagram
+
+**La frecuencia que funciona**
+
+Feed: 4-6 publicaciones semanales. Stories/DM masivos: diario. PPV: 2-3 por semana máximo (más satura y devalúa). Redes externas: 1-2 piezas diarias.
+
+**El calendario lo es todo**
+
+Las cuentas top no improvisan: trabajan con calendario de contenido mensual, grabando en tandas (batch). Un día de grabación bien planificado produce contenido para 2 semanas.`
+  },
+  { slug:"como-cobrar-onlyfans-mexico-latam", locale:"es", date:"2026-06-26",
+    title:"Cómo Cobrar OnlyFans en México y Latinoamérica (2026)",
+    excerpt:"Métodos para retirar dinero de OnlyFans en México, Colombia, Argentina y el resto de LatAm: transferencia, ewallets, tiempos, mínimos y comisiones.",
+    kw:["como cobrar onlyfans","onlyfans mexico retirar dinero","cobrar onlyfans colombia","onlyfans metodos de pago"],
+    content:`Cobrar tus ganancias de OnlyFans desde Latinoamérica es más simple de lo que parece, pero cada país tiene sus particularidades. Aquí está lo esencial actualizado.
+
+**Cómo paga OnlyFans**
+
+OnlyFans paga en dólares estadounidenses (USD). Tienes un saldo pendiente que se libera a los 7 días (periodo de seguridad de la plataforma) y puedes configurar retiros manuales o automáticos (semanales o mensuales). El mínimo de retiro es de 20$.
+
+**México**
+
+Transferencia bancaria internacional directa a tu cuenta (SWIFT). Los bancos digitales suelen dar mejor tipo de cambio que la banca tradicional. El pago tarda típicamente 3-5 días hábiles.
+
+**Colombia, Argentina, Chile, Perú**
+
+Transferencia internacional SWIFT a cuenta local, o ewallets intermedias cuando el banco pone problemas con transferencias del exterior. En Argentina, el diferencial cambiario hace que cobrar en USD sea especialmente ventajoso.
+
+**El factor cambiario: tu superpoder en LatAm**
+
+Cobrar en dólares viviendo en LatAm es una ventaja estructural: tus costes de vida están en moneda local pero tus ingresos en USD. Una creadora facturando 2.000$/mes en México o Colombia tiene un poder adquisitivo equivalente a un salario alto local. Es una de las razones del crecimiento explosivo de creadoras latinas.
+
+**Impuestos: no los ignores**
+
+En todos los países de LatAm los ingresos de OnlyFans son ingresos gravables. Los bancos reportan transferencias del exterior. Regularizarte desde el principio (como independiente/autónoma según tu país) te evita problemas serios. Consulta con un contador local especializado en ingresos digitales.
+
+**Errores a evitar**
+
+- Usar cuentas bancarias de terceros (motivo de cierre de cuenta en OnlyFans)
+- No guardar un porcentaje para impuestos
+- Retirar todo inmediatamente sin planificación cambiaria`
+  },
+  { slug:"errores-onlyfans-principiantes", locale:"es", date:"2026-06-25",
+    title:"12 Errores de Principiante en OnlyFans que te Cuestan Dinero",
+    excerpt:"Los errores más comunes al empezar en OnlyFans: precios mal puestos, promoción inexistente, PPV mal gestionado. Y cómo corregir cada uno.",
+    kw:["errores onlyfans","onlyfans principiantes errores","fallos onlyfans","onlyfans que no hacer"],
+    content:`Después de gestionar decenas de cuentas hemos visto los mismos errores repetirse una y otra vez. Estos son los 12 que más dinero cuestan, ordenados por impacto.
+
+**1. Precio de suscripción demasiado bajo**
+
+Poner 3-5$ "para atraer gente" atrae exactamente al suscriptor que nunca compra PPV ni deja propinas. El rango 9,99-14,99$ con descuento de lanzamiento filtra mejor.
+
+**2. Cero promoción externa**
+
+Abrir la cuenta y esperar. OnlyFans no tiene descubrimiento interno: sin tráfico de Twitter, Reddit, TikTok o Instagram, no existe crecimiento posible.
+
+**3. No responder mensajes (o tardar días)**
+
+Los mensajes son donde está el dinero. Un fan que escribe y no recibe respuesta en horas es una venta perdida y una cancelación probable.
+
+**4. Regalar en el feed lo que deberías vender por PPV**
+
+Si tu mejor contenido va al feed, nadie tiene razón para comprar. El feed mantiene; el PPV monetiza.
+
+**5. Publicar sin calendario**
+
+Dos semanas activa, tres desaparecida. La inconsistencia destruye la retención más que cualquier otro factor.
+
+**6. Ignorar a los suscriptores nuevos**
+
+El mensaje de bienvenida es el momento de mayor conversión. No automatizarlo con una oferta es dejar dinero sobre la mesa.
+
+**7. No renovar contenido para renovaciones**
+
+Los fans cancelan cuando sienten que "ya lo han visto todo". Las series con continuidad son el antídoto.
+
+**8. Compararse con el top 1% desde el día uno**
+
+Frustración garantizada. Los primeros 3 meses son de construcción; los resultados compuestos llegan después.
+
+**9. Usar fotos de perfil y banner mediocres**
+
+Es tu escaparate. Una foto de perfil profesional multiplica la conversión de visitante a suscriptor.
+
+**10. No verificar la fiscalidad de tu país**
+
+Los ingresos son gravables en prácticamente todos los países. Ignorarlo sale caro.
+
+**11. Aceptar cualquier petición personalizada sin tarifa clara**
+
+El contenido custom es de lo mejor pagado — si le pones precio. Sin tarifas claras, acabas regalando trabajo.
+
+**12. Intentar hacerlo absolutamente todo sola**
+
+Contenido + chatting + promoción + estrategia + análisis es un trabajo de equipo. Es matemáticamente imposible sostenerlo sola más allá de cierto nivel. Ahí es donde una agencia multiplica: absorbe todo menos la creación de contenido.`
+  },
+  { slug:"onlyfans-promotion-strategies", locale:"en", date:"2026-06-27",
+    title:"How to Promote OnlyFans in 2026: 9 Channels That Work",
+    excerpt:"Complete OnlyFans promotion guide: TikTok, Instagram, Reddit, Twitter/X and more. What works on each channel and how to combine them into a funnel.",
+    kw:["how to promote onlyfans","onlyfans promotion","promote onlyfans","get onlyfans subscribers"],
+    content:`Promoting OnlyFans is 80% of the job. The platform has no internal discovery: nobody finds you inside. Every subscriber comes from outside, and mastering external traffic channels is what separates a $100/month account from a $5,000/month one.
+
+**The 9 channels ranked by effectiveness**
+
+1. **Twitter/X** — The only major channel allowing explicit adult content. Non-negotiable: post daily, use threads, and cross-promote with similar-sized creators.
+2. **Reddit** — Massive free traffic in niche subreddits. Reddit subscribers convert best because they're actively looking for content.
+3. **TikTok** — Biggest organic reach, but bans adult content: the play is SFW personality content that funnels to your link-in-bio.
+4. **Instagram** — Best for personal brand and trust. Daily Reels + engaging Stories. Never mention OnlyFans directly: use an intermediate link-in-bio.
+5. **Telegram** — Your owned community channel. Works as a mid-funnel: TikTok/IG to Telegram, Telegram to OnlyFans.
+6. **YouTube Shorts** — Less niche competition than TikTok and the algorithm is pushing Shorts hard.
+7. **Collaborations** — Cross-shoutouts with similar-sized creators. Free and very effective.
+8. **Dating apps** — They work but carry high ban risk. Secondary channel only.
+9. **Paid traffic** — Only once you're already earning: ads on adult-friendly networks and buying shoutouts from big accounts.
+
+**The funnel rule**
+
+The most common mistake is linking OnlyFans directly from TikTok or Instagram — that's how accounts get banned. The correct structure: viral SFW content → link-in-bio (Linktree, Beacons) or Telegram → OnlyFans. Each layer filters lurkers and protects your accounts.
+
+**Time investment**
+
+A solo creator needs 3-4 hours daily on promotion alone to grow meaningfully. That's exactly what an agency absorbs: we run multi-channel promotion while you only create content.`
+  },
+  { slug:"onlyfans-content-ideas", locale:"en", date:"2026-06-26",
+    title:"50 OnlyFans Content Ideas That Actually Increase Revenue",
+    excerpt:"OnlyFans content ideas organized by business goal: retention, PPV sales, tips and growth. With concrete examples and recommended posting frequency.",
+    kw:["onlyfans content ideas","what to post on onlyfans","onlyfans post ideas","content for onlyfans"],
+    content:`Running out of content ideas is the #1 reason creators lose consistency — and inconsistency kills accounts. This guide organizes content by business goal, not just format.
+
+**Retention content (so they don't cancel)**
+
+- Weekly series with continuity: fans renew to see "the next episode"
+- Recurring good morning/good night content that builds habit
+- Behind-the-scenes from your photo sessions
+- Polls where fans vote your next content
+- Day-in-the-life content that humanizes (cooking, working out, gaming)
+
+**PPV content (where the real money is)**
+
+- Themed exclusive sets that never hit the feed
+- Custom content on request (the highest paid)
+- Long premium videos vs. short feed clips
+- "Best of the month" bundles for new subscribers
+
+**Tip-generating content**
+
+- Visible challenges and goals: "if we reach X in tips, I'll do Y"
+- Interactive DM games (wheels, dice, cards)
+- Personalized thank-yous by name
+
+**Growth content (for external socials)**
+
+- SFW personality clips for TikTok/Reels
+- Transformations and get-ready-with-me
+- Trends adapted to your niche
+- Aesthetic lifestyle photos for Instagram
+
+**The frequency that works**
+
+Feed: 4-6 posts weekly. Stories/mass DMs: daily. PPV: 2-3 weekly max (more saturates and devalues). External socials: 1-2 pieces daily.
+
+**The calendar is everything**
+
+Top accounts don't improvise: they run a monthly content calendar, shooting in batches. One well-planned shooting day produces two weeks of content.`
+  },
+
 ];
 
 

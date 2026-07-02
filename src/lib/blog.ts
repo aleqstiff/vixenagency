@@ -342,7 +342,7 @@ The highest earners generate income from multiple streams: subscriptions, PPV co
   // ── FR (5 posts) ──────────────────────────────────────────────────────────
   { slug:"agence-onlyfans-france-2026-guide", locale:"fr", date:"2026-06-10",
     title:"Agence OnlyFans France 2026 — Le Guide Définitif pour Créatrices",
-    excerpt:"Comment choisir une agence OnlyFans en France en 2026. Ce qu\'il faut regarder, ce qu\'il faut éviter et les signes d\'une agence qui fonctionne vraiment.",
+    excerpt:"Comment choisir une agence OnlyFans en France en 2026. Ce qu\'il faut regarder, ce qu\'il faut éviter et les signes d\'une agence.",
     kw:["agence onlyfans france","agence onlyfans 2026","gestion onlyfans france","choisir agence onlyfans"],
     content:`Le marché des agences OnlyFans en France est devenu plus professionnel, mais aussi plus risqué pour les créatrices qui ne savent pas ce qu\'elles cherchent. Voici comment choisir correctement.
 
@@ -1109,7 +1109,7 @@ El posicionamiento en este mercado requiere: TikTok en español apuntando a audi
   // ─── HIGH-INTENT EN ──────────────────────────────────────────────────────
   { slug:"what-do-onlyfans-chatters-do", locale:"en", date:"2026-06-18",
     title:"What Do OnlyFans Chatters Do? — Complete Guide 2026",
-    excerpt:"OnlyFans chatters are the reason top creators earn 10x more. Here's exactly what they do, how much they cost, and why they're essential for any creator serious.",
+    excerpt:"OnlyFans chatters are the reason top creators earn 10x more. What they do, how much they cost, and why they're essential for any creator serious.",
     kw:["what do onlyfans chatters do","onlyfans chatters how they work","onlyfans chatting","hire chatters onlyfans"],
     content:`OnlyFans chatters are real people who manage fan conversations on behalf of creators. They are the single biggest difference between earning $200/month and $3,000/month with the same content.
 

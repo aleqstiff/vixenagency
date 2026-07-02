@@ -265,6 +265,25 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
         <Link href={`/${l}/`} style={{ color:"var(--pink)", fontSize:13, fontWeight:600 }}>← {l==="es"?"Volver al inicio":l==="en"?"Back home":"Retour"}</Link>
       </div>
 
+      {/* Internal linking — otros países + servicios */}
+      <section style={{ padding:"40px 20px", background:"var(--bg2)", borderTop:"1px solid var(--border)" }}>
+        <div style={{ maxWidth:960, margin:"0 auto" }}>
+          <p style={{ fontSize:11, fontWeight:700, color:"var(--pink)", textTransform:"uppercase", letterSpacing:".1em", marginBottom:14 }}>
+            {l==="es"?"También operamos en":"Also operating in"}
+          </p>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:8, marginBottom:24 }}>
+            {(LOCALE_COUNTRIES[l]??[]).filter(cc=>cc!==country).map(cc=>{
+              const cd = COUNTRIES[cc];
+              return <Link key={cc} href={`/${l}/${cc}/`} style={{ fontSize:13, padding:"7px 14px", borderRadius:999, background:"#fff", border:"1px solid var(--border)", color:"var(--dark)", fontWeight:600, textDecoration:"none" }}>{cd.flag} {cd.name}</Link>;
+            })}
+          </div>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:14, fontSize:13 }}>
+            <Link href={`/${l}/`} style={{ color:"var(--muted)" }}>Home</Link>
+            <Link href={`/${l}/blog/`} style={{ color:"var(--muted)" }}>Blog</Link>
+            <Link href={`/${l}/#form`} style={{ color:"var(--pink)", fontWeight:700 }}>{l==="es"?"Aplicar gratis →":"Apply free →"}</Link>
+          </div>
+        </div>
+      </section>
       <footer style={{ padding:"24px", textAlign:"center", borderTop:"1px solid var(--border)", background:"#fff" }}>
         <p style={{ fontSize:12, color:"var(--muted2)" }}>© 2026 Only Sweety Agency · {t(l,"footer_rights")}</p>
       </footer>

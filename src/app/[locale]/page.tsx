@@ -135,7 +135,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
             {/* Mobile hero image — solo móvil */}
             <div className="show-mobile" style={{marginTop:24,borderRadius:20,overflow:"hidden",position:"relative",aspectRatio:"4/5",maxHeight:"60vh",boxShadow:"0 16px 40px rgba(196,105,154,0.15)"}}>
-              <img src={IMGS.hero} alt="Only Sweety Agency" width={500} height={625}
+              <img fetchPriority="high" loading="eager" src={IMGS.hero} alt="Only Sweety Agency" width={500} height={625}
                 style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center 30%",display:"block"}}/>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,16,24,0.6),transparent 55%)"}}/>
               <div style={{position:"absolute",bottom:14,left:14,right:14,background:"rgba(255,255,255,0.95)",backdropFilter:"blur(12px)",borderRadius:12,padding:"10px 14px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
@@ -169,7 +169,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <div className="hero-img" style={{position:"relative"}}>
             <div style={{position:"absolute",width:440,height:440,borderRadius:"50%",background:"rgba(245,213,204,0.5)",filter:"blur(60px)",top:"50%",left:"50%",transform:"translate(-50%,-50%)",pointerEvents:"none"}}/>
             <div style={{borderRadius:28,overflow:"hidden",boxShadow:"0 32px 80px rgba(196,105,154,0.15)",aspectRatio:"4/5",position:"relative"}}>
-              <img src={IMGS.hero} alt="Creator managed by Only Sweety Agency" width={520} height={650}
+              <img fetchPriority="high" loading="eager" src={IMGS.hero} alt="Creator managed by Only Sweety Agency" width={520} height={650}
                 style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center",display:"block"}}/>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to top,rgba(26,18,16,0.55) 0%,transparent 55%)"}}/>
               <div style={{position:"absolute",bottom:22,left:18,right:18,background:"rgba(255,255,255,0.95)",backdropFilter:"blur(16px)",borderRadius:14,padding:"14px 18px"}}>

@@ -20,9 +20,9 @@ export function UnlockSection({ locale }: { locale: string }) {
   const words = ({ es:["MULTIPLICA","TU","POTENCIAL"], en:["UNLOCK","YOUR","POTENTIAL"], fr:["LIBÈRE","TON","POTENTIEL"], de:["ENTFALTE","DEIN","POTENZIAL"], it:["LIBERA","IL TUO","POTENZIALE"], pt:["LIBERA","SEU","POTENCIAL"] } as Record<string,string[]>)[locale] ?? ["MULTIPLICA","TU","POTENCIAL"];
   // 3 distinct model photos — no duplicates
   const imgs = [
-    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=160&h=160&fit=crop&crop=faces&q=82",
-    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=160&h=160&fit=crop&crop=faces&q=82",
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&h=160&fit=crop&crop=faces&q=82",
+    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=160&h=160&fit=crop&crop=faces&q=82&auto=format",
+    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=160&h=160&fit=crop&crop=faces&q=82&auto=format",
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&h=160&fit=crop&crop=faces&q=82&auto=format",
   ];
   return (
     <div ref={ref} style={{ padding:"64px 0", overflow:"hidden", userSelect:"none", background:"var(--bg2)" }}>
@@ -35,9 +35,9 @@ export function UnlockSection({ locale }: { locale: string }) {
           transform: vis ? "translateY(0)" : "translateY(40px)",
           transition: `opacity .7s ease ${i*.15}s,transform .7s ease ${i*.15}s`,
         }}>
-          {i % 2 === 0 && <img src={imgs[i]} alt="" className="unlock-img" style={{ opacity: vis ? 1 : 0, transition:`opacity .5s ease ${i*.2+.3}s` }} />}
+          {i % 2 === 0 && <img src={imgs[i]} alt="" width={160} height={160} loading="lazy" className="unlock-img" style={{ opacity: vis ? 1 : 0, transition:`opacity .5s ease ${i*.2+.3}s` }} />}
           <span className="unlock-text g-pink">{word}</span>
-          {i % 2 !== 0 && <img src={imgs[i]} alt="" className="unlock-img" style={{ opacity: vis ? 1 : 0, transition:`opacity .5s ease ${i*.2+.3}s` }} />}
+          {i % 2 !== 0 && <img src={imgs[i]} alt="" width={160} height={160} loading="lazy" className="unlock-img" style={{ opacity: vis ? 1 : 0, transition:`opacity .5s ease ${i*.2+.3}s` }} />}
         </div>
       ))}
     </div>

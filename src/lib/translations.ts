@@ -2,7 +2,7 @@ import type { Locale } from "./config";
 
 export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
   es: {
-    meta_title: "Agencia OnlyFans — Multiplica tus ingresos ×3 | Only Sweety Agency",
+    meta_title: "Agencia OnlyFans — Multiplica tus ingresos ×3 | Only Sweety",
     meta_desc: "Agencia de gestión OnlyFans #1 en habla hispana. Chatters 24/7, marketing digital, protección de identidad. España, México, Argentina, Colombia y más. Aplicación gratuita.",
     meta_kw: "agencia onlyfans,gestión onlyfans,agencia modelos onlyfans,agencia onlyfans españa,ganar dinero onlyfans,chatters onlyfans",
     // nav
@@ -89,7 +89,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
   },
 
   en: {
-    meta_title: "OnlyFans Management Agency — Triple Your Income | Only Sweety Agency",
+    meta_title: "OnlyFans Management Agency — Triple Your Income | Only Sweety",
     meta_desc: "Top OnlyFans management agency. 24/7 chatters, social media marketing, full anonymity. USA, Canada and worldwide. Free application. Results in 30 days.",
     meta_kw: "onlyfans management agency,onlyfans agency,onlyfans chatters,onlyfans growth,best onlyfans agency 2026",
     nav_services:"Services", nav_countries:"Countries", nav_blog:"Blog", nav_apply:"Apply free",
@@ -163,7 +163,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
   },
 
   fr: {
-    meta_title: "Agence OnlyFans France — Multipliez vos revenus ×3 | Only Sweety Agency",
+    meta_title: "Agence OnlyFans France — Multipliez vos revenus ×3 | Only Sweety",
     meta_desc: "Agence OnlyFans & MYM #1 pour créatrices francophones. Chatteuses 24/7, marketing digital, anonymat total. France, Belgique, Canada. Candidature gratuite.",
     meta_kw: "agence onlyfans,gestion onlyfans,agence mym onlyfans,agence onlyfans france,gagner argent onlyfans",
     nav_services:"Services", nav_countries:"Pays", nav_blog:"Blog", nav_apply:"Postuler gratuitement",
@@ -233,7 +233,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
   },
 
   de: {
-    meta_title: "OnlyFans Agentur Deutschland — Einnahmen verdreifachen | Only Sweety Agency",
+    meta_title: "OnlyFans Agentur Deutschland — Einnahmen verdreifachen | Only Sweety",
     meta_desc: "OnlyFans Management Agentur #1 für DACH-Creator. Deutschsprachige Chatter 24/7, Social-Media-Marketing, volle Anonymität. Deutschland, Österreich, Schweiz. Kostenlose Bewerbung.",
     meta_kw: "onlyfans agentur,onlyfans management,onlyfans agentur deutschland,onlyfans chatter,geld verdienen onlyfans",
     nav_services:"Services", nav_countries:"Länder", nav_blog:"Blog", nav_apply:"Kostenlos bewerben",
@@ -303,7 +303,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
   },
 
   it: {
-    meta_title: "Agenzia OnlyFans Italia — Moltiplica i guadagni ×3 | Only Sweety Agency",
+    meta_title: "Agenzia OnlyFans Italia — Moltiplica i guadagni ×3 | Only Sweety",
     meta_desc: "Agenzia di gestione OnlyFans #1 per creator italiane. Chatter 24/7, marketing digitale, anonimato totale. Italia e mercati internazionali. Candidatura gratuita.",
     meta_kw: "agenzia onlyfans,gestione onlyfans,agenzia modelle onlyfans,agenzia onlyfans italia,guadagnare onlyfans",
     nav_services:"Servizi", nav_countries:"Paesi", nav_blog:"Blog", nav_apply:"Candidati gratis",
@@ -373,7 +373,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
   },
 
   pt: {
-    meta_title: "Agência OnlyFans Brasil — Multiplique seus ganhos ×3 | Only Sweety Agency",
+    meta_title: "Agência OnlyFans Brasil — Multiplique seus ganhos ×3 | Only Sweety",
     meta_desc: "Agência de gestão OnlyFans #1 para creators brasileiras. Chatters 24/7, marketing digital, anonimato total. Brasil e mercados internacionais. Candidatura gratuita.",
     meta_kw: "agencia onlyfans,gestão onlyfans,agencia modelos onlyfans,agencia onlyfans brasil,ganhar dinheiro onlyfans",
     nav_services:"Serviços", nav_countries:"Países", nav_blog:"Blog", nav_apply:"Candidatar-se grátis",

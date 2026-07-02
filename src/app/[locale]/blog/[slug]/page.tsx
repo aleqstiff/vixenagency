@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   LOCALES, type Locale, BASE_URL,
   LOCALE_COUNTRIES, COUNTRIES, waLink, waMsg
-} from "@/lib/config";
+, smartTitle } from "@/lib/config";
 import { POSTS, postImage } from "@/lib/blog";
 import { t } from "@/lib/translations";
 import MegaNav from "@/components/MegaNav";
@@ -16,10 +16,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const post = POSTS.find(p => p.locale === locale && p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | Only Sweety Agency`,
+    title: smartTitle(post.title),
     description: post.excerpt,
     keywords: post.kw,
-    alternates: { canonical: `${BASE_URL}/${locale}/blog/${slug}/` },
+    alternates: { canonical: `${BASE_URL}/${locale}/blog/${slug}/`, languages: { [locale]: `${BASE_URL}/${locale}/blog/${slug}/`, "x-default": `${BASE_URL}/${locale}/blog/${slug}/` } },
     openGraph: {
       title: post.title, description: post.excerpt,
       url: `${BASE_URL}/${locale}/blog/${slug}/`, type: "article",

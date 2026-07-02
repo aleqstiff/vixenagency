@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LOCALES, type Locale, COUNTRIES, LOCALE_COUNTRIES, BASE_URL, WA } from "@/lib/config";
+import { LOCALES, type Locale, COUNTRIES, LOCALE_COUNTRIES, BASE_URL, WA , smartTitle } from "@/lib/config";
 import { getCountryData } from "@/lib/countryData";
 import { GALLERY, IMGS } from "@/lib/images";
 import { t } from "@/lib/translations";
@@ -14,43 +14,43 @@ export async function generateStaticParams() {
 
 const COUNTRY_META: Record<string, Record<string, { title:string; desc:string }>> = {
   es: {
-    espana:    { title:"Agencia OnlyFans España — Gestión Profesional Madrid Barcelona | Only Sweety Agency", desc:"Agencia de gestión OnlyFans en España. Chatters en español 24/7, marketing digital y anonimato total. Creadoras en Madrid, Barcelona, Valencia, Sevilla. Aplicación gratuita." },
-    mexico:    { title:"Agencia OnlyFans México — Gestión Profesional CDMX | Only Sweety Agency", desc:"Agencia OnlyFans en México. Chatters nativos 24/7, marketing en TikTok e Instagram. Creadoras en CDMX, Guadalajara, Monterrey. Cobramos solo si ganas." },
-    argentina: { title:"Agencia OnlyFans Argentina — Gestión Profesional Buenos Aires | Only Sweety Agency", desc:"Agencia OnlyFans en Argentina. Chatters nativos 24/7, posicionamiento en mercado USA. Creadoras en Buenos Aires, Córdoba, Rosario. Sin pago inicial." },
-    colombia:  { title:"Agencia OnlyFans Colombia — Gestión Profesional Bogotá Medellín | Only Sweety Agency", desc:"Agencia OnlyFans en Colombia. Chatters nativos 24/7, marketing y mercado USA. Creadoras en Bogotá, Medellín, Cali, Barranquilla. Sin permanencia." },
-    chile:     { title:"Agencia OnlyFans Chile — Gestión Profesional Santiago | Only Sweety Agency", desc:"Agencia OnlyFans en Chile. Chatters nativos 24/7, marketing y posicionamiento USA. Creadoras en Santiago, Valparaíso, Concepción." },
-    peru:      { title:"Agencia OnlyFans Perú — Gestión Profesional Lima | Only Sweety Agency", desc:"Agencia OnlyFans en Perú. Chatters nativos 24/7, marketing y anonimato total. Creadoras en Lima, Arequipa, Trujillo." },
-    venezuela: { title:"Agencia OnlyFans Venezuela — Gestión Profesional Caracas | Only Sweety Agency", desc:"Agencia OnlyFans en Venezuela. Chatters nativos 24/7, marketing y mercado USA. Creadoras en Caracas, Maracaibo, Valencia." },
-    ecuador:   { title:"Agencia OnlyFans Ecuador — Gestión Profesional Guayaquil Quito | Only Sweety Agency", desc:"Agencia OnlyFans en Ecuador. Chatters nativos 24/7, cobra en dólares, mercado USA. Creadoras en Guayaquil, Quito, Cuenca. Sin pago inicial." },
-    bolivia:   { title:"Agencia OnlyFans Bolivia — Gestión Profesional Santa Cruz La Paz | Only Sweety Agency", desc:"Agencia OnlyFans en Bolivia. Chatters nativos 24/7, cobra en dólares, mercado latino USA. Creadoras en Santa Cruz, La Paz, Cochabamba." },
-    paraguay:  { title:"Agencia OnlyFans Paraguay — Gestión Profesional Asunción | Only Sweety Agency", desc:"Agencia OnlyFans en Paraguay. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Asunción, Ciudad del Este." },
-    uruguay:   { title:"Agencia OnlyFans Uruguay — Gestión Profesional Montevideo | Only Sweety Agency", desc:"Agencia OnlyFans en Uruguay. Chatters nativos 24/7, cobra en dólares, mercado latino USA. Creadoras en Montevideo, Punta del Este." },
-    guatemala: { title:"Agencia OnlyFans Guatemala — Gestión Profesional | Only Sweety Agency", desc:"Agencia OnlyFans en Guatemala. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Ciudad de Guatemala." },
-    costarica: { title:"Agencia OnlyFans Costa Rica — Gestión Profesional San José | Only Sweety Agency", desc:"Agencia OnlyFans en Costa Rica. Chatters nativos 24/7, cobra en dólares, mercado latino USA. Creadoras en San José, Cartago." },
-    panama:    { title:"Agencia OnlyFans Panamá — Gestión Profesional | Only Sweety Agency", desc:"Agencia OnlyFans en Panamá. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Ciudad de Panamá." },
-    republicadominicana: { title:"Agencia OnlyFans República Dominicana — Santo Domingo | Only Sweety Agency", desc:"Agencia OnlyFans en República Dominicana. Chatters nativos 24/7, cobra en dólares, mercado USA. Creadoras en Santo Domingo, Santiago." },
-    puertorico:{ title:"Agencia OnlyFans Puerto Rico — Gestión Profesional San Juan | Only Sweety Agency", desc:"Agencia OnlyFans en Puerto Rico. Chatters nativos 24/7, mercado USA directo. Creadoras en San Juan, Bayamón, Ponce." },
-    honduras:  { title:"Agencia OnlyFans Honduras — Gestión Profesional | Only Sweety Agency", desc:"Agencia OnlyFans en Honduras. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Tegucigalpa, San Pedro Sula." },
-    elsalvador:{ title:"Agencia OnlyFans El Salvador — Gestión Profesional | Only Sweety Agency", desc:"Agencia OnlyFans en El Salvador. Chatters nativos 24/7, cobra en dólares, mercado latino USA. Creadoras en San Salvador." },
-    nicaragua: { title:"Agencia OnlyFans Nicaragua — Gestión Profesional Managua | Only Sweety Agency", desc:"Agencia OnlyFans en Nicaragua. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Managua, León." },
+    espana:    { title:"Agencia OnlyFans España — Madrid Barcelona | Only Sweety", desc:"Agencia de gestión OnlyFans en España. Chatters en español 24/7, marketing digital y anonimato total. Creadoras en Madrid, Barcelona, Valencia, Sevilla." },
+    mexico:    { title:"Agencia OnlyFans México — CDMX | Only Sweety", desc:"Agencia OnlyFans en México. Chatters nativos 24/7, marketing en TikTok e Instagram. Creadoras en CDMX, Guadalajara, Monterrey. Cobramos solo si ganas." },
+    argentina: { title:"Agencia OnlyFans Argentina — Buenos Aires | Only Sweety", desc:"Agencia OnlyFans en Argentina. Chatters nativos 24/7, posicionamiento en mercado USA. Creadoras en Buenos Aires, Córdoba, Rosario. Sin pago inicial." },
+    colombia:  { title:"Agencia OnlyFans Colombia — Bogotá Medellín | Only Sweety", desc:"Agencia OnlyFans en Colombia. Chatters nativos 24/7, marketing y mercado USA. Creadoras en Bogotá, Medellín, Cali, Barranquilla. Sin permanencia." },
+    chile:     { title:"Agencia OnlyFans Chile — Santiago | Only Sweety", desc:"Agencia OnlyFans en Chile. Chatters nativos 24/7, marketing y posicionamiento USA. Creadoras en Santiago, Valparaíso, Concepción." },
+    peru:      { title:"Agencia OnlyFans Perú — Lima | Only Sweety", desc:"Agencia OnlyFans en Perú. Chatters nativos 24/7, marketing y anonimato total. Creadoras en Lima, Arequipa, Trujillo." },
+    venezuela: { title:"Agencia OnlyFans Venezuela — Caracas | Only Sweety", desc:"Agencia OnlyFans en Venezuela. Chatters nativos 24/7, marketing y mercado USA. Creadoras en Caracas, Maracaibo, Valencia." },
+    ecuador:   { title:"Agencia OnlyFans Ecuador — Guayaquil Quito | Only Sweety", desc:"Agencia OnlyFans en Ecuador. Chatters nativos 24/7, cobra en dólares, mercado USA. Creadoras en Guayaquil, Quito, Cuenca. Sin pago inicial." },
+    bolivia:   { title:"Agencia OnlyFans Bolivia — Santa Cruz La Paz | Only Sweety", desc:"Agencia OnlyFans en Bolivia. Chatters nativos 24/7, cobra en dólares, mercado latino USA. Creadoras en Santa Cruz, La Paz, Cochabamba." },
+    paraguay:  { title:"Agencia OnlyFans Paraguay — Asunción | Only Sweety", desc:"Agencia OnlyFans en Paraguay. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Asunción, Ciudad del Este." },
+    uruguay:   { title:"Agencia OnlyFans Uruguay — Montevideo | Only Sweety", desc:"Agencia OnlyFans en Uruguay. Chatters nativos 24/7, cobra en dólares, mercado latino USA. Creadoras en Montevideo, Punta del Este." },
+    guatemala: { title:"Agencia OnlyFans Guatemala — | Only Sweety", desc:"Agencia OnlyFans en Guatemala. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Ciudad de Guatemala." },
+    costarica: { title:"Agencia OnlyFans Costa Rica — San José | Only Sweety", desc:"Agencia OnlyFans en Costa Rica. Chatters nativos 24/7, cobra en dólares, mercado latino USA. Creadoras en San José, Cartago." },
+    panama:    { title:"Agencia OnlyFans Panamá — | Only Sweety", desc:"Agencia OnlyFans en Panamá. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Ciudad de Panamá." },
+    republicadominicana: { title:"Agencia OnlyFans República Dominicana — Santo Domingo | Only Sweety", desc:"Agencia OnlyFans en República Dominicana. Chatters nativos 24/7, cobra en dólares, mercado USA. Creadoras en Santo Domingo, Santiago." },
+    puertorico:{ title:"Agencia OnlyFans Puerto Rico — San Juan | Only Sweety", desc:"Agencia OnlyFans en Puerto Rico. Chatters nativos 24/7, mercado USA directo. Creadoras en San Juan, Bayamón, Ponce." },
+    honduras:  { title:"Agencia OnlyFans Honduras — | Only Sweety", desc:"Agencia OnlyFans en Honduras. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Tegucigalpa, San Pedro Sula." },
+    elsalvador:{ title:"Agencia OnlyFans El Salvador — | Only Sweety", desc:"Agencia OnlyFans en El Salvador. Chatters nativos 24/7, cobra en dólares, mercado latino USA. Creadoras en San Salvador." },
+    nicaragua: { title:"Agencia OnlyFans Nicaragua — Managua | Only Sweety", desc:"Agencia OnlyFans en Nicaragua. Chatters nativos 24/7, ingresos en dólares, mercado USA. Creadoras en Managua, León." },
   },
   en: {
-    eeuu:   { title:"OnlyFans Management Agency USA — New York Los Angeles Miami | Only Sweety Agency", desc:"Top OnlyFans management agency in the USA. Native English chatters 24/7, social media marketing, full anonymity. Creators in New York, LA, Miami, Chicago." },
-    canada: { title:"OnlyFans Management Agency Canada — Toronto Vancouver Montreal | Only Sweety Agency", desc:"Top OnlyFans management agency in Canada. Native chatters 24/7, social media marketing, full anonymity. Creators in Toronto, Vancouver, Montreal, Calgary." },
+    eeuu:   { title:"OnlyFans Management Agency USA — New York Los Angeles Miami | Only Sweety", desc:"Top OnlyFans management agency in the USA. Native English chatters 24/7, social media marketing, full anonymity. Creators in New York, LA, Miami, Chicago." },
+    canada: { title:"OnlyFans Management Agency Canada — Toronto Vancouver Montreal | Only Sweety", desc:"Top OnlyFans management agency in Canada. Native chatters 24/7, social media marketing, full anonymity. Creators in Toronto, Vancouver, Montreal, Calgary." },
   },
   fr: {
-    france:   { title:"Agence OnlyFans France — Paris Lyon Marseille | Only Sweety Agency", desc:"Agence OnlyFans & MYM en France. Chatteuses francophones 24/7, marketing digital, anonymat total. Créatrices à Paris, Lyon, Marseille, Toulouse." },
-    belgique: { title:"Agence OnlyFans Belgique — Bruxelles Anvers | Only Sweety Agency", desc:"Agence OnlyFans en Belgique. Chatteuses francophones 24/7, marketing digital, anonymat total. Créatrices à Bruxelles, Anvers, Gand, Liège." },
+    france:   { title:"Agence OnlyFans France — Paris Lyon Marseille | Only Sweety", desc:"Agence OnlyFans & MYM en France. Chatteuses francophones 24/7, marketing digital, anonymat total. Créatrices à Paris, Lyon, Marseille, Toulouse." },
+    belgique: { title:"Agence OnlyFans Belgique — Bruxelles Anvers | Only Sweety", desc:"Agence OnlyFans en Belgique. Chatteuses francophones 24/7, marketing digital, anonymat total. Créatrices à Bruxelles, Anvers, Gand, Liège." },
   },
   de: {
-    deutschland:  { title:"OnlyFans Agentur Deutschland — Berlin München Hamburg | Only Sweety Agency", desc:"OnlyFans Management Agentur in Deutschland. Deutschsprachige Chatter 24/7, Social-Media-Marketing, volle Anonymität. Creator in Berlin, München, Hamburg." },
-    oesterreich:  { title:"OnlyFans Agentur Österreich — Wien Graz Salzburg | Only Sweety Agency", desc:"OnlyFans Management Agentur in Österreich. Deutschsprachige Chatter 24/7, Social-Media-Marketing, volle Anonymität. Creator in Wien, Graz, Salzburg." },
+    deutschland:  { title:"OnlyFans Agentur Deutschland — Berlin München Hamburg | Only Sweety", desc:"OnlyFans Management Agentur in Deutschland. Deutschsprachige Chatter 24/7, Social-Media-Marketing, volle Anonymität. Creator in Berlin, München, Hamburg." },
+    oesterreich:  { title:"OnlyFans Agentur Österreich — Wien Graz Salzburg | Only Sweety", desc:"OnlyFans Management Agentur in Österreich. Deutschsprachige Chatter 24/7, Social-Media-Marketing, volle Anonymität. Creator in Wien, Graz, Salzburg." },
   },
   it: {
-    italia: { title:"Agenzia OnlyFans Italia — Milano Roma Napoli | Only Sweety Agency", desc:"Agenzia OnlyFans in Italia. Chatter italiani 24/7, marketing digitale, anonimato totale. Creator a Milano, Roma, Napoli, Torino, Firenze." },
+    italia: { title:"Agenzia OnlyFans Italia — Milano Roma Napoli | Only Sweety", desc:"Agenzia OnlyFans in Italia. Chatter italiani 24/7, marketing digitale, anonimato totale. Creator a Milano, Roma, Napoli, Torino, Firenze." },
   },
   pt: {
-    brasil: { title:"Agência OnlyFans Brasil — São Paulo Rio de Janeiro | Only Sweety Agency", desc:"Agência OnlyFans no Brasil. Chatters brasileiros 24/7, marketing digital, anonimato total. Creators em São Paulo, Rio de Janeiro, BH, Brasília." },
+    brasil: { title:"Agência OnlyFans Brasil — São Paulo Rio de Janeiro | Only Sweety", desc:"Agência OnlyFans no Brasil. Chatters brasileiros 24/7, marketing digital, anonimato total. Creators em São Paulo, Rio de Janeiro, BH, Brasília." },
   },
 };
 
@@ -60,10 +60,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const meta = COUNTRY_META[l]?.[country];
   if (!meta) return {};
   return {
-    title: meta.title,
+    title: smartTitle(meta.title, ""),
     description: meta.desc,
-    alternates: { canonical: `${BASE_URL}/${l}/${country}/` },
-    openGraph: { title: meta.title, description: meta.desc, url: `${BASE_URL}/${l}/${country}/` },
+    alternates: { canonical: `${BASE_URL}/${l}/${country}/`, languages: { [l]: `${BASE_URL}/${l}/${country}/`, "x-default": `${BASE_URL}/${l}/${country}/` } },
+    openGraph: { title: smartTitle(meta.title, ""), description: meta.desc, url: `${BASE_URL}/${l}/${country}/` },
   };
 }
 

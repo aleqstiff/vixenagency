@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   LOCALES, type Locale, COUNTRIES, LOCALE_COUNTRIES,
   SERVICES, BASE_URL, WA, waLink, waMsg
-} from "@/lib/config";
+, langAlternates } from "@/lib/config";
 import { TR, t, ta, ta2 } from "@/lib/translations";
 import { POSTS } from "@/lib/blog";
 import { IMGS, GALLERY } from "@/lib/images";
@@ -14,7 +14,7 @@ export async function generateStaticParams() { return LOCALES.map(l => ({ locale
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const l = locale as Locale;
   const tr = TR[l] as Record<string,string>;
-  return { title: tr.meta_title, description: tr.meta_desc };
+  return { title: tr.meta_title, description: tr.meta_desc, alternates: { canonical: `${BASE_URL}/${l}/`, languages: langAlternates(loc => `/${loc}/`) } };
 }
 
 // OnlyFans OF logo SVG — platform logo sin nombrar

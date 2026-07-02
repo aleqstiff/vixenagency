@@ -217,3 +217,22 @@ export function waMsg(locale: Locale): string {
   };
   return m[locale];
 }
+
+// ── HREFLANG helper ──────────────────────────────────────────────────────────
+export function langAlternates(pathPerLocale: (l: Locale) => string) {
+  const languages: Record<string,string> = {};
+  LOCALES.forEach(l => { languages[l] = `${BASE_URL}${pathPerLocale(l as Locale)}`; });
+  languages["x-default"] = `${BASE_URL}${pathPerLocale("es" as Locale)}`;
+  return languages;
+}
+
+// ── SEO title <=65 chars ─────────────────────────────────────────────────────
+export function smartTitle(raw: string, brand = " | Only Sweety"): string {
+  const withBrand = raw + brand;
+  if (withBrand.length <= 65) return withBrand;
+  if (raw.length <= 65) return raw;
+  const main = raw.split(" — ")[0].trim();
+  if (main.length <= 65) return main;
+  const cut = raw.slice(0, 62);
+  return cut.slice(0, cut.lastIndexOf(" "));
+}

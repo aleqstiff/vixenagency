@@ -123,7 +123,7 @@ El precio del PPV debe estar calibrado según el tipo de contenido y la relació
 Los mensajes masivos de PPV funcionan bien cuando la audiencia está calentada. Lo ideal es: enviar un teaser gratuito para todos los suscriptores (esto genera conversaciones activas), identificar quién responde y calentarlos individualmente, y luego enviar el PPV completo con precio más alto. La tasa de conversión del PPV de esta forma puede superar el 30%.`
   },
   { slug:"agencia-onlyfans-colombia", locale:"es", date:"2026-05-05",
-    title:"Agencia OnlyFans Colombia — Gestión Profesional para Creadoras Colombianas",
+    title:"Agencia OnlyFans Colombia — para Creadoras Colombianas",
     excerpt:"Cómo funciona una agencia OnlyFans para creadoras en Colombia. Cobros, estrategia y por qué el mercado USA es clave para las creadoras colombianas.",
     kw:["agencia onlyfans colombia","onlyfans colombia agencia","gestión onlyfans colombia","onlyfans medellin bogota"],
     content:`Colombia se ha convertido en uno de los mercados más activos de OnlyFans en habla hispana. Las creadoras colombianas tienen características que las hacen especialmente exitosas en el mercado anglosajón.
@@ -404,7 +404,7 @@ Le chatting efficace requiert une disponibilité 24/7, quelque chose d\'impossib
   },
   { slug:"onlyfans-sans-montrer-visage-france", locale:"fr", date:"2026-05-10",
     title:"Réussir sur OnlyFans sans Montrer son Visage en France — Guide 2026",
-    excerpt:"Comment construire un compte OnlyFans anonyme et rentable en France. Stratégies de contenu, protection d\'identité et exemples de créatrices anonymes qui réussissent.",
+    excerpt:"Comment construire un compte OnlyFans anonyme et rentable en France. Stratégies de contenu, protection d\'identité et exemples de créatrices anonymes qui.",
     kw:["onlyfans sans visage france","onlyfans anonyme france","créatrice onlyfans sans identité","onlyfans sans montrer face"],
     content:`L\'une des questions les plus fréquentes que nous recevons est de savoir s\'il est possible de gagner de l\'argent sur OnlyFans sans montrer son visage. La réponse est oui, et certaines de nos meilleures créatrices sont complètement anonymes.
 
@@ -538,7 +538,7 @@ Operiamo con creator a Milano, Roma, Napoli, Torino e in tutta Italia. Nessuna q
   },
   { slug:"guadagnare-onlyfans-senza-faccia-2026", locale:"it", date:"2026-05-20",
     title:"Come Guadagnare su OnlyFans Senza Mostrare la Faccia nel 2026",
-    excerpt:"La guida completa per costruire un profilo OnlyFans anonimo e redditizio. Strategie di contenuto, protezione dell\'identità e quanto si guadagna senza mostrare il viso.",
+    excerpt:"La guida completa per costruire un profilo OnlyFans anonimo e redditizio. Strategie di contenuto, protezione dell\'identità e quanto si guadagna senza mostrare.",
     kw:["onlyfans senza faccia","onlyfans anonima italia","guadagnare onlyfans senza mostrare","onlyfans anonimo"],
     content:`Essere anonima su OnlyFans non è un compromesso, è una scelta strategica che alcune delle creator di maggior successo hanno fatto deliberatamente.
 
@@ -672,7 +672,7 @@ Quando os fãs se sentem genuinamente conectados, renovam suas assinaturas todo 
   // ── EXTRA ES ──────────────────────────────────────────────────────────────
   { slug:"creadoras-latinas-mercado-usa", locale:"es", date:"2026-06-15",
     title:"Por qué las Creadoras Latinas Dominan el Mercado de OnlyFans USA en 2026",
-    excerpt:"El mercado hispano en USA es el de mayor crecimiento en OnlyFans. Descubre por qué las creadoras latinoamericanas tienen una ventaja competitiva única y cómo explotarla.",
+    excerpt:"El mercado hispano en USA es el de mayor crecimiento en OnlyFans. Descubre por qué las creadoras latinoamericanas tienen una ventaja competitiva única y cómo.",
     kw:["creadoras latinas onlyfans","onlyfans mercado usa latinas","onlyfans hispano usa","creadoras latinoamericanas onlyfans"],
     content:`El mercado hispano en Estados Unidos es uno de los segmentos de mayor crecimiento en OnlyFans. Más de 62 millones de hispanohablantes en USA con poder adquisitivo creciente representan una audiencia masiva y muy dispuesta a pagar por contenido de creadoras que hablan su idioma.
 
@@ -973,7 +973,7 @@ Reddit tem regras muito rígidas sobre autopromoção. A estratégia: construir 
   // ─── HIGH-INTENT ES ──────────────────────────────────────────────────────
   { slug:"que-son-chatters-onlyfans-guia", locale:"es", date:"2026-06-18",
     title:"¿Qué son los Chatters de OnlyFans? — Guía Completa 2026",
-    excerpt:"Los chatters de OnlyFans son la razón por la que las creadoras top ganan 10 veces más. Aquí está todo lo que necesitas saber sobre qué hacen, cuánto cobran y por qué son imprescindibles.",
+    excerpt:"Los chatters de OnlyFans son la razón por la que las creadoras top ganan 10 veces más. Aquí está todo lo que necesitas saber sobre qué hacen, cuánto cobran y.",
     kw:["que son chatters onlyfans","chatters onlyfans que hacen","chatters onlyfans español","contratar chatters onlyfans"],
     content:`Los chatters de OnlyFans son personas reales que gestionan las conversaciones con fans en nombre de las creadoras. Son la diferencia entre ganar 200€/mes y ganar 3.000€/mes con el mismo contenido.
 
@@ -1025,7 +1025,7 @@ Pago por adelantado de cualquier cantidad antes de ver resultados, exclusividad 
   },
   { slug:"cuanto-cobran-agencias-onlyfans-2026", locale:"es", date:"2026-06-16",
     title:"¿Cuánto Cobran las Agencias de OnlyFans en 2026? — Precios Reales",
-    excerpt:"El desglose real de los precios de las agencias de OnlyFans en España y LATAM. Sin letra pequeña: porcentajes, cuotas, qué está incluido y cómo calcular tu ganancia neta.",
+    excerpt:"El desglose real de los precios de las agencias de OnlyFans en España y LATAM. Sin letra pequeña: porcentajes, cuotas, qué está incluido y cómo calcular tu.",
     kw:["cuanto cobran agencias onlyfans","precio agencia onlyfans","comision agencia onlyfans","agencia onlyfans precio 2026"],
     content:`La pregunta sobre cuánto cobra una agencia de OnlyFans tiene múltiples respuestas dependiendo del modelo, el mercado y los servicios incluidos. Aquí está el desglose honesto.
 
@@ -1071,7 +1071,7 @@ La respuesta a "¿cuál elegir?" es casi siempre "las dos". Con una agencia que 
   },
   { slug:"ganar-dinero-onlyfans-sin-mostrar-cara-2026", locale:"es", date:"2026-06-13",
     title:"Ganar Dinero en OnlyFans sin Mostrar la Cara — Guía Completa 2026",
-    excerpt:"Sí es posible ganar mucho en OnlyFans siendo completamente anónima. Nichos, estrategias, identidad de personaje y el protocolo de privacidad que usan las creadoras profesionales.",
+    excerpt:"Sí es posible ganar mucho en OnlyFans siendo completamente anónima. Nichos, estrategias, identidad de personaje y el protocolo de privacidad que usan las.",
     kw:["ganar dinero onlyfans sin mostrar cara","onlyfans anonima ganar","onlyfans sin identidad","onlyfans sin cara"],
     content:`Ganar dinero en OnlyFans sin mostrar la cara no es solo posible, es la estrategia consciente de muchas de las creadoras con mayores ingresos. El anonimato no es una limitación — es un posicionamiento.
 
@@ -1089,7 +1089,7 @@ Para creadoras que requieren máximo anonimato implementamos: email dedicado sol
   },
   { slug:"onlyfans-mercado-usa-creadoras-latinas", locale:"es", date:"2026-06-11",
     title:"Cómo las Creadoras Latinas Conquistan el Mercado USA de OnlyFans en 2026",
-    excerpt:"El mercado hispano en USA paga entre 3 y 6 veces más por suscriptor que el mercado latinoamericano local. Estrategias reales para creadoras de España, México, Colombia y Argentina.",
+    excerpt:"El mercado hispano en USA paga entre 3 y 6 veces más por suscriptor que el mercado latinoamericano local.",
     kw:["onlyfans mercado usa latinas","creadoras latinas onlyfans usa","onlyfans hispano usa","onlyfans latinoamerica"],
     content:`El mercado hispano en Estados Unidos es uno de los más valiosos y menos saturados en OnlyFans. Más de 62 millones de hispanohablantes en USA con poder adquisitivo americano y preferencia cultural por creadoras que hablan su idioma.
 
@@ -1109,7 +1109,7 @@ El posicionamiento en este mercado requiere: TikTok en español apuntando a audi
   // ─── HIGH-INTENT EN ──────────────────────────────────────────────────────
   { slug:"what-do-onlyfans-chatters-do", locale:"en", date:"2026-06-18",
     title:"What Do OnlyFans Chatters Do? — Complete Guide 2026",
-    excerpt:"OnlyFans chatters are the reason top creators earn 10x more. Here's exactly what they do, how much they cost, and why they're essential for any creator serious about income.",
+    excerpt:"OnlyFans chatters are the reason top creators earn 10x more. Here's exactly what they do, how much they cost, and why they're essential for any creator serious.",
     kw:["what do onlyfans chatters do","onlyfans chatters how they work","onlyfans chatting","hire chatters onlyfans"],
     content:`OnlyFans chatters are real people who manage fan conversations on behalf of creators. They are the single biggest difference between earning $200/month and $3,000/month with the same content.
 
@@ -1207,7 +1207,7 @@ OnlyFans has essentially no internal discovery. Without external traffic, you gr
   // ─── FR ──────────────────────────────────────────────────────────────────
   { slug:"chatteuses-onlyfans-guide-complet", locale:"fr", date:"2026-06-18",
     title:"Chatteuses OnlyFans — Guide Complet 2026 : Rôle, Coût et Résultats",
-    excerpt:"Les chatteuses OnlyFans sont la raison pour laquelle les meilleures créatrices gagnent 10x plus. Tout ce que vous devez savoir sur leur rôle, leur coût et pourquoi elles sont indispensables.",
+    excerpt:"Les chatteuses OnlyFans sont la raison pour laquelle les meilleures créatrices gagnent 10x plus.",
     kw:["chatteuses onlyfans","chatteuses onlyfans français","chatting onlyfans","embaucher chatteuses onlyfans"],
     content:`Les chatteuses OnlyFans sont des personnes réelles qui gèrent les conversations avec les fans au nom des créatrices. Elles représentent la différence entre gagner 200€/mois et gagner 3.000€/mois avec le même contenu.
 
@@ -1229,7 +1229,7 @@ En France, la stratégie optimale est de gérer les deux plateformes : OnlyFans 
   },
   { slug:"agence-onlyfans-guide-choisir-2026", locale:"fr", date:"2026-06-16",
     title:"Comment Choisir une Agence OnlyFans en 2026 — Guide Sans Filtre",
-    excerpt:"Le marché des agences OnlyFans est plein d'acteurs peu sérieux. Ce guide vous aide à identifier les vrais professionnels et à éviter les arnaques avant qu'elles ne vous coûtent cher.",
+    excerpt:"Le marché des agences OnlyFans est plein d'acteurs peu sérieux. Ce guide vous aide à identifier les vrais professionnels et à éviter les arnaques avant.",
     kw:["choisir agence onlyfans","agence onlyfans sérieuse","agence onlyfans arnaque","meilleure agence onlyfans france"],
     content:`Le marché des agences OnlyFans a un problème de fraude significatif. Voici comment distinguer les vraies agences des arnaques.
 
@@ -1275,7 +1275,7 @@ Eigene Chatter einzustellen hat Herausforderungen: Training, Überwachung, 24/7-
   },
   { slug:"onlyfans-agentur-vergleich-2026", locale:"de", date:"2026-06-16",
     title:"OnlyFans Agentur Vergleich 2026 — Wie du die Beste findest",
-    excerpt:"Der ehrliche Vergleich der besten OnlyFans Management Agenturen für DACH-Creator in 2026. Provisionen, Chatter-Qualität, Vertragsbedingungen und was wirklich wichtig ist.",
+    excerpt:"Der ehrliche Vergleich der besten OnlyFans Management Agenturen für DACH-Creator in 2026. Provisionen, Chatter-Qualität, Vertragsbedingungen und was wirklich.",
     kw:["onlyfans agentur vergleich","beste onlyfans agentur deutschland","onlyfans management vergleich","onlyfans agentur seriös"],
     content:`Der Markt der OnlyFans Agenturen hat ein erhebliches Betrugsproblem. Hier ist, wie du seriöse von unseriösen Anbietern unterscheidest.
 
@@ -1564,16 +1564,16 @@ As criadoras que acompanhamos na Only Sweety Agency superam consistentemente as 
 
 // ── Header images by topic (Unsplash, commercial-free) ──────────────────────
 const TOPIC_IMAGES: Record<string,string> = {
-  income:   "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&h=420&fit=crop&q=82",
-  agency:   "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&h=420&fit=crop&q=82",
-  anonymous:"https://images.unsplash.com/photo-1492288991661-058aa541ff43?w=900&h=420&fit=crop&q=82",
-  start:    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&h=420&fit=crop&crop=top&q=82",
-  marketing:"https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=900&h=420&fit=crop&q=82",
-  chatters: "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=900&h=420&fit=crop&q=82",
-  growth:   "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=420&fit=crop&q=82",
-  model:    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900&h=420&fit=crop&crop=top&q=82",
-  money:    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=900&h=420&fit=crop&q=82",
-  default:  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&h=420&fit=crop&crop=top&q=82",
+  income:   "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&h=420&fit=crop&q=82&auto=format",
+  agency:   "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&h=420&fit=crop&q=82&auto=format",
+  anonymous:"https://images.unsplash.com/photo-1492288991661-058aa541ff43?w=900&h=420&fit=crop&q=82&auto=format",
+  start:    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&h=420&fit=crop&crop=top&q=82&auto=format",
+  marketing:"https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=900&h=420&fit=crop&q=82&auto=format",
+  chatters: "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=900&h=420&fit=crop&q=82&auto=format",
+  growth:   "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=420&fit=crop&q=82&auto=format",
+  model:    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900&h=420&fit=crop&crop=top&q=82&auto=format",
+  money:    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=900&h=420&fit=crop&q=82&auto=format",
+  default:  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&h=420&fit=crop&crop=top&q=82&auto=format",
 };
 
 export function postImage(post: { slug:string; kw:string[] }): string {

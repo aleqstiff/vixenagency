@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LOCALES, type Locale, BASE_URL } from "@/lib/config";
+import { LOCALES, type Locale, BASE_URL , langAlternates } from "@/lib/config";
 import { POSTS, postImage } from "@/lib/blog";
 import MegaNav from "@/components/MegaNav";
 
@@ -11,12 +11,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const l = locale as Locale;
   const titles: Record<Locale, string> = {
-    es: "Blog Agencia OnlyFans — Guías y Estrategias 2026 | Only Sweety Agency",
-    en: "OnlyFans Agency Blog — Guides & Strategies 2026 | Only Sweety Agency",
-    fr: "Blog Agence OnlyFans — Guides & Stratégies 2026 | Only Sweety Agency",
-    de: "OnlyFans Agentur Blog — Ratgeber 2026 | Only Sweety Agency",
-    it: "Blog Agenzia OnlyFans — Guide 2026 | Only Sweety Agency",
-    pt: "Blog Agência OnlyFans — Guias 2026 | Only Sweety Agency",
+    es: "Blog Agencia OnlyFans — Guías y Estrategias 2026 | Only Sweety",
+    en: "OnlyFans Agency Blog — Guides & Strategies 2026 | Only Sweety",
+    fr: "Blog Agence OnlyFans — Guides & Stratégies 2026 | Only Sweety",
+    de: "OnlyFans Agentur Blog — Ratgeber 2026 | Only Sweety",
+    it: "Blog Agenzia OnlyFans — Guide 2026 | Only Sweety",
+    pt: "Blog Agência OnlyFans — Guias 2026 | Only Sweety",
   };
   const descs: Record<Locale,string> = {
     es: "Guías reales y estrategias probadas sobre OnlyFans: cuánto se gana, cómo empezar, marketing, PPV y más.",
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     it: "Guide reali e strategie OnlyFans: quanto si guadagna, come iniziare, marketing, PPV e altro.",
     pt: "Guias reais e estratégias OnlyFans: quanto se ganha, como começar, marketing, PPV e mais.",
   };
-  return { title: titles[l], description: descs[l], alternates: { canonical: `${BASE_URL}/${l}/blog/` } };
+  return { title: titles[l], description: descs[l], alternates: { canonical: `${BASE_URL}/${l}/blog/`, languages: langAlternates(loc => `/${loc}/blog/`) } };
 }
 
 const PINK = "#c4699a";

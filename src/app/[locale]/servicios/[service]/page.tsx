@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   LOCALES, type Locale, SERVICES, LOCALE_COUNTRIES, COUNTRIES,
   BASE_URL, WA, waLink, waMsg, type ServicePage
-} from "@/lib/config";
+, smartTitle } from "@/lib/config";
 import { t, ta2 } from "@/lib/translations";
 import MegaNav from "@/components/MegaNav";
 import { POSTS } from "@/lib/blog";
@@ -25,10 +25,10 @@ export async function generateMetadata({
   if (!s) return {};
   const desc = `${s.desc} Only Sweety Agency — agencia especializada con +200 creadoras gestionadas.`;
   return {
-    title: `${s.title} | Only Sweety Agency`,
+    title: `${s.title} | Only Sweety`,
     description: desc.slice(0, 160),
     keywords: [s.kw, "onlysweety", "onlyfans", "agencia onlyfans"].join(","),
-    alternates: { canonical: `${BASE_URL}/${l}/servicios/${service}/` },
+    alternates: { canonical: `${BASE_URL}/${l}/servicios/${service}/`, languages: { [l]: `${BASE_URL}/${l}/servicios/${service}/`, "x-default": `${BASE_URL}/${l}/servicios/${service}/` } },
     openGraph: {
       title: s.title,
       description: s.desc,

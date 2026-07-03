@@ -3,7 +3,10 @@ import { getStore } from "@netlify/blobs";
 export default async (req) => {
   // Only allow POST
   if (req.method !== "POST") {
-    return new Response("Method not allowed", { status: 405 });
+    // Bots/GET: respuesta limpia, sin error de servidor
+    return new Response(JSON.stringify({ ok: true, info: "POST only" }), {
+      status: 200, headers: { "Content-Type": "application/json", "X-Robots-Tag": "noindex" }
+    });
   }
 
   try {

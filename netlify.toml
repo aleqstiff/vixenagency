@@ -38,3 +38,14 @@
   for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# ── No indexar endpoints internos ──
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

@@ -28,6 +28,8 @@ export const COUNTRIES = {
   puertorico: { locale:"es" as Locale, name:"Puerto Rico",  flag:"🇵🇷", city:"San Juan" },
   honduras:   { locale:"es" as Locale, name:"Honduras",     flag:"🇭🇳", city:"Tegucigalpa" },
   elsalvador: { locale:"es" as Locale, name:"El Salvador",  flag:"🇸🇻", city:"San Salvador" },
+  cuba:       { locale:"es" as Locale, name:"Cuba",         flag:"🇨🇺", city:"La Habana" },
+  guineaecuatorial: { locale:"es" as Locale, name:"Guinea Ecuatorial", flag:"🇬🇶", city:"Malabo" },
   nicaragua:  { locale:"es" as Locale, name:"Nicaragua",    flag:"🇳🇮", city:"Managua" },
   eeuu:       { locale:"en" as Locale, name:"United States",flag:"🇺🇸", city:"New York" },
   canada:     { locale:"en" as Locale, name:"Canada",       flag:"🇨🇦", city:"Toronto" },
@@ -41,7 +43,7 @@ export const COUNTRIES = {
 export type CountrySlug = keyof typeof COUNTRIES;
 
 export const LOCALE_COUNTRIES: Record<Locale, CountrySlug[]> = {
-  es: ["espana","mexico","colombia","argentina","venezuela","chile","peru","ecuador","bolivia","paraguay","uruguay","guatemala","costarica","panama","republicadominicana","puertorico","honduras","elsalvador","nicaragua"],
+  es: ["espana","mexico","colombia","argentina","venezuela","chile","peru","ecuador","bolivia","paraguay","uruguay","guatemala","costarica","panama","republicadominicana","puertorico","honduras","elsalvador","nicaragua","cuba","guineaecuatorial"],
   en: ["eeuu","canada"],
   fr: ["france","belgique"],
   de: ["deutschland","oesterreich"],

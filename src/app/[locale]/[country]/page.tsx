@@ -6,6 +6,14 @@ import { GALLERY, IMGS } from "@/lib/images";
 import { t } from "@/lib/translations";
 import MegaNav from "@/components/MegaNav";
 
+const LOCAL_GUIDE: Record<string,[string,string]> = {
+  mexico: ["onlyfans-mexico-cuanto-se-gana", "OnlyFans en México: cuánto se gana y cómo empezar"],
+  colombia: ["onlyfans-colombia-guia-completa", "OnlyFans en Colombia: guía completa 2026"],
+  argentina: ["onlyfans-argentina-como-empezar", "OnlyFans en Argentina: cuánto se gana en dólares"],
+  venezuela: ["onlyfans-venezuela-oportunidad", "OnlyFans en Venezuela: ingresos en dólares desde casa"],
+  espana: ["agencia-onlyfans-espana", "Agencia OnlyFans en España: qué hace y cómo elegir"],
+};
+
 export async function generateStaticParams() {
   const params: { locale: string; country: string }[] = [];
   LOCALES.forEach(l => (LOCALE_COUNTRIES[l as Locale]??[]).forEach(c => params.push({ locale:l, country:c })));
@@ -264,6 +272,23 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
       <div style={{ textAlign:"center", padding:"24px 20px 40px", background:"var(--bg2)" }}>
         <Link href={`/${l}/`} style={{ color:"var(--pink)", fontSize:13, fontWeight:600 }}>← {l==="es"?"Volver al inicio":l==="en"?"Back home":"Retour"}</Link>
       </div>
+
+      {/* Guía local del país (blog SEO) */}
+      {LOCAL_GUIDE[country] && (
+        <section style={{ padding:"40px 20px 8px", background:"var(--bg2)" }}>
+          <div style={{ maxWidth:960, margin:"0 auto" }}>
+            <Link href={`/${l}/blog/${LOCAL_GUIDE[country][0]}/`} style={{ textDecoration:"none", display:"block" }}>
+              <div className="card" style={{ padding:"22px 26px", display:"flex", alignItems:"center", justifyContent:"space-between", gap:16, flexWrap:"wrap" }}>
+                <div>
+                  <p style={{ fontSize:11, fontWeight:700, color:"var(--pink)", textTransform:"uppercase", letterSpacing:".1em", marginBottom:6 }}>Guía local</p>
+                  <p style={{ fontSize:17, fontWeight:800, color:"var(--dark)", letterSpacing:"-.3px" }}>{LOCAL_GUIDE[country][1]}</p>
+                </div>
+                <span style={{ color:"var(--pink)", fontWeight:700, fontSize:14, whiteSpace:"nowrap" }}>Leer guía →</span>
+              </div>
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Internal linking — otros países + servicios */}
       <section style={{ padding:"40px 20px", background:"var(--bg2)", borderTop:"1px solid var(--border)" }}>

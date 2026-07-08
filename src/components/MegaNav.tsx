@@ -43,9 +43,11 @@ export default function MegaNav({ locale, posts = [] }: {
         <div style={{ maxWidth:1280, margin:"0 auto", padding:"0 20px", height:64, display:"flex", alignItems:"center", justifyContent:"space-between", gap:8 }}>
 
           {/* Logo */}
-          <Link href={`/${locale}/`} style={{ fontWeight:800, fontSize:20, letterSpacing:"-0.5px", textDecoration:"none", color:"var(--dark)", flexShrink:0 }}>
-            <span style={{ fontFamily:"'Playfair Display',Georgia,serif", fontStyle:"italic" }}>Only Sweety</span>
-            <span style={{ fontWeight:700 }}>Agency</span>
+          <Link href={`/${locale}/`} style={{ display:"flex", alignItems:"center", textDecoration:"none", flexShrink:0 }}>
+            <span style={{ display:"flex", alignItems:"center", justifyContent:"center", background:"#1a1018", borderRadius:12, padding:"6px 10px", height:48 }}>
+              <img src="/logo-badge.jpeg" alt="Only Sweety Agency" height={36}
+                style={{ height:36, width:"auto", display:"block", borderRadius:6 }}/>
+            </span>
           </Link>
 
           {/* Desktop nav */}

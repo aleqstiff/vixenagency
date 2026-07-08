@@ -353,3 +353,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
+
+/* Oficina — stack en móvil */
+@media(max-width:720px){
+  .office-grid, .office-grid-2 { grid-template-columns:1fr!important }
+  .office-grid > div[style*="3/4"] { aspect-ratio:16/10!important }
+}

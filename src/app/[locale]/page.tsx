@@ -335,6 +335,54 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
+      {/* ═══ QUIÉNES SOMOS — oficina real ═════════════════ */}
+      <section style={{padding:"80px 20px",background:"#fff"}}>
+        <div style={{maxWidth:1200,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:44}}>
+            <span className="lbl">{l==="es"?"Quiénes somos":l==="en"?"Who we are":l==="fr"?"Qui sommes-nous":l==="de"?"Wer wir sind":l==="it"?"Chi siamo":"Quem somos"}</span>
+            <h2 style={{fontSize:"clamp(1.6rem,3.5vw,2.6rem)",fontWeight:900,color:"var(--dark)",letterSpacing:"-1px",margin:"12px 0 14px"}}>
+              {l==="es"?"Una agencia real, con equipo real":l==="en"?"A real agency, with a real team":l==="fr"?"Une vraie agence, avec une vraie équipe":l==="de"?"Eine echte Agentur mit echtem Team":l==="it"?"Un'agenzia vera, con un team vero":"Uma agência real, com equipe real"}
+            </h2>
+            <p style={{color:"var(--muted)",fontSize:16,maxWidth:620,margin:"0 auto",lineHeight:1.7}}>
+              {l==="es"?"Desde nuestra sede gestionamos cuentas de creadoras de todo el mundo hispanohablante: chatters, marketing, estudio de contenido y estrategia, todo bajo un mismo techo.":l==="en"?"From our headquarters we manage creator accounts across the entire Spanish-speaking world: chatters, marketing, content studio and strategy, all under one roof.":l==="fr"?"Depuis notre siège, nous gérons les comptes de créatrices dans tout le monde hispanophone : chatteuses, marketing, studio de contenu et stratégie.":l==="de"?"Von unserem Hauptsitz aus verwalten wir Creator-Accounts in der gesamten spanischsprachigen Welt.":l==="it"?"Dalla nostra sede gestiamo account di creator in tutto il mondo di lingua spagnola.":"Da nossa sede gerimos contas de criadoras em todo o mundo de língua espanhola."}
+            </p>
+          </div>
+
+          {/* Grid de fotos oficina */}
+          <div className="office-grid" style={{display:"grid",gridTemplateColumns:"2fr 1fr",gap:14,marginBottom:14}}>
+            <div style={{borderRadius:20,overflow:"hidden",aspectRatio:"16/10",boxShadow:"0 16px 44px rgba(196,105,154,0.14)"}}>
+              <img src="/oficina-equipo.jpeg" alt={l==="es"?"Equipo de Only Sweety Agency trabajando en la oficina":"Only Sweety Agency team working in the office"} width={780} height={488} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}}/>
+            </div>
+            <div style={{borderRadius:20,overflow:"hidden",aspectRatio:"3/4",boxShadow:"0 16px 44px rgba(196,105,154,0.14)"}}>
+              <img src="/oficina-fachada.jpeg" alt={l==="es"?"Sede de Only Sweety Agency en Barcelona":"Only Sweety Agency headquarters in Barcelona"} width={400} height={533} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}}/>
+            </div>
+          </div>
+          <div className="office-grid-2" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14}}>
+            <div style={{borderRadius:20,overflow:"hidden",aspectRatio:"16/10",boxShadow:"0 16px 44px rgba(196,105,154,0.14)"}}>
+              <img src="/oficina-estudio.jpeg" alt={l==="es"?"Estudio de fotografía profesional de Only Sweety Agency":"Only Sweety Agency professional photo studio"} width={560} height={350} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}}/>
+            </div>
+            <div style={{borderRadius:20,overflow:"hidden",aspectRatio:"16/10",boxShadow:"0 16px 44px rgba(196,105,154,0.14)"}}>
+              <img src="/oficina-reunion.jpeg" alt={l==="es"?"Sala de reuniones de Only Sweety Agency":"Only Sweety Agency meeting room"} width={560} height={350} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}}/>
+            </div>
+          </div>
+
+          {/* Stats de confianza */}
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:14,marginTop:32}}>
+            {[
+              [l==="es"?"Equipo dedicado":"Dedicated team", l==="es"?"Chatters, marketing y estrategia":"Chatters, marketing & strategy"],
+              [l==="es"?"Estudio propio":"In-house studio", l==="es"?"Producción de contenido profesional":"Professional content production"],
+              ["24/7", l==="es"?"Gestión de mensajes sin descanso":"Round-the-clock message management"],
+              [l==="es"?"6 idiomas":"6 languages", l==="es"?"Cobertura en todo el mundo hispano":"Coverage across the Spanish-speaking world"],
+            ].map(([n,d],i)=>(
+              <div key={i} className="card" style={{padding:"20px 18px",textAlign:"center"}}>
+                <p style={{fontSize:17,fontWeight:900,color:"var(--pink)",letterSpacing:"-.3px",marginBottom:6}}>{n}</p>
+                <p style={{fontSize:12.5,color:"var(--muted)",lineHeight:1.5}}>{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ PROCESO ══════════════════════════════════════ */}
       <section id="como" style={{padding:"80px 24px",background:"#fff"}}>
         <div style={{maxWidth:1000,margin:"0 auto"}}>
@@ -543,8 +591,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         <div style={{maxWidth:1280,margin:"0 auto"}}>
           <div className="footer-4" style={{display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:36,marginBottom:44}}>
             <div className="footer-brand">
-              <div style={{fontSize:24,fontWeight:900,marginBottom:14,letterSpacing:"-0.5px",display:"flex",alignItems:"center",gap:10}}>
-                <span style={{color:"var(--pink2)"}}>Only Sweety</span><span style={{color:"#fff"}}>Agency</span>
+              <div style={{marginBottom:16,display:"flex",alignItems:"center",gap:12}}>
+                <img src="/logo-real.png" alt="Only Sweety Agency" height={56} style={{height:56,width:"auto",display:"block"}}/>
                 <OFLogo size={22}/>
               </div>
               <p style={{fontSize:13,color:"rgba(255,255,255,0.35)",lineHeight:1.7,maxWidth:260,marginBottom:20}}>{t(l,"footer_desc")}</p>

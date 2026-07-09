@@ -1336,7 +1336,7 @@ Creators brasileiras têm uma vantagem enorme: quando estão dormindo (de madrug
   // ── NUEVOS POSTS SEO ALTO VOLUMEN ──────────────────────────────────────────
   // ES
   { slug:"que-es-onlyfans-como-funciona", locale:"es", date:"2026-06-20",
-    title:"¿Qué es OnlyFans y Cómo Funciona? Guía Completa 2026",
+    title:"¿Qué es OnlyFans y Cómo Funciona? Explicado Fácil 2026",
     excerpt:"Qué es OnlyFans, cómo funciona la plataforma, cuánto cobra de comisión y cómo ganan dinero las creadoras. La guía definitiva para entenderlo todo.",
     kw:["que es onlyfans","como funciona onlyfans","onlyfans españa","onlyfans como funciona"],
     content:`OnlyFans es una plataforma de suscripción donde las creadoras de contenido cobran a sus seguidores (los "fans") por acceder a contenido exclusivo. Funciona como Netflix: el fan paga una cuota mensual y recibe contenido a cambio. La plataforma tiene su sede en Londres y supera los 4 millones de creadoras registradas.
@@ -1588,7 +1588,7 @@ El error más común es enlazar OnlyFans directamente desde TikTok o Instagram: 
 Una creadora sola necesita 3-4 horas diarias solo de promoción para crecer de verdad. Es exactamente el trabajo que una agencia absorbe: nosotras gestionamos la promoción multicanal mientras tú solo creas contenido.`
   },
   { slug:"ideas-contenido-onlyfans", locale:"es", date:"2026-06-27",
-    title:"50 Ideas de Contenido para OnlyFans que Aumentan Ingresos",
+    title:"50 Ideas de Contenido para OnlyFans (que Venden) 2026",
     excerpt:"Ideas de contenido para OnlyFans organizadas por objetivo: retención, PPV, propinas y crecimiento. Con ejemplos concretos y frecuencia recomendada.",
     kw:["ideas contenido onlyfans","que subir a onlyfans","contenido para onlyfans","ideas onlyfans"],
     content:`Quedarse sin ideas de contenido es la razón nº1 por la que las creadoras pierden consistencia — y la inconsistencia mata cuentas. Esta guía organiza el contenido por objetivo de negocio, no solo por formato.
@@ -1630,7 +1630,7 @@ Feed: 4-6 publicaciones semanales. Stories/DM masivos: diario. PPV: 2-3 por sema
 Las cuentas top no improvisan: trabajan con calendario de contenido mensual, grabando en tandas (batch). Un día de grabación bien planificado produce contenido para 2 semanas.`
   },
   { slug:"como-cobrar-onlyfans-mexico-latam", locale:"es", date:"2026-06-26",
-    title:"Cómo Cobrar OnlyFans en México y Latinoamérica (2026)",
+    title:"Cómo Cobrar OnlyFans en Dólares desde México y LatAm 2026",
     excerpt:"Métodos para retirar dinero de OnlyFans en México, Colombia, Argentina y el resto de LatAm: transferencia, ewallets, tiempos, mínimos y comisiones.",
     kw:["como cobrar onlyfans","onlyfans mexico retirar dinero","cobrar onlyfans colombia","onlyfans metodos de pago"],
     content:`Cobrar tus ganancias de OnlyFans desde Latinoamérica es más simple de lo que parece, pero cada país tiene sus particularidades. Aquí está lo esencial actualizado.

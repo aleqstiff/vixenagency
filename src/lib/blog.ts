@@ -1929,6 +1929,235 @@ Muchas creadoras españolas trabajan de forma anónima, sin mostrar la cara, y l
 Somos una agencia de gestión de OnlyFans que trabaja con creadoras en España y toda Latinoamérica. Ofrecemos análisis gratuito sin compromiso, trabajamos a resultados y adaptamos la estrategia a tu nicho y objetivos. Si publicas pero los suscriptores no llegan, el problema casi nunca es el contenido: es el sistema de captación.`
   },
 
+
+  // ── INTENCIÓN DIRECTA: "ser modelo/creadora OnlyFans" — todos los idiomas ──
+
+  // ES — "ser modelo onlyfans", "como ser creadora onlyfans", "trabajar en onlyfans"
+  { slug:"como-ser-modelo-onlyfans", locale:"es", date:"2026-07-10",
+    title:"Cómo Ser Modelo de OnlyFans en 2026: Guía Paso a Paso",
+    excerpt:"Todo lo que necesitas saber para ser modelo de OnlyFans en 2026: requisitos, verificación, cuánto se gana y cómo empezar desde cero.",
+    kw:["ser modelo onlyfans","como ser modelo onlyfans","trabajar en onlyfans","modelo onlyfans requisitos"],
+    content:`Ser modelo de OnlyFans en 2026 es una opción profesional legítima que genera ingresos reales para miles de creadoras en todo el mundo hispanohablante. No necesitas ser famosa, tener miles de seguidores ni mostrar la cara. Lo que sí necesitas es estrategia, constancia y, idealmente, un equipo que gestione lo que tú no puedes hacer sola.
+
+**Requisitos para ser modelo de OnlyFans**
+
+Los requisitos son simples: ser mayor de 18 años, tener un documento de identidad válido (DNI, pasaporte o cédula) y una cuenta bancaria para recibir pagos. OnlyFans verifica tu identidad con un servicio llamado Ondato: subes tu documento y un selfie con él. La verificación tarda entre unas horas y 3 días.
+
+**¿Cuánto gana una modelo de OnlyFans?**
+
+Las cifras reales: el 75% de las creadoras gana menos de $150/mes trabajando solas. Pero las creadoras con estrategia profesional y gestión de chatting alcanzan entre $1.000 y $5.000/mes en 3-6 meses. La diferencia no es el físico ni el contenido: es el sistema de captación de tráfico y la monetización por mensajes (PPV).
+
+**¿Necesito mostrar la cara?**
+
+No. Hay creadoras anónimas en el top 1% de la plataforma. Lo importante es definir tu nicho, crear una marca reconocible y tener un flujo constante de promoción en redes externas. Muchas creadoras exitosas trabajan con encuadres que no muestran el rostro.
+
+**¿Puedo ser modelo de OnlyFans y tener otro trabajo?**
+
+Sí, de hecho la mayoría empieza así. Con 1-2 horas diarias de creación de contenido y un equipo que gestione el chatting y la promoción, puedes mantener tu trabajo principal mientras construyes tu cuenta.
+
+**El paso que marca la diferencia**
+
+La mayoría de creadoras que se estancan lo hacen porque intentan hacerlo todo solas: crear contenido, responder mensajes, promocionar en redes, analizar métricas. Es matemáticamente imposible sostenerlo más allá de cierto nivel. Una agencia de gestión como Only Sweety Agency absorbe todo menos la creación: chatters 24/7, marketing multicanal y estrategia de precios.`
+  },
+  { slug:"trabajar-en-onlyfans-sin-mostrar-cara", locale:"es", date:"2026-07-09",
+    title:"Trabajar en OnlyFans sin Mostrar la Cara: Guía Anónima 2026",
+    excerpt:"Cómo trabajar en OnlyFans de forma anónima sin mostrar la cara. Estrategias reales, nichos rentables y cómo proteger tu identidad.",
+    kw:["onlyfans sin mostrar cara","trabajar onlyfans anonimo","onlyfans anonimo","onlyfans sin cara"],
+    content:`Trabajar en OnlyFans sin mostrar la cara no solo es posible: es una de las estrategias más demandadas y hay creadoras anónimas facturando miles de dólares al mes.
+
+**Por qué funciona**
+
+Los suscriptores de OnlyFans no pagan solo por ver una cara. Pagan por exclusividad, conexión personal y contenido que no encuentran en otro sitio. Una creadora anónima con buena estrategia de nicho, chatting efectivo y promoción constante puede superar a una creadora que muestra todo pero no tiene sistema.
+
+**Nichos más rentables para creadoras anónimas**
+
+Los nichos que mejor funcionan sin mostrar cara: fitness y cuerpo (encuadres de cuello para abajo), fetiche de pies (uno de los más lucrativos de OnlyFans), ASMR y voz, cosplay con máscara, contenido artístico o aesthetic, y lifestyle de lujo.
+
+**Cómo proteger tu identidad**
+
+Usa un nombre artístico desde el principio. Crea cuentas de redes sociales separadas para la promoción. Activa el bloqueo geográfico en OnlyFans para que usuarios de tu país o ciudad no puedan encontrarte. Nunca uses tu email personal. Y trabaja con una agencia que tenga protocolos de privacidad — en Only Sweety Agency gestionamos creadoras anónimas con protección total de identidad.
+
+**La promoción anónima**
+
+Twitter/X y Reddit son los canales ideales para creadoras anónimas porque permiten contenido adulto y no exigen verificación facial. TikTok e Instagram requieren más creatividad (contenido SFW con personalidad), pero funcionan perfectamente sin mostrar el rostro.`
+  },
+
+  // EN — "become onlyfans model", "how to be an onlyfans creator", "onlyfans career"
+  { slug:"how-to-become-onlyfans-model", locale:"en", date:"2026-07-10",
+    title:"How to Become an OnlyFans Model in 2026: Complete Guide",
+    excerpt:"Everything you need to know to become an OnlyFans model in 2026: requirements, verification, how much you can earn and how to start from scratch.",
+    kw:["become onlyfans model","how to be onlyfans model","onlyfans model requirements","start onlyfans career"],
+    content:`Becoming an OnlyFans model in 2026 is a legitimate career path generating real income for thousands of creators worldwide. You don't need to be famous, have a large following, or show your face. What you do need is strategy, consistency, and ideally a team handling what you can't do alone.
+
+**Requirements to become an OnlyFans model**
+
+The requirements are straightforward: be 18 or older, have a valid government ID (passport, driver's license or national ID), and a bank account to receive payments. OnlyFans verifies your identity through a service called Ondato: you upload your document and a selfie holding it. Verification takes between a few hours and 3 days.
+
+**How much do OnlyFans models make?**
+
+Real figures: 75% of creators earn under $150/month working alone. But creators with professional strategy and chatting management reach $1,000-$5,000/month within 3-6 months. The difference isn't looks or content quality — it's the traffic acquisition system and PPV monetisation.
+
+**Do I need to show my face?**
+
+No. There are faceless creators in the top 1% of the platform. What matters is defining your niche, building a recognisable brand, and maintaining a consistent flow of external promotion. Many successful creators work with angles that never show their face.
+
+**The step that makes the difference**
+
+Most creators who plateau do so because they try to do everything alone: create content, reply to messages, promote on socials, analyse metrics. It's mathematically impossible to sustain beyond a certain level. A management agency like Only Sweety Agency absorbs everything except creation: 24/7 chatters, multi-channel marketing and pricing strategy.`
+  },
+  { slug:"onlyfans-anonymous-no-face", locale:"en", date:"2026-07-09",
+    title:"OnlyFans Without Showing Your Face: Anonymous Guide 2026",
+    excerpt:"How to do OnlyFans anonymously without showing your face. Real strategies, profitable niches and how to protect your identity.",
+    kw:["onlyfans without face","onlyfans anonymous","faceless onlyfans","onlyfans no face"],
+    content:`Working on OnlyFans without showing your face isn't just possible — it's one of the most in-demand strategies, with anonymous creators earning thousands of dollars per month.
+
+**Why it works**
+
+OnlyFans subscribers don't pay just to see a face. They pay for exclusivity, personal connection and content they can't find elsewhere. An anonymous creator with a solid niche strategy, effective chatting and consistent promotion can outperform a creator who shows everything but has no system.
+
+**Most profitable niches for anonymous creators**
+
+Niches that work best without showing your face: fitness and body (neck-down framing), foot fetish (one of the most lucrative on OnlyFans), ASMR and voice, cosplay with mask, artistic or aesthetic content, and luxury lifestyle.
+
+**How to protect your identity**
+
+Use a stage name from day one. Create separate social media accounts for promotion. Enable geo-blocking on OnlyFans so users in your country or city can't find you. Never use your personal email. And work with an agency that has privacy protocols — at Only Sweety Agency we manage anonymous creators with full identity protection.`
+  },
+
+  // FR — "devenir modèle onlyfans", "comment commencer onlyfans", "gagner argent onlyfans"
+  { slug:"devenir-modele-onlyfans-2026", locale:"fr", date:"2026-07-10",
+    title:"Devenir Modèle OnlyFans en 2026 : Guide Complet",
+    excerpt:"Comment devenir modèle OnlyFans en France en 2026 : conditions, vérification, combien on gagne et comment se lancer de zéro.",
+    kw:["devenir modele onlyfans","comment commencer onlyfans","modele onlyfans france","onlyfans comment debuter"],
+    content:`Devenir modèle OnlyFans en 2026 est une activité professionnelle accessible à toute personne majeure, en France comme dans tout le monde francophone. La plateforme compte plus de 4,6 millions de créateurs et le marché français est l'un des plus dynamiques d'Europe.
+
+**Les conditions pour commencer**
+
+Il faut avoir 18 ans, un document d'identité officiel valide (carte nationale d'identité, passeport ou permis de conduire) et un compte bancaire. OnlyFans vérifie votre identité via le service Ondato : vous téléchargez votre pièce d'identité et un selfie avec. La vérification prend entre quelques heures et 3 jours.
+
+**Combien gagne un modèle OnlyFans en France ?**
+
+Les chiffres réels : 75% des créatrices gagnent moins de 150$ par mois en travaillant seules. Mais les créatrices avec une stratégie professionnelle atteignent 1.000 à 5.000$ par mois en 3 à 6 mois. La différence n'est pas le physique : c'est le système d'acquisition de trafic et la monétisation par messages (PPV).
+
+**OnlyFans ou MYM ?**
+
+MYM est la plateforme numéro 1 en France, OnlyFans est la référence mondiale. MYM prélève 27-28% de commission contre 20% pour OnlyFans. Notre recommandation : commencer sur OnlyFans pour l'audience internationale, tout en gardant MYM comme canal complémentaire pour le public français.
+
+**Faut-il montrer son visage ?**
+
+Non. De nombreuses créatrices françaises travaillent de manière totalement anonyme. Le facteur clé n'est pas de montrer son visage mais d'avoir une stratégie de captation de trafic efficace et un chatting professionnel.
+
+**Fiscalité en France**
+
+Les revenus d'OnlyFans sont imposables. En tant que micro-entrepreneur ou sous statut de société, vous devez déclarer vos revenus. OnlyFans étant basé hors de France, il y a des particularités en matière de TVA (reverse charge). Consultez un expert-comptable spécialisé dans les activités digitales.
+
+**Le rôle d'une agence**
+
+Only Sweety Agency gère des créatrices francophones avec des chatteuses qui parlent français, un marketing adapté au marché FR et une stratégie de prix optimisée. Analyse gratuite et sans engagement.`
+  },
+  { slug:"onlyfans-france-combien-gagner", locale:"fr", date:"2026-07-09",
+    title:"OnlyFans en France : Combien Peut-on Vraiment Gagner en 2026 ?",
+    excerpt:"Les revenus réels des modèles OnlyFans en France en 2026. Chiffres par niveau, facteurs de réussite et comment maximiser ses gains.",
+    kw:["combien gagner onlyfans france","revenus onlyfans france","salaire onlyfans","onlyfans france argent"],
+    content:`Les revenus réels d'OnlyFans en France en 2026 sont plus nuancés que ce que les titres clickbait suggèrent. Le top 10% des créatrices génère environ 73% des revenus de la plateforme.
+
+**Les vrais chiffres par niveau**
+
+Débutantes (0-3 mois) : entre 100 et 500 dollars par mois avec une stratégie active. Créatrices établies (6-12 mois) : entre 500 et 3.000 dollars par mois. Top performers françaises : le top 1% dépasse 8.000 dollars par mois. Certaines créatrices françaises très médiatisées comme Anne Wünsche rapportent plus de 2 millions d'euros par an.
+
+**D'où vient vraiment l'argent**
+
+Une erreur fréquente : penser que l'essentiel vient des abonnements. Dans les comptes bien gérés, le PPV (messages payants) et les pourboires dépassent largement les revenus d'abonnement. C'est pourquoi les meilleures créatrices investissent dans des chatteuses professionnelles.
+
+**Les 3 facteurs qui déterminent vos revenus**
+
+Premier facteur : la régularité du contenu (publier 4-5 fois par semaine minimum). Deuxième facteur : le trafic externe (Twitter, Reddit, TikTok et Instagram sont vos canaux). Troisième facteur : la gestion des messages privés (le chatting professionnel peut multiplier vos revenus par 3 à 5).`
+  },
+
+  // DE — "onlyfans model werden", "onlyfans starten", "mit onlyfans geld verdienen"
+  { slug:"onlyfans-model-werden-2026", locale:"de", date:"2026-07-10",
+    title:"OnlyFans Model werden 2026: Kompletter Leitfaden",
+    excerpt:"Wie werde ich OnlyFans Model in 2026? Voraussetzungen, Verifizierung, Verdienstmöglichkeiten und wie du von Null startest.",
+    kw:["onlyfans model werden","onlyfans starten","mit onlyfans geld verdienen","onlyfans anfangen"],
+    content:`OnlyFans Model werden ist 2026 eine realistische berufliche Option für Creator im deutschsprachigen Raum. Die Plattform zählt über 4 Millionen Creator weltweit und der DACH-Markt gehört zu den am schnellsten wachsenden in Europa.
+
+**Voraussetzungen**
+
+Du musst mindestens 18 Jahre alt sein, einen gültigen Ausweis (Personalausweis, Reisepass oder Führerschein) und ein Bankkonto besitzen. OnlyFans verifiziert deine Identität über Ondato: Du lädst deinen Ausweis und ein Selfie damit hoch. Die Verifizierung dauert zwischen ein paar Stunden und 3 Tagen.
+
+**Wie viel verdient man als OnlyFans Model?**
+
+Die echten Zahlen: 75% der Creator verdienen unter 150$ pro Monat alleine. Creator mit professioneller Strategie und Chatting-Management erreichen 1.000-5.000$ pro Monat innerhalb von 3-6 Monaten. Der Unterschied liegt nicht im Aussehen — sondern im System.
+
+**Muss ich mein Gesicht zeigen?**
+
+Nein. Es gibt gesichtslose Creator im Top 1% der Plattform. Was zählt ist die Nische, ein wiedererkennbares Branding und konstante externe Promotion. Viele erfolgreiche deutsche Creatorinnen arbeiten komplett anonym.
+
+**Steuern in Deutschland**
+
+OnlyFans-Einnahmen sind in Deutschland steuerpflichtig. Du brauchst ein Gewerbe (Gewerbeanmeldung) und musst Einkommensteuer und gegebenenfalls Umsatzsteuer abführen. Da OnlyFans im Ausland sitzt, gilt das Reverse-Charge-Verfahren. Lass dich von einem Steuerberater beraten.
+
+**Was macht eine OnlyFans Agentur?**
+
+Eine professionelle Agentur wie Only Sweety Agency übernimmt das Chatting (Nachrichten beantworten und PPV verkaufen), das Social-Media-Marketing, die Preisstrategie und die Analyse. Du erstellst nur den Content. Wir arbeiten auf Provisionsbasis ohne Vorauszahlung.`
+  },
+
+  // IT — "diventare modella onlyfans", "come iniziare onlyfans", "guadagnare onlyfans"
+  { slug:"diventare-modella-onlyfans-2026", locale:"it", date:"2026-07-10",
+    title:"Diventare Modella OnlyFans nel 2026: Guida Completa",
+    excerpt:"Come diventare modella OnlyFans nel 2026: requisiti, verifica, quanto si guadagna e come iniziare da zero in Italia.",
+    kw:["diventare modella onlyfans","come iniziare onlyfans","modella onlyfans italia","onlyfans come iniziare"],
+    content:`Diventare modella OnlyFans nel 2026 è un'opzione professionale accessibile a chiunque sia maggiorenne. La piattaforma conta oltre 4 milioni di creator e il mercato italiano è in forte crescita.
+
+**Requisiti**
+
+Devi avere almeno 18 anni, un documento d'identità valido (carta d'identità, passaporto o patente) e un conto corrente. OnlyFans verifica la tua identità tramite Ondato: carichi il documento e un selfie con esso. La verifica richiede da poche ore a 3 giorni.
+
+**Quanto si guadagna come modella OnlyFans in Italia?**
+
+I dati reali: il 75% delle creator guadagna meno di 150$ al mese lavorando da sole. Ma le creator con strategia professionale raggiungono 1.000-5.000$ al mese in 3-6 mesi. La differenza non è il fisico: è il sistema di acquisizione traffico e la monetizzazione tramite messaggi (PPV).
+
+**Devo mostrare il viso?**
+
+No. Ci sono creator anonime nel top 1% della piattaforma. Il fattore chiave non è mostrare il viso ma avere una strategia di captazione traffico efficace e un chatting professionale.
+
+**Tasse in Italia**
+
+I redditi di OnlyFans sono tassabili in Italia. Come libera professionista o con partita IVA, devi dichiarare i tuoi redditi. Consulta un commercialista specializzato in attività digitali per la gestione IVA e IRPEF.
+
+**Il ruolo di un'agenzia**
+
+Only Sweety Agency gestisce creator italiane con chatters che parlano italiano, marketing adattato e strategia di prezzi ottimizzata. Analisi gratuita e senza impegno.`
+  },
+
+  // PT — "ser modelo onlyfans", "como começar onlyfans", "ganhar dinheiro onlyfans"
+  { slug:"como-ser-modelo-onlyfans-brasil", locale:"pt", date:"2026-07-10",
+    title:"Como Ser Modelo OnlyFans no Brasil em 2026: Guia Completo",
+    excerpt:"Tudo que você precisa saber para ser modelo OnlyFans no Brasil em 2026: requisitos, verificação, quanto se ganha e como começar do zero.",
+    kw:["ser modelo onlyfans","como começar onlyfans","modelo onlyfans brasil","onlyfans como começar"],
+    content:`Ser modelo OnlyFans no Brasil em 2026 é uma opção profissional real que gera renda em dólares para milhares de criadoras brasileiras. O Brasil é um dos maiores mercados da plataforma na América Latina.
+
+**Requisitos**
+
+Ter 18 anos ou mais, documento de identidade válido (RG, CNH ou passaporte) e conta bancária. OnlyFans verifica sua identidade pelo serviço Ondato: você envia o documento e uma selfie com ele. A verificação leva de algumas horas a 3 dias.
+
+**Quanto ganha uma modelo OnlyFans no Brasil?**
+
+Os números reais: 75% das criadoras ganham menos de 150$ por mês trabalhando sozinhas. Mas criadoras com estratégia profissional alcançam 1.000-5.000$ por mês em 3-6 meses. A diferença não é o físico: é o sistema de captação de tráfego e a monetização por mensagens (PPV).
+
+**A vantagem cambial brasileira**
+
+Ganhar em dólares morando no Brasil é uma vantagem estrutural. 2.000$/mês equivalem a um salário muito acima da média brasileira. Seus custos são em reais; seus ganhos, em dólares.
+
+**Como receber no Brasil**
+
+OnlyFans paga em dólares por transferência internacional. As opções mais usadas por criadoras brasileiras: Wise (a mais popular — conta virtual com número bancário dos EUA), Payoneer, e posterior liquidação com bancos brasileiros.
+
+**O papel de uma agência**
+
+Only Sweety Agency gerencia criadoras brasileiras com chatters que falam português, marketing direcionado e estratégia de preços otimizada. Análise gratuita e sem compromisso.`
+  },
+
 ];
 
 

@@ -1,5 +1,5 @@
 export const BASE_URL = "https://onlysweety.com";
-export const WA = "34644462216";
+export const WA = "34614083416";
 export const waLink = (msg: string) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
 
 export const LOCALES = ["es","en","fr","de","it","pt"] as const;

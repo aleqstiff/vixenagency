@@ -82,7 +82,7 @@ export default async function CountryPage({ params }: { params: Promise<{ locale
   if (!c) return <div>Not found</div>;
   const meta = COUNTRY_META[l]?.[country];
   const data = getCountryData(country, c.name, c.city);
-  const PINK = "#c4699a";
+  const PINK = "#0d9488";
 
   const h1 = meta?.title.split("|")[0].trim() ?? `Agencia OnlyFans ${c.name}`;
 

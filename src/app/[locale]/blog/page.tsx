@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: titles[l], description: descs[l], alternates: { canonical: `${BASE_URL}/${l}/blog/`, languages: langAlternates(loc => `/${loc}/blog/`) } };
 }
 
-const PINK = "#c4699a";
+const PINK = "#0d9488";
 
 export default async function BlogIndex({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

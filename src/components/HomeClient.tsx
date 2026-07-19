@@ -145,7 +145,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
 
     // Short delay then redirect to WhatsApp
     setStatus("ok");
-    const waNumber="34644462216";
+    const waNumber="34614083416";
     const waText=buildWaMessage();
     setTimeout(()=>{
       window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`,"_blank");
@@ -170,7 +170,7 @@ export function ApplyForm({ locale, href }: { locale: string; href: string }) {
       <p style={{color:"var(--muted)",fontSize:14,marginBottom:24}}>
         {locale==="es"?"Si no se abre automáticamente, pulsa el botón:":"If it doesn't open automatically:"}
       </p>
-      <a href={`https://wa.me/34644462216?text=${encodeURIComponent(buildWaMessage())}`}
+      <a href={`https://wa.me/34614083416?text=${encodeURIComponent(buildWaMessage())}`}
         target="_blank" rel="noopener noreferrer"
         style={{display:"inline-flex",alignItems:"center",gap:10,padding:"16px 32px",borderRadius:14,background:"#25D366",color:"#fff",fontWeight:800,fontSize:16,boxShadow:"0 4px 20px rgba(37,211,102,0.3)"}}>
         💬 {locale==="es"?"Abrir WhatsApp":locale==="en"?"Open WhatsApp":"WhatsApp"}

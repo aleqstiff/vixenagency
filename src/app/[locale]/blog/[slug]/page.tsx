@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const PINK = "#c4699a";
+const PINK = "#0d9488";
 
 function renderInline(text: string): React.ReactNode[] {
   const parts = text.split(/\*\*(.*?)\*\*/g);
@@ -54,7 +54,7 @@ function renderContent(content: string) {
           margin: "44px 0 14px", lineHeight: 1.2,
           display: "flex", alignItems: "center", gap: 12,
         }}>
-          <span style={{ width: 4, height: 26, borderRadius: 2, background: `linear-gradient(${PINK},#d985b0)`, flexShrink: 0 }} />
+          <span style={{ width: 4, height: 26, borderRadius: 2, background: `linear-gradient(${PINK},#14b8a6)`, flexShrink: 0 }} />
           {h2[1]}
         </h2>
       );

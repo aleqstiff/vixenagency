@@ -636,9 +636,14 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               </div>
             </div>
           </div>
-          <div style={{borderTop:"1px solid rgba(255,255,255,0.05)",paddingTop:20,display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:10}}>
+          <div style={{borderTop:"1px solid rgba(255,255,255,0.05)",paddingTop:20,display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:10,alignItems:"center"}}>
             <p style={{fontSize:12,color:"rgba(255,255,255,0.15)"}}>© 2026 Only Sweety Agency · {t(l,"footer_rights")}</p>
-            <p style={{fontSize:11,color:"rgba(255,255,255,0.08)"}}>{t(l,"footer_disclaimer")}</p>
+            <div style={{display:"flex",gap:16,alignItems:"center",flexWrap:"wrap"}}>
+              <Link href={`/${l}/privacidad/`} style={{fontSize:12,color:"rgba(255,255,255,0.35)",textDecoration:"none"}}>
+                {l==="es"?"Privacidad":l==="en"?"Privacy":l==="fr"?"Confidentialité":l==="de"?"Datenschutz":l==="it"?"Privacy":"Privacidade"}
+              </Link>
+              <p style={{fontSize:11,color:"rgba(255,255,255,0.08)"}}>{t(l,"footer_disclaimer")}</p>
+            </div>
           </div>
         </div>
       </footer>

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const CONTACT_EMAIL = "hola@onlysweety.com"; // ← CAMBIAR por email real cuando el usuario lo indique
+const CONTACT_EMAIL = "privacidad@onlysweety.com";
 
 export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

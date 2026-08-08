@@ -36,10 +36,18 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     "areaServed": ["ES", "MX", "AR", "CO", "CL", "PE", "US", "CA", "FR", "DE", "IT", "BR"],
   };
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <a href="#main" className="skip-link">Saltar al contenido</a>
-      {children}
-    </>
+    <html lang={l}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      </head>
+      <body>
+        <a href="#main" className="skip-link">Saltar al contenido</a>
+        {children}
+      </body>
+    </html>
   );
 }

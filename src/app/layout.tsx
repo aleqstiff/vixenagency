@@ -10,16 +10,7 @@ export const metadata: Metadata = {
   title: "Only Sweety Agency",
 };
 
+// Layout raíz mínimo — el <html> lang correcto lo pone [locale]/layout
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="es">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" />
-      </head>
-      <body>{children}</body>
-    </html>
-  );
+  return children as React.ReactElement;
 }

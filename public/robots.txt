@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://www.onlysweety.com/sitemap.xml
+Sitemap: https://onlysweety.com/sitemap.xml

@@ -1,6 +1,9 @@
-[build]
-  command = "npm install && npm run build"
-  publish = "out"
+# Redirect www a NO-www (canonical sin www)
+[[redirects]]
+  from = "https://www.onlysweety.com/*"
+  to = "https://onlysweety.com/:splat"
+  status = 301
+  force = true
 
 # NO redirect on root "/" — serve public/index.html which has Trustpilot meta + JS redirect to /es/
 # This lets verification bots (Trustpilot, Google) read the meta tag at the root.
@@ -14,15 +17,14 @@
   conditions = {Method = ["GET", "HEAD"]}
 
 # ── Security & cache headers ──
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    X-XSS-Protection = "1; mode=block"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
 [[headers]]
   for = "/_next/static/*"
@@ -30,22 +32,21 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.png"
+  for = "*.jpg"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.svg"
+  for = "*.png"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
-
-# ── No indexar endpoints internos ──
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/admin/*"
+  for = "*.svg"
   [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

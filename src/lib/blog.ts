@@ -1440,32 +1440,6 @@ A common mistake is assuming most income comes from subscriptions. In well-manag
 
 Creators we work with at Only Sweety Agency consistently beat market averages. The reason isn't the content — it's that they have 24/7 chatters, active social media marketing, and an optimized PPV strategy. Together these have a multiplier effect a solo creator can rarely replicate.`
   },
-  { slug:"how-to-start-onlyfans-from-scratch", locale:"en", date:"2026-06-17",
-    title:"How to Start OnlyFans From Scratch in 2026 (Step by Step)",
-    excerpt:"Step-by-step guide to starting OnlyFans with no followers. Account setup, verification, pricing strategy and getting your first paying subscribers.",
-    kw:["how to start onlyfans","start onlyfans from scratch","onlyfans for beginners","create onlyfans account"],
-    content:`Starting OnlyFans from scratch is entirely possible in 2026, but opening an account and waiting no longer works. Success now requires strategy from day one.
-
-**Step 1: Create and verify your account**
-
-You must be of legal age and verify your identity with official ID. Verification is mandatory. Once verified, set up your profile: stage name, photo, bio and subscription price.
-
-**Step 2: Set the right price**
-
-The most effective strategy for new creators: start between $9.99 and $14.99 with a 50% launch discount for the first 2-4 weeks. This generates initial subscribers, then you raise gradually. Avoid prices under $5 — they attract the least committed subscribers.
-
-**Step 3: External traffic is everything**
-
-OnlyFans has no internal discovery. Nobody finds you inside the platform. All growth comes from outside: Twitter/X, Reddit, TikTok and Instagram. Without active social media, growth is impossible. This is what new creators underestimate most.
-
-**Step 4: Use your welcome message to sell**
-
-The welcome message is your first contact with each new subscriber. Use it to generate an immediate first sale — it's one of the highest-converting moments.
-
-**Mistakes that stall 70% of new creators**
-
-Posting for two weeks then disappearing for three (inconsistency destroys retention), underpricing out of fear, and not upselling (letting subscribers consume only the base subscription without offering PPV).`
-  },
   // FR
   { slug:"combien-gagne-onlyfans-2026", locale:"fr", date:"2026-06-19",
     title:"Combien Gagne-t-on sur OnlyFans en 2026 ? Chiffres Réels",

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { BASE_URL } from "@/lib/config";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon-32.png", sizes: "32x32" }],
     apple: "/apple-touch-icon.png",

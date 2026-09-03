@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   LOCALES, type Locale, SERVICES, LOCALE_COUNTRIES, COUNTRIES,
   BASE_URL, WA, waLink, waMsg, type ServicePage
-, smartTitle } from "@/lib/config";
+, smartTitle, serviceAlternates } from "@/lib/config";
 import { t, ta2 } from "@/lib/translations";
 import MegaNav from "@/components/MegaNav";
 import { POSTS } from "@/lib/blog";
@@ -28,7 +28,7 @@ export async function generateMetadata({
     title: `${s.title} | Only Sweety`,
     description: desc.slice(0, 160),
     keywords: [s.kw, "onlysweety", "onlyfans", "agencia onlyfans"].join(","),
-    alternates: { canonical: `${BASE_URL}/${l}/servicios/${service}/`, languages: { [l]: `${BASE_URL}/${l}/servicios/${service}/`, "x-default": `${BASE_URL}/${l}/servicios/${service}/` } },
+    alternates: { canonical: `${BASE_URL}/${l}/servicios/${service}/`, languages: serviceAlternates(l, service) },
     openGraph: {
       title: s.title,
       description: s.desc,
@@ -67,14 +67,20 @@ const SERVICE_FAQS: Record<string, [string, string][]> = {
   ],
 };
 
-const RELATED: Record<string, string[]> = {
-  "chatters-onlyfans": ["ppv-onlyfans","gestion-onlyfans","anonimato-onlyfans"],
-  "gestion-onlyfans": ["chatters-onlyfans","marketing-onlyfans","ppv-onlyfans"],
-  "marketing-onlyfans": ["chatters-onlyfans","ppv-onlyfans","creadoras-latinas-onlyfans"],
-  "ppv-onlyfans": ["chatters-onlyfans","monetizar-onlyfans","gestion-onlyfans"],
-  "onlyfans-chatters": ["onlyfans-management-agency","onlyfans-ppv-strategy","hire-onlyfans-chatters"],
-  "onlyfans-management-agency": ["onlyfans-chatters","onlyfans-ppv-strategy","best-onlyfans-agency-2026"],
+// Relación por concepto (no por slug) — funciona igual en los 6 idiomas y no
+// depende de que un slug concreto exista en cada locale.
+const RELATED_CONCEPTS: Record<string, string[]> = {
+  chatters: ["ppv","management","anonymity"],
+  management: ["chatters","marketing","ppv"],
+  marketing: ["chatters","ppv","trust"],
+  ppv: ["chatters","monetize","management"],
+  anonymity: ["chatters","dmca","management"],
+  dmca: ["anonymity","trust","management"],
+  monetize: ["ppv","marketing","management"],
+  trust: ["management","marketing","beginners"],
+  beginners: ["management","chatters","marketing"],
 };
+const DEFAULT_RELATED_CONCEPTS = ["chatters","management","marketing"];
 
 export default async function ServicePage({
   params,
@@ -87,8 +93,10 @@ export default async function ServicePage({
   const wa = waMsg(l);
   const href = waLink(wa);
   const navPosts = POSTS.filter(p => p.locale === l).slice(0, 6).map(p => ({ slug: p.slug, title: p.title }));
-  const relatedSlugs = RELATED[service] ?? [];
-  const relatedPages = relatedSlugs.map(rs => SERVICES[l]?.find(x => x.slug === rs)).filter(Boolean) as ServicePage[];
+  const relatedConcepts = RELATED_CONCEPTS[s.concept ?? ""] ?? DEFAULT_RELATED_CONCEPTS;
+  const relatedPages = relatedConcepts
+    .map(c => SERVICES[l]?.find(x => x.concept === c && x.slug !== service))
+    .filter(Boolean) as ServicePage[];
   const faqs = SERVICE_FAQS[service] ?? ta2(l,"faqs").slice(0,4);
   const allFaqs = faqs.length > 0 ? faqs : ta2(l,"faqs").slice(0,4);
 

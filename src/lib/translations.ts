@@ -374,7 +374,7 @@ export const TR: Record<Locale, Record<string,string|string[][]|string[]>> = {
 
   pt: {
     meta_title: "Agência OnlyFans Brasil — Ganhos ×3 | Only Sweety",
-    meta_desc: "Agência de gestão OnlyFans #1 para creators brasileiras. Chatters 24/7, marketing digital, anonimato total. Brasil e mercados internacionais. Candidatura gratuita.",
+    meta_desc: "Agência de gestão OnlyFans #1 para creators brasileiras. Chatters 24/7, marketing digital, anonimato total. Brasil e mercados internacionais.",
     meta_kw: "agencia onlyfans,gestão onlyfans,agencia modelos onlyfans,agencia onlyfans brasil,ganhar dinheiro onlyfans",
     nav_services:"Serviços", nav_countries:"Países", nav_blog:"Blog", nav_apply:"Candidatar-se grátis",
     nav_mega_services_title:"Nossos serviços",

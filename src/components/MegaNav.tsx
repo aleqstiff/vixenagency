@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { LOCALES, type Locale, COUNTRIES, LOCALE_COUNTRIES, SERVICES, waLink, waMsg } from "@/lib/config";
+import { usePathname } from "next/navigation";
+import { LOCALES, LANG, type Locale, COUNTRIES, LOCALE_COUNTRIES, SERVICES, waLink, waMsg, serviceAlternates } from "@/lib/config";
 import { t } from "@/lib/translations";
 import { POSTS } from "@/lib/blog";
 
@@ -12,16 +13,35 @@ export default function MegaNav({ locale, posts = [] }: {
   const [desktop, setDesktop] = useState<string | null>(null);
   const [mobile, setMobile] = useState(false);
   const [mSection, setMSection] = useState<string | null>(null);
+  const [langOpen, setLangOpen] = useState(false);
   const href = waLink(waMsg(locale));
   const countries = LOCALE_COUNTRIES[locale] ?? [];
   const services  = SERVICES[locale] ?? [];
+  const pathname = usePathname();
 
   useEffect(() => { document.body.style.overflow = mobile ? "hidden" : ""; return () => { document.body.style.overflow = ""; }; }, [mobile]);
+
+  // Enlaza al equivalente real de la página actual cuando existe (home, blog
+  // index, privacidad, servicios con concept compartido); si no hay traducción
+  // (país, post de blog, servicio regional) cae al home del idioma destino.
+  function hrefForLocale(target: Locale): string {
+    const segments = (pathname ?? "/").split("/").filter(Boolean);
+    const [, section, sub] = segments;
+    if (!section) return `/${target}/`;
+    if (section === "blog" && !sub) return `/${target}/blog/`;
+    if (section === "privacidad") return `/${target}/privacidad/`;
+    if (section === "servicios" && sub) {
+      const alt = serviceAlternates(locale, sub);
+      return alt?.[target] ?? `/${target}/`;
+    }
+    return `/${target}/`;
+  }
 
   const L: Record<string, Record<Locale, string>> = {
     sv: { es:"Servicios",en:"Services",fr:"Services",de:"Leistungen",it:"Servizi",pt:"Serviços" },
     co: { es:"Países",en:"Countries",fr:"Pays",de:"Länder",it:"Paesi",pt:"Países" },
     how:{ es:"Cómo funciona",en:"How it works",fr:"Comment ça marche",de:"So geht's",it:"Come funziona",pt:"Como funciona" },
+    lang:{ es:"Idioma",en:"Language",fr:"Langue",de:"Sprache",it:"Lingua",pt:"Idioma" },
   };
 
   const PILL: React.CSSProperties = {
@@ -142,17 +162,27 @@ export default function MegaNav({ locale, posts = [] }: {
 
           {/* Right */}
           <div className="hide-mobile" style={{ alignItems:"center", gap:8, flexShrink:0 }}>
-            <div style={{ display:"flex", gap:2, marginRight:6 }}>
-              {LOCALES.map(loc => (
-                <Link key={loc} href={`/${loc}/`}
-                  style={{ fontSize:10, padding:"3px 6px", borderRadius:5, textDecoration:"none",
-                    fontFamily:"monospace", textTransform:"uppercase", fontWeight:800,
-                    color: loc===locale ? "var(--pink2)" : "rgba(255,255,255,0.25)",
-                    background: loc===locale ? "rgba(212,130,106,0.08)" : "transparent",
-                    border:`1px solid ${loc===locale ? "rgba(212,130,106,0.4)" : "transparent"}` }}>
-                  {loc}
-                </Link>
-              ))}
+            <div style={{ position:"relative" }}
+              onMouseEnter={() => setLangOpen(true)}
+              onMouseLeave={() => setLangOpen(false)}>
+              <button style={PILL} aria-haspopup="true" aria-expanded={langOpen}>
+                <span style={{ fontFamily:"monospace", fontWeight:800, fontSize:12, textTransform:"uppercase" }}>{locale}</span>
+                <span style={{ fontSize:9, opacity:.4 }}>▾</span>
+              </button>
+              {langOpen && (
+                <div style={{ ...MEGA, minWidth:190, right:0, left:"auto", padding:8 }}>
+                  {LOCALES.map(loc => (
+                    <Link key={loc} href={hrefForLocale(loc)}
+                      style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:14, padding:"10px 12px", borderRadius:10, textDecoration:"none",
+                        color: loc===locale ? "var(--pink2)" : "var(--dark)",
+                        background: loc===locale ? "rgba(212,130,106,0.08)" : "transparent",
+                        fontWeight: loc===locale ? 800 : 600 }}>
+                      <span style={{ fontSize:13 }}>{LANG[loc]}</span>
+                      <span style={{ fontFamily:"monospace", fontSize:11, color:"var(--muted2)", textTransform:"uppercase" }}>{loc}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
             <a href={href} target="_blank" rel="noopener noreferrer" className="btn btn-rose" style={{ padding:"10px 22px", fontSize:13 }}>
               {locale==="es"?"Aplicar gratis":locale==="en"?"Apply free":locale==="fr"?"Postuler":locale==="de"?"Bewerben":"Candidati"}
@@ -259,21 +289,25 @@ export default function MegaNav({ locale, posts = [] }: {
           <span style={{ fontWeight:700, color:"var(--dark)", fontSize:15 }}>{L.how[locale]}</span>
         </Link>
 
-        <div style={{ borderTop:"1px solid rgba(255,255,255,0.08)", paddingTop:20, marginTop:16 }}>
-          <p style={{ fontSize:11, color:"var(--muted)", fontWeight:700, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12 }}>
-            {locale==="es"?"Idioma":locale==="en"?"Language":"Langue"}
-          </p>
-          <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
-            {LOCALES.map(loc => (
-              <Link key={loc} href={`/${loc}/`} onClick={() => setMobile(false)}
-                style={{ padding:"8px 16px", borderRadius:10, textDecoration:"none", fontFamily:"monospace", textTransform:"uppercase", fontWeight:800, fontSize:13,
-                  color:loc===locale?"var(--pink)":"var(--muted2)",
-                  background:loc===locale?"rgba(212,130,106,0.08)":"rgba(26,22,18,0.04)",
-                  border:`1px solid ${loc===locale?"rgba(196,105,154,0.3)":"rgba(255,255,255,0.08)"}` }}>
-                {loc}
-              </Link>
-            ))}
-          </div>
+        <div style={{ borderTop:"1px solid rgba(255,255,255,0.08)", paddingTop:16, marginTop:16 }}>
+          <button onClick={() => setMSection(mSection==="lang"?null:"lang")}
+            style={{ width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"14px 16px", borderRadius:12, background:"var(--bg2)", border:"1px solid var(--border-d)", cursor:"pointer", color:"var(--dark)", fontWeight:700, fontSize:15 }}>
+            <span>{L.lang[locale]} · {LANG[locale]}</span>
+            <span style={{ color:"var(--pink2)", fontSize:22, fontWeight:300, transform:mSection==="lang"?"rotate(45deg)":"none", transition:"transform .2s", lineHeight:1 }}>+</span>
+          </button>
+          {mSection === "lang" && (
+            <div style={{ padding:"10px 0 0 6px", display:"grid", gap:6 }}>
+              {LOCALES.map(loc => (
+                <Link key={loc} href={hrefForLocale(loc)} onClick={() => setMobile(false)}
+                  style={{ display:"flex", alignItems:"center", justifyContent:"space-between", padding:"12px 14px", borderRadius:10, textDecoration:"none",
+                    background: loc===locale ? "rgba(212,130,106,0.08)" : "var(--bg2)",
+                    border:`1px solid ${loc===locale ? "rgba(196,105,154,0.3)" : "var(--border-d)"}` }}>
+                  <span style={{ fontWeight:700, color:"var(--dark)", fontSize:14 }}>{LANG[loc]}</span>
+                  <span style={{ fontFamily:"monospace", fontSize:11, color:"var(--muted2)", textTransform:"uppercase" }}>{loc}</span>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>

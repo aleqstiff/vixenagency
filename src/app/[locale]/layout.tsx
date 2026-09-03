@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { LOCALES, type Locale, BASE_URL, langAlternates } from "@/lib/config";
 import { TR } from "@/lib/translations";
 import "../globals.css";
+
+const GA_MEASUREMENT_ID = "G-673LDKPMFN";
 
 export async function generateStaticParams() {
   return LOCALES.map(locale => ({ locale }));
@@ -46,6 +49,13 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       </head>
       <body>
         <a href="#main" className="skip-link">Saltar al contenido</a>
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`}
+        </Script>
         {children}
       </body>
     </html>
